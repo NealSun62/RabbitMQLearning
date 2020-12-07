@@ -19,7 +19,7 @@ import javax.sql.DataSource;
  * @author wen
  */
 @Configuration
-@MapperScan(basePackages = {"com.sun.overweight.mapper","com.sun.overweight.com.sun.overweight.ramp.common.model"}, sqlSessionTemplateRef = "pgSqlSessionTemplate")
+@MapperScan(basePackages = {"com.sun.overweight.mapper","com.sun.overweight.ramp.common.model"}, sqlSessionTemplateRef = "pgSqlSessionTemplate")
 public class PgMybatisConfig {
 	
 	@Bean(name = "pgDataSource")

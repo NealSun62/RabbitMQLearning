@@ -28,13 +28,13 @@ public class Swagger2Bean {
                 .groupName("ramp.api.docs")
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.znjt.automatic.ramp"))
+                .apis(RequestHandlerSelectors.basePackage("com.sun.overweight"))
                 .paths(PathSelectors.any()).build();
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("automatic-ramp")
-                .description("serviceName:automatic-ramp")
+                .title("echo")
+                .description("serviceName:echo")
                 //.termsOfServiceUrl("http://blog.52itstyle.com")
                 //.contact(new Contact("科帮网 ", "http://blog.52itstyle.com", "345849402@qq.com"))
                 .version("1.0").build();
