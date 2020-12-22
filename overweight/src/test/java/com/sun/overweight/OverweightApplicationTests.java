@@ -10,7 +10,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class OverweightApplicationTests {
 
     @Test
-    public void contextLoads() {
+    public static void main(String[] args) throws InterruptedException {
+        Object ob = new Object();
+        Thread.sleep(1000);
+        System.out.println(Thread.currentThread().getName());
+        if(ob == null){
+            System.out.println("null");
+        }
     }
 
 }

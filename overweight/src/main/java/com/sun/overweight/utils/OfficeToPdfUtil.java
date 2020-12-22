@@ -5,6 +5,8 @@ import com.aspose.cells.Workbook;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.words.Document;
+import com.sun.overweight.OverweightApplication;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ClassUtils;
 
 import java.io.*;
@@ -28,7 +30,10 @@ public class OfficeToPdfUtil {
 		String path = ClassUtils.getDefaultClassLoader().getResource("").getPath().replace("file:", "")
 				+ "license.xml";
 		System.out.println("path:"+path);
-//		log.info("[ license路径 ] path = {}", (path));
+		path = OfficeToPdfUtil.class.getClass().getClassLoader().getResource("license.xml").getPath();
+//		File file = new File("src/main/resources/license.xml");
+//		path = file.getAbsolutePath();
+		System.out.println("[ license路径 ] path===="+(path));
 		return path;
 	}
 
@@ -42,7 +47,7 @@ public class OfficeToPdfUtil {
 		boolean result = false;
 		InputStream is = null;
 		try {
-			is = new FileInputStream(getLicensePath());
+			is = new FileInputStream(OfficeToPdfUtil.class.getClass().getClassLoader().getResource("license.xml").getPath());
 			// InputStream is =
 			// ClassUtils.getDefaultClassLoader().getResourceAsStream(getLicensePath());
 //			log.info("is->" + is.available());

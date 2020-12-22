@@ -186,5 +186,4 @@ public class ByteUtil
         return int2ByteArray(value);
     }
 
-    public static void main(String[] args) {}
 }

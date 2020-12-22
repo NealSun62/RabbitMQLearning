@@ -111,12 +111,4 @@ public final class JsonUtil {
         return node;
     }
 
-    public static void main(String[] args) {
-        String json = "{\"error\":0,\"data\":{\"name\":\"ABC\",\"age\":20,\"phone\":{\"home\":\"abc\",\"mobile\":\"def\"},\"friends\":[{\"name\":\"DEF\",\"phone\":{\"home\":\"hij\",\"mobile\":\"klm\"}},{\"name\":\"GHI\",\"phone\":{\"home\":\"nop\",\"mobile\":\"qrs\"}}]},\"other\":{\"nickname\":[]}}";
-        Map<String, Map<String, Object>> map = fromJsonToMap(json);
-
-        for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
-            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-        }
-    }
 }
