@@ -10,16 +10,15 @@ package com.sun.overweight.controller;/*
  */
 
 import com.sun.overweight.enums.FileType;
-import com.sun.overweight.utils.ExcelUtil;
-import com.sun.overweight.utils.OfficeToPdfUtil;
-import com.sun.overweight.utils.PreviewUtil;
+import com.sun.overweight.common.utils.ExcelUtil;
+import com.sun.overweight.common.utils.OfficeToPdfUtil;
+import com.sun.overweight.common.utils.PreviewUtil;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;

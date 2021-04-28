@@ -1,12 +1,10 @@
-package com.sun.overweight.utils;
+package com.sun.overweight.common.utils;
 
 import com.aspose.cells.PdfSaveOptions;
 import com.aspose.cells.Workbook;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.words.Document;
-import com.sun.overweight.OverweightApplication;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ClassUtils;
 
 import java.io.*;

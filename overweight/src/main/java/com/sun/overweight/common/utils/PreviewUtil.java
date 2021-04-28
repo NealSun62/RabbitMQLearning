@@ -1,4 +1,4 @@
-package com.sun.overweight.utils;
+package com.sun.overweight.common.utils;
 
 
 import javax.servlet.http.HttpServletResponse;
