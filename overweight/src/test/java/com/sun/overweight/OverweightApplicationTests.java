@@ -171,5 +171,41 @@ public class OverweightApplicationTests {
         return result;
     }
 
+    <process xmlns='http://jbpm.org/4.4/jpdl' name='舆情点评' key='platform_BIZ_yqdp_20201014085449'>
+  <start name='start' isProcessTemplate='false' g='50,100,48,48'>
+    <transition name='to 人工 1' to='发起'/>
+  </start>
+  <end name='end' isProcessTemplate='false' g='500,102,48,48'/>
+  <human wfCompanyId='BIZ' enableRemind='false' canNotice='false' canReassign='false' canCoordinate='false' form='cf572edb08e44ef1a4111a9b14ada998' formName='舆情点评' message-notice='默认' g='133,100,90,50' name='发起'>
+    <form>[]</form>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;舆情点评发起岗&quot;,&quot;code&quot;:&quot;CRS_OPINION_001&quot;,&quot;typecode&quot;:&quot;pos&quot;,&quot;typename&quot;:&quot;岗位&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:4,&quot;_rowKey&quot;:5}]</participants>
+    <extaction/>
+    <variable name='CURRENT_NODE_ID' type='String' init-expr='launch'/>
+  <transition wfCompanyId='BIZ' name='transition 1' to='action 1'/>
+  </human>
+  <action wfCompanyId='BIZ' assignNext='0' irrevocable='0' comeBack='0' g='243,110,30,30' text='提交' name='action 1'>
+    <form>[]</form>
+    <transition name='to 人工 2' to='审核'/>
+  </action>
+  <human wfCompanyId='BIZ' enableRemind='false' canNotice='false' canReassign='false' canCoordinate='false' form='cf572edb08e44ef1a4111a9b14ada998' formName='舆情点评' message-notice='默认' g='295,100,90,50' name='审核'>
+    <form>[]</form>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;舆情点评审核岗&quot;,&quot;code&quot;:&quot;CRS_OPINION_002&quot;,&quot;typecode&quot;:&quot;pos&quot;,&quot;typename&quot;:&quot;岗位&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:2,&quot;_rowKey&quot;:3}]</participants>
+    <extaction/>
+    <variable name='CURRENT_NODE_ID' type='String' init-expr='audit'/>
+  <transition wfCompanyId='BIZ' name='transition 2' to='action 2'/>
+  <transition name='transition 6' to='action 3'/>
+  </human>
+  <action wfCompanyId='BIZ' assignNext='0' irrevocable='0' comeBack='0' g='405,110,30,30' text='同意' name='action 2'>
+    <form>[]</form>
+    <transition name='to end' to='end'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' g='325,172,30,30' text='驳回' name='action 3'>
+    <form>[]</form>
+    <transition name='to 人工 1' g='178,185:96,-23' to='发起'/>
+  </action>
+</process>
+
 
 }
