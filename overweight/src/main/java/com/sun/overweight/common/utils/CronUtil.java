@@ -29,7 +29,7 @@ public class CronUtil {
      * @param expression
      * @return
      */
-    public static List<String> getListByExpression(Date createDate,String expression) {
+    public static List<String> getListByExpression(Date createDate, String expression) {
         List<String> timeList = new ArrayList<>();
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

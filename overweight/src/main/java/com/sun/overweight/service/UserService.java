@@ -1,5 +1,7 @@
 package com.sun.overweight.service;
 
+import com.sun.overweight.ramp.common.model.CrdmBaseComptCfgDetailResponseVo;
+import com.sun.overweight.ramp.common.model.CrdmBaseComptCfgDetailTypeVo;
 import com.sun.overweight.ramp.common.model.Users;
 import org.springframework.stereotype.Service;
 
@@ -25,4 +27,10 @@ public interface UserService {
      * @return
      */
     Users findDs2User(String name);
+
+    /**
+     * aa
+     * @return
+     */
+    List<CrdmBaseComptCfgDetailTypeVo> getInfo();
 }

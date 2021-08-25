@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sun.overweight.mapper.UserMapper">
+    <resultMap id="aa" type="com.sun.overweight.ramp.common.model.CrdmBaseComptCfgDetailTypeVo">
+        <result column="area_id" jdbcType="VARCHAR" property="areaId"/>
+        <result column="area_name" jdbcType="VARCHAR" property="areaName"/>
+        <result column="label_name" jdbcType="VARCHAR" property="labelName"/>
+        <result column="mod_label_name" jdbcType="VARCHAR" property="modLabelName"/>
+        <result column="label_type" jdbcType="VARCHAR" property="labelType"/>
+        <result column="type_id" jdbcType="VARCHAR" property="typeId"/>
+        <result column="value" jdbcType="VARCHAR" property="value"/>
+    </resultMap>
     <select id="selectUser" resultType="com.sun.overweight.ramp.common.model.Users">
         select * from person
         <where>
@@ -8,5 +17,10 @@
                 and name = #{name}
             </if>
         </where>
+    </select>
+
+    <select id="getInfo" resultMap="aa">
+        select * from crdm_base_comp_cfg a left join crdm_base_comp_type b
+        on a.uuid = b.parent_id
     </select>
 </mapper>

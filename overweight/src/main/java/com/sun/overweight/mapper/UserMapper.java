@@ -1,5 +1,6 @@
 package com.sun.overweight.mapper;
 
+import com.sun.overweight.ramp.common.model.CrdmBaseComptCfgDetailTypeVo;
 import com.sun.overweight.ramp.common.model.Users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -20,4 +21,10 @@ public interface UserMapper {
      * @return
      */
     Users selectUser(@Param("name") String name);
+
+    /**
+     * a
+     * @return
+     */
+    List<CrdmBaseComptCfgDetailTypeVo> getInfo();
 }
