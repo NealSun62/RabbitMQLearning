@@ -11,7 +11,7 @@ import java.io.*;
 
 /**
  * @author gezc30201
- * @description excel转pdf 解决折叠问题（列太多）
+ * @description excel转pdf 解决折叠问题（列太多） Office文件预览
  * @date 2020/5/9
  */
 //@Slf4j
