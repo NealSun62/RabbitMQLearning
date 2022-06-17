@@ -183,7 +183,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.54</version>
+            <version>1.2.83</version>
         </dependency>
         <!-- 这个包很重要，如果缺失的话会出现各种奇怪的异常，不是未找到类哦！ -->
         <dependency>
