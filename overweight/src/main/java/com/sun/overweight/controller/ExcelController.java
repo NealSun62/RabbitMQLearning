@@ -1,32 +1,27 @@
 package com.sun.overweight.controller;
 
-import com.google.common.collect.Lists;
-import com.sun.overweight.common.utils.BeanUtil;
-import com.sun.overweight.entity.EasyExcelParams;
-import com.sun.overweight.ramp.common.model.*;
+import com.alibaba.fastjson.JSONArray;
+import com.sun.overweight.common.utils.excel.ExcelUtils;
+import com.sun.overweight.ramp.common.model.Users;
 import com.sun.overweight.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.util.CellRangeAddressList;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.net.URLEncoder;
+import java.math.BigDecimal;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * @author sunwx33102
@@ -34,103 +29,46 @@ import java.util.stream.Collectors;
  * @date 2021-05-14 14:48
  */
 @Controller
-@RequestMapping(value = "/user")
-public class UserController {
+@RequestMapping(value = "/excel")
+public class ExcelController {
 
-    @Resource(name = "userService")
-    UserService userService;
-
-    @GetMapping("getUser1")
-    @ResponseBody
-    @ApiOperation(value = "用户", notes = "用户")
-    public Users getUser1(@RequestParam("name") String name) {
-        Users users = userService.findDs1User(name);
-        return users;
-    }
-
-    @GetMapping("getUser2")
-    @ResponseBody
-    @ApiOperation(value = "用户", notes = "用户")
-    public Users getUser2(@RequestParam("name") String name) {
-        Users users = userService.findDs2User(name);
-        return users;
-
-    }
-
-    @GetMapping("getInfo2")
+    @GetMapping("dropList")
     @ResponseBody
     @ApiOperation(value = "info", notes = "getInfo")
-    public static void writeExcels(HttpServletResponse response) throws IOException {
-        //创建工作薄
-        HSSFWorkbook workbook = new HSSFWorkbook();
-        //创建用户工作表
-        HSSFSheet sheet = workbook.createSheet("动态获取");
-        //创建行
-        HSSFRow rows = sheet.createRow(0);
-        //动态添加的所有表头行构成一个集合headList
-        List<List<String>> headList = new ArrayList<List<String>>();
-        List<Map> mapList = new ArrayList<>();
-        Map map0 = new HashMap();
-        map0.put("form_title", " ");
-        map0.put(" ","指标1");
-        map0.put("2020","2020指标1的值");
-        map0.put("2021","2021指标1的值");
-        Map map1 = new HashMap();
-        map1.put("form_title", "2020");
-        map1.put(" ","指标2");
-        map1.put("2020","2020指标2的值");
-        map1.put("2021","2021指标2的值");
-        Map map2 = new HashMap();
-        map2.put("form_title", "2021");
-        map2.put(" ", "指标3");
-        map2.put("2020","2020指标3的值");
-        map2.put("2021","2021指标3的值");
-        mapList.add(map0);
-        mapList.add(map1);
-        mapList.add(map2);
-        // 第 n 行 的表头
-        int j = 0;
-        for (Map map : mapList) {
-            //创建列
-            rows.createCell(j).setCellValue((String) map.get("form_title"));
-            j++;
-        }
-        j = 1;
-        // 第 n 行的数据
-        for (Map<String, Object> maps : mapList) {
-            HSSFRow rowss = sheet.createRow(j);
-            int i = 0;
-            for (Map map : mapList) {
-                //创建列
-                rowss.createCell(i).setCellValue((String) maps.get(map.get("form_title")));
-                i++;
-            }
-            j++;
-        }
+    public static void dropList(HttpServletResponse response) throws IOException {
+        List<Object> head = Arrays.asList("主体名称","定性指标1","定量指标2","定性指标2","定性没映射指标3");
+        String tempFileName = "insMaintTmpl.xlsx";
+        List<Object> infos = new ArrayList<>();
+        infos.add("万科企业股份");
+        infos.add("国企");
+        infos.add("-1235.25");
+        infos.add("一公里以内");
+        infos.add("游泳");
+        List<Object> infos2 = new ArrayList<>();
+        infos2.add("恒生电子");
+        infos2.add("名企");
+        infos2.add("2351536156415451.5131532534");
+        infos2.add("两公里以内");
+        infos2.add("跳舞");
 
-        //字节输出流
-        OutputStream out = response.getOutputStream();
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        try {
-            workbook.write(outputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            outputStream.close();
-        }
-        //http请求头
-        String name = System.currentTimeMillis() +"sunwx.xlsx";
-        response.setHeader("Content-Disposition",
-                "inline;filename=" + new String(name.getBytes("utf-8"),"iso8859-1"));
-        workbook.write(outputStream);
-        out.write(outputStream.toByteArray());
-        try {
-            outputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            outputStream.close();
-        }
+        List<List<Object>> sheetDataList = new ArrayList<>();
+        sheetDataList.add(head);
+        sheetDataList.add(infos);
+        sheetDataList.add(infos2);
+
+        Map<Integer, List<String>> selectMap = new HashMap<>();
+        selectMap.put(1, Arrays.asList("国企","一般企业","名企"));
+        selectMap.put(3, Arrays.asList("两公里以内","三公里以外","一公里以内"));
+        String fileName = "机构指标维护导出"+ System.currentTimeMillis();
+        ExcelUtils.export(response, null, fileName,"机构指标数据维护", sheetDataList, selectMap, tempFileName);
+
+    }
+
+    @PostMapping("/import")
+    public JSONArray importUser(@RequestPart("file") MultipartFile file) throws Exception {
+        JSONArray array = ExcelUtils.readMultipartFile(file);
+        System.out.println("导入数据为:" + array);
+        return array;
     }
 
     @GetMapping("getInfo3")

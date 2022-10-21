@@ -156,68 +156,6 @@ public class DownloadController {
 
     }
 
-//    /**
-//     * 方法简介: 下载聚源附件
-//     *
-//     * @param response :
-//     * @param attachId : 附件ID
-//     * @return
-//     * @author: zhangli25087 zhangli25087@hundsun.com
-//     * @date: 2019/6/1 16:50 <br>
-//     * @describe:
-//     */
-//    @GetMapping("/downloadGilAttach")
-//    public void downloadGilAttach(HttpServletResponse response,
-//                                  @RequestParam(name = "attach_name", required = false) String attachName,
-//                                  @RequestParam(name = "attach_id", required = false) String attachId,
-//                                  @RequestParam(name = "attach_date", required = false) Integer attachDate,
-//                                  @RequestParam(name = "attach_type", required = false) Integer attachType,
-//                                  @RequestParam(name = "attach_table", required = false) String attachTable) {
-//        log.info("请求聚源附件参数：attachId【" + attachId.replaceAll("[\r\n]", "") + "】、" + "attachTable【"
-//                + attachTable.replaceAll("[\r\n]", "") + "】");
-//        fileName fileName = gilAttachService.downloadGildAttach(attachId, attachName, attachDate,
-//                attachType, attachTable);
-//        if (fileName == null || fileName.getBytes() == null) {
-//            log.warn("聚源附件获取为空。附件id:" + attachId.replaceAll("[\r\n]", ""));
-//        }
-//        OutputStream os = null;
-//        try {
-//            response.setContentType("application/msexcel;charset=utf-8");
-//            response.setHeader("content-disposition",
-//                    "attachment;filename=" + java.net.URLEncoder
-//                            .encode(fileName.getFileName()==null?"":fileName.getFileName(), "UTF-8")
-//                            + fileSuffix);
-//            os = response.getOutputStream();
-//            os.write(fileName.getBytes(), 0, fileName.getBytes().length);
-//        } catch (Exception e) {
-//            log.error("下载聚源附件报错。附件id:" + attachId.replaceAll("[\r\n]", ""));
-//            //log.error(ExceptionUtils.getTrace(e));
-//        } finally {
-//            if (os != null) {
-//                try {
-//                    os.flush();
-//                    os.close();
-//                } catch (IOException e) {
-//                    //log.error(ExceptionUtils.getTrace(e));
-//                }
-//            }
-//        }
-//    }
-
-    //    @PostMapping("/fileNameBytes")
-//    public byte[] fileNameBytes(HttpServletResponse response, @RequestParam(value = "attach_id") String attachId) {
-//        try {
-//            fileName fileName = sysAttachService.fileName(attachId).getResult();
-//            if (fileName == null || fileName.getBytes() == null) {
-//                log.warn("附件获取为空。附件id:" + attachId.replaceAll("[\r\n]", ""));
-//                return null;
-//            }
-//            return fileName.getBytes();
-//        }catch (Exception e){
-//            log.error("下载附件失败：" + e);
-//            return null;
-//        }
-//    }
     //读取文件到byte[]
     private static byte[] getFileBytes(String file) {
         try {

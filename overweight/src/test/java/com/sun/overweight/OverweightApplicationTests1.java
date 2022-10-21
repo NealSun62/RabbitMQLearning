@@ -1,21 +1,16 @@
 package com.sun.overweight;
 
 import com.sun.overweight.controller.UserController;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import com.sun.overweight.entity.RemoveHandler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @param
@@ -32,34 +27,72 @@ public class OverweightApplicationTests1 {
 
     @Test
     public static void main(String[] args) throws Exception {
-        int four = 2;
-        System.out.println("ln:" + Math.log(four));
-        System.out.println("根号:" + Math.sqrt(four));
-        System.out.println("log10:" +Math.log10(four));
-        System.out.println("平方:" +  Math.pow(four, 2));
-        System.out.println("81的开方(pow)："+Math.pow(four, 1.0/3.0));
+        List<RemoveHandler> input = new ArrayList<>();
+        RemoveHandler removeHandler1 = RemoveHandler.builder().insNum("a").value(new BigDecimal("10.1")).build();
+        RemoveHandler removeHandler2 = RemoveHandler.builder().insNum("b").value(new BigDecimal("30.3")).build();
+        RemoveHandler removeHandler3 = RemoveHandler.builder().insNum("c").value(new BigDecimal("-20")).build();
+        RemoveHandler removeHandler4 = RemoveHandler.builder().insNum("d").value(null).build();
+        input.add(removeHandler1);
+        input.add(removeHandler2);
+        input.add(removeHandler3);
+        input.add(removeHandler4);
+        Boolean flag = true;
+//        Boolean flag = false;
+        if (flag){
+            // 从小到大-nulllast
+            input.sort(Comparator.nullsLast(Comparator.comparing(RemoveHandler::getValue,
+                    Comparator.nullsLast(BigDecimal::compareTo))));
+        }else {
+            // 从大到小-nulllast
+            input.sort(Comparator.nullsLast(Comparator.comparing(RemoveHandler::getValue,
+                    Comparator.nullsFirst(BigDecimal::compareTo)).reversed()));
+        }
 
+        List<RemoveHandler> sortInput = new ArrayList<>(input);
+//        Map<String, BigDecimal> results = sortInput.parallelStream()
+//                .collect(LinkedHashMap::new, (m, v)->m.put(v.getInsNum(), v.getValue()), LinkedHashMap::putAll);
+//        List<Map<String, BigDecimal>> list = Collections.synchronizedList(new ArrayList<>());
+//        Set<Map.Entry<String, BigDecimal>> entries = results.entrySet();
+//        for (Map.Entry entry : entries) {
+//            String tempInsNum = (String) entry.getKey();
+//            BigDecimal tempIndVal = (BigDecimal) entry.getValue();
+//            Map<String, BigDecimal> currentMap = new HashMap<>();
+//            currentMap.put(tempInsNum, tempIndVal);
+//            list.add(currentMap);
+//        }
+//        List<RemoveHandler> pxlist = new ArrayList<>();
+        for (int i = 0; i < sortInput.size(); i++) {
+            System.out.println("insNum:" + sortInput.get(i) + ";排名:" + i );
+
+        }
+
+//        Set<Map.Entry<String, BigDecimal>> entries2 = results.entrySet();
+//        for (Map.Entry entry : entries2) {
+//            String tempInsNum = (String) entry.getKey();
+//            BigDecimal tempIndVal = (BigDecimal) entry.getValue();
+//            System.out.println("insNum:" + tempInsNum + ";排名:" + tempIndVal );
+//        }
     }
 
-    public Set<String> getExcelHeaders(String fileUrl) throws Exception {
-        File file = new File(fileUrl);
-        InputStream is = new FileInputStream(file);
-        Workbook workbook = new XSSFWorkbook(is);
-        Sheet sheet = workbook.getSheetAt(0);
-        System.out.println(sheet.getLastRowNum());
-        //获取 excel 第一行数据（表头）
-        Row row = sheet.getRow(0);
-        //存放表头信息
-        Set<String> set = new HashSet<>();
-        //算下有多少列
-        int colCount = sheet.getRow(0).getLastCellNum();
-        System.out.println(colCount);
-        for (int j = 0; j < colCount; j++) {
-            Cell cell = row.getCell(j);
-            String cellValue = cell.getStringCellValue().trim();
-            set.add(cellValue);
+    /**
+     * 计算几何标准差
+     *
+     * @param values 计算数据数组
+     * @return 几何标准差
+     */
+    private static double geoStandardDeviation(double[] values) {
+        double v = 0.0;
+        double sqrValue = 0.0;
+        double powValue = 0.0;
+        if (values != null) {
+            int length = values.length;
+            for (double d : values) {
+                sqrValue = sqrValue + Math.pow(Math.log10(d), 2);
+                powValue = powValue + Math.log10(d);
+            }
+            v = Math.pow(10, Math.sqrt((sqrValue - Math.pow(powValue, 2) / (double) length) / (double) (length - 1)));
         }
-        return set;
+        return v;
     }
 
 }
