@@ -29,7 +29,7 @@ public class OverweightApplicationTests1 {
     public static void main(String[] args) throws Exception {
         List<RemoveHandler> input = new ArrayList<>();
         RemoveHandler removeHandler1 = RemoveHandler.builder().insNum("a").value(new BigDecimal("10.1")).build();
-        RemoveHandler removeHandler2 = RemoveHandler.builder().insNum("b").value(new BigDecimal("30.3")).build();
+        RemoveHandler removeHandler2 = RemoveHandler.builder().insNum("a").value(new BigDecimal("30.3")).build();
         RemoveHandler removeHandler6 = RemoveHandler.builder().insNum("g").value(null).build();
         RemoveHandler removeHandler3 = RemoveHandler.builder().insNum("c").value(new BigDecimal("-20")).build();
         RemoveHandler removeHandler5 = RemoveHandler.builder().insNum("f").value(new BigDecimal("-20")).build();
@@ -85,14 +85,12 @@ public class OverweightApplicationTests1 {
             } else {
                 if (aa != null && flagNum != null && flagNum.compareTo(aa) != 0) {
                     flagNum = aa;
-                    rankNum = rankNum + 1;
-                    rankNum = rankNum + sameNum;
+                    rankNum = rankNum + 1+ sameNum;
                     System.out.println("insNum:" + removeHandler + ";排名two:" + rankNum);
                     sameNum = 0;
                 } else if (aa == null && flagNum != null) {
                     flagNum = aa;
-                    rankNum++;
-                    rankNum = rankNum + sameNum;
+                    rankNum = rankNum +1+ sameNum;
                     System.out.println("insNum:" + removeHandler + ";排名three:" + rankNum);
                     sameNum = 0;
                 } else if (aa != null && flagNum != null && flagNum.compareTo(aa) == 0) {
