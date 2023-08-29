@@ -9,8 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * @param
@@ -79,27 +80,23 @@ public class OverweightApplicationTests1 {
         for (int i = 0; i < sortInput.size(); i++) {
             RemoveHandler removeHandler = sortInput.get(i);
             BigDecimal aa = removeHandler.getValue();
+            if (aa == null) {
+                System.out.println("insNum:" + removeHandler + ";排名one:" + null + "int i" + i);
+                continue;
+            }
             if (i == 0) {
                 flagNum = aa;
                 System.out.println("insNum:" + removeHandler + ";排名one:" + rankNum);
             } else {
-                if (aa != null && flagNum != null && flagNum.compareTo(aa) != 0) {
+                if (flagNum != null && flagNum.compareTo(aa) != 0) {
                     flagNum = aa;
-                    rankNum = rankNum + 1+ sameNum;
+                    rankNum = rankNum + 1 + sameNum;
                     System.out.println("insNum:" + removeHandler + ";排名two:" + rankNum);
                     sameNum = 0;
-                } else if (aa == null && flagNum != null) {
-                    flagNum = aa;
-                    rankNum = rankNum +1+ sameNum;
-                    System.out.println("insNum:" + removeHandler + ";排名three:" + rankNum);
-                    sameNum = 0;
-                } else if (aa != null && flagNum != null && flagNum.compareTo(aa) == 0) {
+                } else {
                     flagNum = aa;
                     sameNum = sameNum + 1;
                     System.out.println("insNum:" + removeHandler + ";排名four:" + rankNum);
-                } else if (aa == null) {
-                    rankNum = rankNum + sameNum;
-                    System.out.println("insNum:" + removeHandler + ";排名five:" + rankNum);
                 }
             }
 

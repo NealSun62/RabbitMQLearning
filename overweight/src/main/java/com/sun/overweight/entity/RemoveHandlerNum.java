@@ -18,12 +18,12 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 @FieldNameConstants
-public class RemoveHandler implements Serializable {
+public class RemoveHandlerNum implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
      * 主体编码
      */
-    private String insNum;
+    private int pos;
 
     /**
      * 指标值
@@ -31,9 +31,9 @@ public class RemoveHandler implements Serializable {
     private BigDecimal value;
 
     /**
-     * 指标值
+     * 原始指标值
      */
-    private int pos;
+    private BigDecimal oriValue;
 
     /**
      * 指标值
