@@ -1,65 +1,31 @@
 package com.sun.overweight;
 
-import com.google.common.collect.Lists;
 import com.sun.overweight.common.utils.CommUtil;
 import com.sun.overweight.common.utils.DateUtil;
-import com.sun.overweight.controller.UserController;
-import org.junit.Test;
-import org.apache.poi.xwpf.usermodel.*;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.util.Units;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTBody;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTDocument1;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTParagraph;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTP;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTbl;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTblRow;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTblCell;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTcPr;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTR;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTPicture;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTInline;
-import org.w3c.dom.*;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.geom.*;
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xwpf.usermodel.*;
+import org.apache.xmlbeans.XmlCursor;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.openxmlformats.schemas.drawingml.x2006.main.*;
+import org.openxmlformats.schemas.drawingml.x2006.picture.*;
+import org.openxmlformats.schemas.drawingml.x2006.wordprocessingDrawing.CTInline;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.stream.Collectors;
-
 import org.apache.poi.xwpf.usermodel.*;
-import org.apache.poi.util.Units;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.*;
-
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.*;
+import java.math.BigInteger;
+import java.util.Date;
 
 /**
  * @param
@@ -70,51 +36,60 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class OverweightApplicationTests5 {
-    public static void main(String[] args) throws Exception {
-        String templatePath = "template_word_path"; // 模板文件路径
-        String outputPath = "output_word_path"; // 输出文件路径
-        String imagePath = "image_path"; // 图片文件路径
-        String[] data = {"张三", "男", "25"}; // 需要填充的数据
+    public static void main(String[] args) {
+        String time = CommUtil.uuid();
+        String templateFilePath = "E:\\tmp1.docx";
+        String outputFilePath = "E:\\" + time + ".docx";
+        String imagePath = "E:\\2.jpg"; // 替换成你实际的图片路径
 
-        fillWordTemplate(templatePath, outputPath, imagePath, data);
+        try (InputStream inputStream = new FileInputStream(templateFilePath);
+             OutputStream outputStream = new FileOutputStream(outputFilePath)) {
+            XWPFDocument document = new XWPFDocument(inputStream);
+
+            // 替换文档中的标记
+            replacePlaceholder(document, "#{insName}", "万科企业股份有限公司"); // 替换成你实际的占位符和相关内容
+
+            // 插入图片到指定位置
+            insertImage(document, "#{pic}", imagePath); // 替换成你实际的图片占位符
+
+            // 保存文档到输出文件
+            document.write(outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static void fillWordTemplate(String templatePath, String outputPath, String imagePath, String[] data) throws Exception {
-        // 读取模板文件
-        FileInputStream fis = new FileInputStream(new File(templatePath));
-        XWPFDocument document = new XWPFDocument(fis);
-        fis.close();
-
-        // 获取正文内容
-        List<XWPFParagraph> paragraphs = document.getParagraphs();
-        for (XWPFParagraph paragraph : paragraphs) {
-            List<XWPFRun> runs = paragraph.getRuns();
-            for (XWPFRun run : runs) {
-                String text = run.getText(0);
-                if (text != null) {
-                    for (int i = 0; i < data.length; i++) {
-                        text = text.replace("{" + i + "}", data[i]);
+    private static void replacePlaceholder(XWPFDocument document, String placeholder, String replacement) {
+        for (XWPFParagraph paragraph : document.getParagraphs()) {
+            String text = paragraph.getText();
+            if (text.contains(placeholder)) {
+                for (XWPFRun run : paragraph.getRuns()) {
+                    String runText = run.getText(0);
+                    if (runText != null && runText.contains(placeholder)) {
+                        runText = runText.replace(placeholder, replacement);
+                        run.setText(runText, 0);
                     }
-                    run.setText(text, 0); // 更新文本内容
                 }
             }
         }
-
-        // 插入图片到指定位置（这里以第一个表格为例）
-        List<XWPFTable> tables = document.getTables();
-        if (!tables.isEmpty()) {
-            XWPFTable table = tables.get(0); // 获取第一个表格
-            int rowIndex = 1; // 插入图片的行索引（从1开始）
-            int colIndex = 1; // 插入图片的列索引（从1开始）
-            insertImageToTable(table, rowIndex, colIndex, imagePath); // 插入图片到表格中指定位置的方法，需要自定义实现该方法，参考下面的代码示例
-        } else {
-            System.out.println("未找到表格");
-        }
-
-        // 保存输出文件
-        FileOutputStream fos = new FileOutputStream(new File(outputPath));
-        document.write(fos); // 将修改后的文档写入输出文件流中，并关闭输出流和文档对象
-        fos.close();
-        document.close(); // 关闭文档对象，释放资源
     }
+
+    private static void insertImage(XWPFDocument document, String placeholder, String imagePath) {
+        for (XWPFParagraph paragraph : document.getParagraphs()) {
+            for (XWPFRun run : paragraph.getRuns()) {
+                String text = run.getText(0);
+                if (text != null && text.contains(placeholder)) {
+                    text = text.replace(placeholder, "");
+                    run.setText(text, 0);
+                    try (InputStream imageStream = new FileInputStream(imagePath)) {
+                        run.addBreak();
+                        run.addPicture(imageStream, XWPFDocument.PICTURE_TYPE_PNG, imagePath, Units.toEMU(200), Units.toEMU(200)); // 调整图片尺寸
+                    } catch (IOException | InvalidFormatException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
 }

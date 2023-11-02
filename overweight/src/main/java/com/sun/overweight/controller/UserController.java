@@ -200,7 +200,7 @@ public class UserController {
             for (int i = 0, length = list.length; i < length; i++) {
                 row = hidden.createRow(i);
                 cell = row.createCell(0);
-                cell.setCellType(Cell.CELL_TYPE_STRING);
+//                cell.setCellType(Cell.CELL_TYPE_STRING);
                 cell.setCellValue(list[i]);
             }
             Name namedCell = workbook.createName();

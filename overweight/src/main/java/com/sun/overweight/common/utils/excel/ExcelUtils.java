@@ -358,26 +358,26 @@ public class ExcelUtils {
 
     private static String getCellValue(Cell cell) {
         // 空白或空
-        if (cell == null || cell.getCellTypeEnum() == CellType.BLANK) {
-            return "";
-        }
-        // String类型
-        if (cell.getCellTypeEnum() == CellType.STRING) {
-            String val = cell.getStringCellValue();
-            if (val == null || val.trim().length() == 0) {
-                return "";
-            }
-            return val.trim();
-        }
-        // 数字类型
-        if (cell.getCellTypeEnum() == CellType.NUMERIC) {
-            // 科学计数法类型
-            return NUMBER_FORMAT.format(cell.getNumericCellValue()) + "";
-        }
-        // 布尔值类型
-        if (cell.getCellTypeEnum() == CellType.BOOLEAN) {
-            return cell.getBooleanCellValue() + "";
-        }
+//        if (cell == null || cell.getCellTypeEnum() == CellType.BLANK) {
+//            return "";
+//        }
+//        // String类型
+//        if (cell.getCellTypeEnum() == CellType.STRING) {
+//            String val = cell.getStringCellValue();
+//            if (val == null || val.trim().length() == 0) {
+//                return "";
+//            }
+//            return val.trim();
+//        }
+//        // 数字类型
+//        if (cell.getCellTypeEnum() == CellType.NUMERIC) {
+//            // 科学计数法类型
+//            return NUMBER_FORMAT.format(cell.getNumericCellValue()) + "";
+//        }
+//        // 布尔值类型
+//        if (cell.getCellTypeEnum() == CellType.BOOLEAN) {
+//            return cell.getBooleanCellValue() + "";
+//        }
         // 错误类型
         return cell.getCellFormula();
     }
