@@ -2,6 +2,8 @@ package com.sun.overweight;
 
 import com.sun.overweight.common.utils.CommUtil;
 import com.sun.overweight.common.utils.DateUtil;
+import com.sun.overweight.entity.RankVo;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.util.Units;
@@ -24,8 +26,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.*;
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
+
+import static com.sun.overweight.common.utils.JsonUtil.toJson;
 
 /**
  * @param
@@ -37,41 +45,69 @@ import java.util.Date;
 @SpringBootTest
 public class OverweightApplicationTests5 {
     public static void main(String[] args) {
-        String time = CommUtil.uuid();
-        String templateFilePath = "E:\\tmp1.docx";
-        String outputFilePath = "E:\\" + time + ".docx";
-        String imagePath = "E:\\2.jpg"; // 替换成你实际的图片路径
+        List<RankVo> inputList = new ArrayList<>();
+        RankVo rankVo1 = RankVo.builder().code("code1").oriValue(new BigDecimal("0.2")).value(new BigDecimal("1")).build();
+        RankVo rankVo2 = RankVo.builder().code("code2").oriValue(new BigDecimal("0.2")).value(new BigDecimal("2")).build();
+        RankVo rankVo3 = RankVo.builder().code("code3").oriValue(new BigDecimal("0.2")).value(new BigDecimal("3")).build();
+        RankVo rankVo4 = RankVo.builder().code("code4").oriValue(new BigDecimal("0.2")).value(new BigDecimal("4")).build();
+        RankVo rankVo9 = RankVo.builder().code("code9").oriValue(null).value(null).build();
+        RankVo rankVo5 = RankVo.builder().code("code5").oriValue(new BigDecimal("0.2")).value(new BigDecimal("5")).build();
+        RankVo rankVo8 = RankVo.builder().code("code8").oriValue(new BigDecimal("0.2")).value(new BigDecimal("5")).build();
+        RankVo rankVo6 = RankVo.builder().code("code6").oriValue(new BigDecimal("0.2")).value(new BigDecimal("6")).build();
+        RankVo rankVo7 = RankVo.builder().code("code7").oriValue(new BigDecimal("0.2")).value(new BigDecimal("7")).build();
+        inputList.add(rankVo1);
+        inputList.add(rankVo2);
+        inputList.add(rankVo3);
+        inputList.add(rankVo4);
+        inputList.add(rankVo5);
+        inputList.add(rankVo6);
+        inputList.add(rankVo7);
+        inputList.add(rankVo8);
+        inputList= calRank(inputList, "1");
+        System.out.println(toJson(inputList));
 
-        try (InputStream inputStream = new FileInputStream(templateFilePath);
-             OutputStream outputStream = new FileOutputStream(outputFilePath)) {
-            XWPFDocument document = new XWPFDocument(inputStream);
-
-            // 替换文档中的标记
-            replacePlaceholder(document, "#{insName}", "万科企业股份有限公司"); // 替换成你实际的占位符和相关内容
-
-            // 插入图片到指定位置
-            insertImage(document, "#{pic}", imagePath); // 替换成你实际的图片占位符
-
-            // 保存文档到输出文件
-            document.write(outputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
-    private static void replacePlaceholder(XWPFDocument document, String placeholder, String replacement) {
-        for (XWPFParagraph paragraph : document.getParagraphs()) {
-            String text = paragraph.getText();
-            if (text.contains(placeholder)) {
-                for (XWPFRun run : paragraph.getRuns()) {
-                    String runText = run.getText(0);
-                    if (runText != null && runText.contains(placeholder)) {
-                        runText = runText.replace(placeholder, replacement);
-                        run.setText(runText, 0);
-                    }
+    public static  List<RankVo> calRank(List<RankVo> inputList, String dir) {
+        if (CollectionUtils.isEmpty(inputList)) {
+            return new ArrayList<>();
+        }
+        // 正方向：如收益率，值越大，排名越靠前，rankNum越小
+        if ("1".equals(dir)) {
+            // 值从大到小-nulllast
+            inputList.sort(Comparator.nullsLast(Comparator.comparing(RankVo::getValue,
+                    Comparator.nullsFirst(BigDecimal::compareTo)).reversed()));
+        } else {
+            // 值从小到大-nulllast
+            inputList.sort(Comparator.nullsLast(Comparator.comparing(RankVo::getValue,
+                    Comparator.nullsLast(BigDecimal::compareTo))));
+        }
+        List<RankVo> sortInput = new ArrayList<>(inputList);
+        BigDecimal flagNum = null;
+        int rankNum = 1;
+        int sameCount = 0;
+        for (int i = 0; i < sortInput.size(); i++) {
+            RankVo rankVo = sortInput.get(i);
+            BigDecimal value = rankVo.getValue();
+            if (value == null) {
+                rankVo.setRankNum(null);
+                continue;
+            }
+            if (i == 0) {
+                flagNum = value;
+            } else {
+                if (flagNum != null && flagNum.compareTo(value) != 0) {
+                    flagNum = value;
+                    rankNum = rankNum + 1 + sameCount;
+                    sameCount = 0;
+                } else {
+                    flagNum = value;
+                    sameCount = sameCount + 1;
                 }
             }
+            rankVo.setRankNum(rankNum);
         }
+        return sortInput;
     }
 
     private static void insertImage(XWPFDocument document, String placeholder, String imagePath) {
