@@ -40,7 +40,8 @@ public class OverweightApplicationTests7 {
         map.put("weChatPicture", new PictureRenderData(100, 100, new File("E:\\output.png")));
 
 
-//        // 通过url读取网络图片
+        // 通过url读取网络图片
+        // https://blog.csdn.net/dava_zhang/article/details/122214736
 
         File file = new File("E:\\tmpdoc.docx");//看tmpl目录
         XWPFTemplate template = XWPFTemplate.compile(file).render(map);
