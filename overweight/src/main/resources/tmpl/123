@@ -1,0 +1,88 @@
+SELECT
+	*
+FROM
+	POOL_CONTENT pc
+	LEFT JOIN (
+	SELECT
+		a.scr_num,
+		a.rat_no,
+		a.ins_num,
+		a.ytm,
+		decode( b.equi_type_code, 'P', '1', '0' ) AS prefer_flag,
+		a.maty,
+		a.curr_parv,
+		a.intp_freq_code,
+		a.intr_type_code,
+		a.inta_mode_code,
+		a.at_pd_date,
+		a.audt_rat_grad,
+		a.flow_inst_no
+	FROM
+		(
+		SELECT
+			*
+		FROM
+			(
+			SELECT
+				a.scr_num,
+				a.issr_num AS ins_num,
+				a.srte_date,
+				a.at_pd_date,
+				a.bond_code,
+				f.rat_no,
+				f.rat_tect_time,
+				f.ext_bond_rat_id,
+				f.audt_rat_grad,
+				f.flow_inst_no,
+				a.affi_date,
+				a.pd_code,
+				f.rat_trac_type_code,
+				a.iss_date,
+				a.ytm,
+				a.maty,
+				a.curr_parv,
+				a.intp_freq_code,
+				a.intr_type_code,
+				a.inta_mode_code
+			FROM
+				v_crdm_inf_bond_info a
+				LEFT JOIN (
+				SELECT
+					rat.*
+				FROM
+					(
+					SELECT
+						scr_num,
+						audt_rat_grad,
+						rat_tect_time,
+						rat_tect_matu_time,
+						cmph_grad,
+						rat_no,
+						ext_bond_rat_id,
+						flow_inst_no,
+						rat_jour_id,
+						scor_prsn_num,
+						rat_trac_type_code,
+						row_number ( ) OVER ( PARTITION BY scr_num ORDER BY rat_tect_time DESC ) AS rank
+					FROM
+						crdm_rat_bond_info a
+					) rat
+				WHERE
+					rat.rank = 1
+				) f ON a.scr_num = f.scr_num
+			WHERE
+				1 = 1
+				AND (
+					a.bond_abbr LIKE CONCAT( CONCAT( '%', '218' ), '%' )
+					OR a.bond_code LIKE CONCAT( CONCAT( '%', '218' ), '%' )
+				)
+			) a
+		) a
+		LEFT JOIN var_equi b ON a.scr_num = b.scr_num
+	) bi ON pc.pool_content_id = bi.scr_num
+	LEFT JOIN POOL_GROUP pg ON pc.pool_uuid = pg.uuid
+WHERE
+	1 = 1
+	AND bi.scr_num IS NOT NULL
+	AND ( pc.POOL_UUID IN ( 'e641b6d0-7266-45ae-b6d7-501809a3d838' ) )
+	AND pc.POOL_CONTENT_TYPE = '1';
