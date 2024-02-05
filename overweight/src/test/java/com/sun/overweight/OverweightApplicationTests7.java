@@ -32,14 +32,14 @@ public class OverweightApplicationTests7 {
         } catch (IOException e) {
             System.err.println("转换图片失败： " + e.getMessage());
         }
+
         saveBase64StringAsImage(base64Image, "E:\\output.png");
         Map<String, Object> map = new HashMap<>();
         map.put("name", "tony");
         map.put("age", "18");
         // 读取本地磁盘图片
         map.put("weChatPicture", new PictureRenderData(100, 100, new File("E:\\output.png")));
-
-
+        crs5:v:com.hundsun.fais.crdm.api.service.O32.BondToO32Service:com.hundsun.fais.crdm.api.service.O32.BondToO32Service.bondRatingToO32Export:t3:null:crs-crdm-server
         // 通过url读取网络图片
         // https://blog.csdn.net/dava_zhang/article/details/122214736
 
