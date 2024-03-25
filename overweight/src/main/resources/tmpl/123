@@ -1,88 +1,444 @@
-SELECT
-	*
-FROM
-	POOL_CONTENT pc
-	LEFT JOIN (
-	SELECT
-		a.scr_num,
-		a.rat_no,
-		a.ins_num,
-		a.ytm,
-		decode( b.equi_type_code, 'P', '1', '0' ) AS prefer_flag,
-		a.maty,
-		a.curr_parv,
-		a.intp_freq_code,
-		a.intr_type_code,
-		a.inta_mode_code,
-		a.at_pd_date,
-		a.audt_rat_grad,
-		a.flow_inst_no
-	FROM
-		(
-		SELECT
-			*
-		FROM
-			(
-			SELECT
-				a.scr_num,
-				a.issr_num AS ins_num,
-				a.srte_date,
-				a.at_pd_date,
-				a.bond_code,
-				f.rat_no,
-				f.rat_tect_time,
-				f.ext_bond_rat_id,
-				f.audt_rat_grad,
-				f.flow_inst_no,
-				a.affi_date,
-				a.pd_code,
-				f.rat_trac_type_code,
-				a.iss_date,
-				a.ytm,
-				a.maty,
-				a.curr_parv,
-				a.intp_freq_code,
-				a.intr_type_code,
-				a.inta_mode_code
-			FROM
-				v_crdm_inf_bond_info a
-				LEFT JOIN (
-				SELECT
-					rat.*
-				FROM
-					(
-					SELECT
-						scr_num,
-						audt_rat_grad,
-						rat_tect_time,
-						rat_tect_matu_time,
-						cmph_grad,
-						rat_no,
-						ext_bond_rat_id,
-						flow_inst_no,
-						rat_jour_id,
-						scor_prsn_num,
-						rat_trac_type_code,
-						row_number ( ) OVER ( PARTITION BY scr_num ORDER BY rat_tect_time DESC ) AS rank
-					FROM
-						crdm_rat_bond_info a
-					) rat
-				WHERE
-					rat.rank = 1
-				) f ON a.scr_num = f.scr_num
-			WHERE
-				1 = 1
-				AND (
-					a.bond_abbr LIKE CONCAT( CONCAT( '%', '218' ), '%' )
-					OR a.bond_code LIKE CONCAT( CONCAT( '%', '218' ), '%' )
-				)
-			) a
-		) a
-		LEFT JOIN var_equi b ON a.scr_num = b.scr_num
-	) bi ON pc.pool_content_id = bi.scr_num
-	LEFT JOIN POOL_GROUP pg ON pc.pool_uuid = pg.uuid
-WHERE
-	1 = 1
-	AND bi.scr_num IS NOT NULL
-	AND ( pc.POOL_UUID IN ( 'e641b6d0-7266-45ae-b6d7-501809a3d838' ) )
-	AND pc.POOL_CONTENT_TYPE = '1';
+[INFO] Scanning for projects...
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.5-SNAPSHOT/maven-metadata.xml
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.hundsun.crs:crs-dpppub-server:jar:2.20231005.000
+[WARNING] 'version' contains an expression but should be a constant. @ com.hundsun.crs:crs-dpppub-server:${service.version}, E:\project\������������\dpppub\crs-dpppub-server\pom.xml, line 5, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< com.hundsun.crs:crs-dpppub-server >------------------
+[INFO] Building crs-dpppub-server 2.20231005.000
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildbload-api/2.20231005.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 813 B
+                   
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildbload-api/2.20231005.000-SNAPSHOT/maven-metadata.xml (813 B at 5.9 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 603 B
+                   
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml (603 B at 9.1 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildb-api/2.20231005.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 809 B
+                   
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildb-api/2.20231005.000-SNAPSHOT/maven-metadata.xml (809 B at 11 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utilfile-api/2.20231005.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 631/811 B
+Progress (1): 811 B    
+                   
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utilfile-api/2.20231005.000-SNAPSHOT/maven-metadata.xml (811 B at 16 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/github/spotbugs/spotbugs-annotations/maven-metadata.xml
+Progress (1): 2.3 kB
+                    
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/github/spotbugs/spotbugs-annotations/maven-metadata.xml (2.3 kB at 22 kB/s)
+[WARNING] The POM for com.tongtech:htpclient:jar:2.0.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for com.tongtech:tlq9client:jar:1.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-jobauth-api/2.20231005.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 631/810 B
+Progress (1): 810 B    
+                   
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-jobauth-api/2.20231005.000-SNAPSHOT/maven-metadata.xml (810 B at 7.9 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ crs-dpppub-server ---
+[INFO] com.hundsun.crs:crs-dpppub-server:jar:2.20231005.000
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-rpc-def:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-rpc-t2:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-rpc-api:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-t2:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.9.4:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-event:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-common-extension:jar:3.1.6.3.1:compile
+[INFO] |  |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  |  +- io.netty:netty-all:jar:4.1.68.Final:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.32:compile
+[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.14:compile
+[INFO] |  |  |  \- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  |  +- org.apache.curator:curator-recipes:jar:4.2.0:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.83:compile
+[INFO] |  |  +- com.alibaba:hessian-lite:jar:3.2.13:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-common:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-api:jar:3.1.6.3.1:compile
+[INFO] |  |  |     +- org.apache.skywalking:apm-toolkit-trace:jar:8.1.0:compile
+[INFO] |  |  |     \- org.apache.skywalking:apm-toolkit-opentracing:jar:8.1.0:compile
+[INFO] |  |  |        +- io.opentracing:opentracing-api:jar:0.31.0:compile
+[INFO] |  |  |        \- io.opentracing:opentracing-noop:jar:0.31.0:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-starter:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-trace-json:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-protobuff:jar:3.1.6.3.1:compile
+[INFO] |  |  |     \- com.google.protobuf:protobuf-java-util:jar:3.16.3:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-partition:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-start-async-api:jar:3.1.6.3.1:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.9:compile
+[INFO] |  |  \- io.netty:netty-tcnative-boringssl-static:jar:2.0.42.Final:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-monitor:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-monitor-common:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-monitor-api:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-mvc-jwt:jar:3.1.6.3.1:compile
+[INFO] |  |  |  |  \- com.auth0:java-jwt:jar:3.12.0:compile
+[INFO] |  |  |  +- com.carrotsearch:java-sizeof:jar:0.0.5:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-mvc-path-limit:jar:3.1.6.3.1:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  \- io.micrometer:micrometer-core:jar:1.3.16:compile
+[INFO] |  |  |     +- org.hdrhistogram:HdrHistogram:jar:2.1.11:compile
+[INFO] |  |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-prometheus-monitor-api:jar:3.1.6.3.1:compile
+[INFO] |  |     \- io.micrometer:micrometer-registry-prometheus:jar:1.3.1:compile
+[INFO] |  |        \- io.prometheus:simpleclient_common:jar:0.7.0:compile
+[INFO] |  |           \- io.prometheus:simpleclient:jar:0.7.0:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-log4j2:jar:3.1.6.3.1:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-starter-log4j2:jar:2.2.13.RELEASE:compile
+[INFO] |  |     \- org.apache.logging.log4j:log4j-jul:jar:2.18.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.2.13.RELEASE:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-rpc-def-rule-monitor:jar:3.1.6.3.1:compile
+[INFO] +- com.hundsun.jrescloud:store:jar:2.0.40:compile
+[INFO] |  +- org.rocksdb:rocksdbjni:jar:5.18.3:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.18.0:compile
+[INFO] |  |  \- org.apache.logging.log4j:log4j-api:jar:2.18.0:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.18.0:compile
+[INFO] |  \- cn.hutool:hutool-all:jar:5.8.12:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-amqp:jar:4.1.30.8:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-starter:jar:4.1.30.8:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-springboot2:jar:4.1.30.8:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-mq-monitor-common:jar:4.1.30.8:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-starter-web:jar:2.2.13.RELEASE:compile
+[INFO] |  |     +- org.springframework.boot:spring-boot-starter-json:jar:2.2.13.RELEASE:compile
+[INFO] |  |     |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.14.0-rc2:compile
+[INFO] |  |     |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.14.0-rc2:compile
+[INFO] |  |     +- org.springframework.boot:spring-boot-starter-validation:jar:2.2.13.RELEASE:compile
+[INFO] |  |     |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] |  |     |  \- org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile
+[INFO] |  |     |     +- org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile
+[INFO] |  |     |     \- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  |     +- org.springframework:spring-web:jar:5.2.24.RELEASE:compile
+[INFO] |  |     \- org.springframework:spring-webmvc:jar:5.2.24.RELEASE:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-amqp-configuration:jar:4.1.30.8:compile
+[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-amqp:jar:4.1.30.8:compile
+[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-api:jar:4.1.30.8:compile
+[INFO] |        |  +- com.hundsun.jrescloud.middleware:middleware-base-exception:jar:2.0.6:compile
+[INFO] |        |  |  \- com.hundsun.jrescloud.middleware:middleware-base-common:jar:2.0.6:compile
+[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-adapter:jar:4.1.30.8:compile
+[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-api-compatible:jar:4.1.30.8:compile
+[INFO] |        |  \- com.esotericsoftware:kryo:jar:5.0.0-RC1:compile
+[INFO] |        |     +- com.esotericsoftware:reflectasm:jar:1.11.7:compile
+[INFO] |        |     \- com.esotericsoftware:minlog:jar:1.3.0:compile
+[INFO] |        +- com.rabbitmq:amqp-client:jar:5.18.0:compile
+[INFO] |        +- org.apache.commons:commons-pool2:jar:2.7.0:compile
+[INFO] |        \- com.hundsun.jrescloud.middleware:middleware-tenant-sdk:jar:1.0.0:compile
+[INFO] |           +- com.google.code.gson:gson:jar:2.8.9:compile
+[INFO] |           \- com.hundsun.jrescloud.middleware:middleware-tenant-api:jar:1.0.0:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-cache:jar:4.1.30.8:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-cache:jar:4.1.30.8:compile
+[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-core:jar:4.1.30.8:compile
+[INFO] |        \- com.hundsun.jrescloud:jrescloud-trace-core:jar:3.1.6.3.1:compile
+[INFO] |           \- com.hundsun.jrescloud:jrescloud-log-defender:jar:3.1.6.3.1:compile
+[INFO] |              \- com.hundsun.jrescloud:jrescloud-log4j2:jar:3.1.6.3.1:compile
+[INFO] +- com.h2database:h2:jar:2.1.210:compile
+[INFO] +- com.hundsun.crs:crs-utildbload-api:jar:2.20231005.000-SNAPSHOT:compile
+[INFO] |  +- ch.ethz.ganymed:ganymed-ssh2:jar:build210:compile
+[INFO] |  +- com.hundsun.crs:crs-utildb-api:jar:2.20231005.000-SNAPSHOT:compile
+[INFO] |  |  +- com.hundsun.crs:crs-utilfile-api:jar:2.20231005.000-SNAPSHOT:compile
+[INFO] |  |  |  +- commons-io:commons-io:jar:2.8.0:compile
+[INFO] |  |  |  +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.4.0:compile
+[INFO] |  |  |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:2.2.0:compile
+[INFO] |  |  |  |  |  \- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:2.2.0:compile
+[INFO] |  |  |  |  \- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.4.0:compile
+[INFO] |  |  |  +- com.alibaba:druid:jar:1.2.20:compile
+[INFO] |  |  |  \- commons-collections:commons-collections:jar:3.2.2:compile
+[INFO] |  |  +- org.mybatis:mybatis:jar:3.5.6:compile
+[INFO] |  |  +- com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:compile
+[INFO] |  |  |  +- com.oracle.ojdbc:ucp:jar:19.3.0.0:compile
+[INFO] |  |  |  +- com.oracle.ojdbc:oraclepki:jar:19.3.0.0:compile
+[INFO] |  |  |  +- com.oracle.ojdbc:osdt_cert:jar:19.3.0.0:compile
+[INFO] |  |  |  +- com.oracle.ojdbc:osdt_core:jar:19.3.0.0:compile
+[INFO] |  |  |  +- com.oracle.ojdbc:simplefan:jar:19.3.0.0:compile
+[INFO] |  |  |  \- com.oracle.ojdbc:ons:jar:19.3.0.0:compile
+[INFO] |  |  +- com.oracle.ojdbc:orai18n:jar:19.3.0.0:compile
+[INFO] |  |  \- com.google.guava:guava:jar:32.1.1-jre:compile
+[INFO] |  |     +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |     +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |     +- org.checkerframework:checker-qual:jar:3.33.0:compile
+[INFO] |  |     +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO] |  |     \- com.google.j2objc:j2objc-annotations:jar:2.8:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-starter-lock-redis:jar:2.3.1.0.3:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-lock-redis:jar:2.3.1.0.3:compile
+[INFO] |  |  |  +- org.redisson:redisson:jar:3.17.7:compile
+[INFO] |  |  |  |  +- io.netty:netty-codec:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.netty:netty-buffer:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.netty:netty-transport:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.netty:netty-resolver:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.netty:netty-resolver-dns:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  |  \- io.netty:netty-codec-dns:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.netty:netty-handler:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  +- io.projectreactor:reactor-core:jar:3.3.13.RELEASE:compile
+[INFO] |  |  |  |  +- org.reactivestreams:reactive-streams:jar:1.0.3:compile
+[INFO] |  |  |  |  +- io.reactivex.rxjava3:rxjava:jar:3.1.5:compile
+[INFO] |  |  |  |  +- org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile
+[INFO] |  |  |  |  +- org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile
+[INFO] |  |  |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.0-rc2:compile
+[INFO] |  |  |  |  \- org.jodd:jodd-bean:jar:5.1.6:compile
+[INFO] |  |  |  |     \- org.jodd:jodd-core:jar:5.1.6:compile
+[INFO] |  |  |  \- org.bouncycastle:bcpkix-jdk15on:jar:1.68:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-lock-monitor:jar:2.3.1.0.3:compile
+[INFO] |  \- com.github.spotbugs:spotbugs-annotations:jar:4.8.3:compile
+[INFO] |     \- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.6:compile
+[INFO] +- com.baomidou:mybatis-plus-boot-starter:jar:3.5.3.1:compile
+[INFO] |  +- com.baomidou:mybatis-plus:jar:3.5.3.1:compile
+[INFO] |  |  \- com.baomidou:mybatis-plus-extension:jar:3.5.3.1:compile
+[INFO] |  |     +- com.baomidou:mybatis-plus-core:jar:3.5.3.1:compile
+[INFO] |  |     |  +- com.baomidou:mybatis-plus-annotation:jar:3.5.3.1:compile
+[INFO] |  |     |  \- com.github.jsqlparser:jsqlparser:jar:4.4:compile
+[INFO] |  |     \- org.mybatis:mybatis-spring:jar:2.0.7:compile
+[INFO] |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.2.13.RELEASE:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot:jar:2.2.13.RELEASE:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-jdbc:jar:2.2.13.RELEASE:compile
+[INFO] |     +- com.zaxxer:HikariCP:jar:3.4.5:compile
+[INFO] |     \- org.springframework:spring-jdbc:jar:5.2.24.RELEASE:compile
+[INFO] |        +- org.springframework:spring-beans:jar:5.2.24.RELEASE:compile
+[INFO] |        \- org.springframework:spring-tx:jar:5.2.24.RELEASE:compile
+[INFO] +- com.jcraft:jsch:jar:0.1.55:compile
+[INFO] +- org.apache.hive:hive-jdbc:jar:4.0.0-alpha-1:compile
+[INFO] |  +- org.apache.hive:hive-common:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-classification:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-storage-api:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-standalone-metastore-common:jar:4.0.0-alpha-1:compile
+[INFO] |  |  |  +- com.google.protobuf:protobuf-java:jar:3.16.3:compile
+[INFO] |  |  |  +- org.antlr:antlr-runtime:jar:3.5.2:compile
+[INFO] |  |  |  +- org.antlr:ST4:jar:4.0.4:compile
+[INFO] |  |  |  +- org.apache.derby:derby:jar:10.14.2.0:runtime
+[INFO] |  |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.8:compile
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.4:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
+[INFO] |  |  +- org.apache.orc:orc-core:jar:1.6.9:compile
+[INFO] |  |  |  +- org.apache.orc:orc-shims:jar:1.6.9:compile
+[INFO] |  |  |  +- io.airlift:aircompressor:jar:0.19:compile
+[INFO] |  |  |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[INFO] |  |  |  |  \- javax.activation:javax.activation-api:jar:1.2.0:compile
+[INFO] |  |  |  +- org.jetbrains:annotations:jar:17.0.0:compile
+[INFO] |  |  |  \- org.threeten:threeten-extra:jar:1.5.0:compile
+[INFO] |  |  +- jline:jline:jar:2.14.6:compile
+[INFO] |  |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
+[INFO] |  |  +- joda-time:joda-time:jar:2.10.5:compile
+[INFO] |  |  +- org.apache.logging.log4j:log4j-1.2-api:jar:2.18.0:compile
+[INFO] |  |  +- org.apache.logging.log4j:log4j-web:jar:2.18.0:compile
+[INFO] |  |  +- net.sf.jpam:jpam:jar:1.1:compile
+[INFO] |  |  +- org.apache.tez:tez-api:jar:0.10.1:compile
+[INFO] |  |  |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
+[INFO] |  |  |  +- com.sun.jersey:jersey-client:jar:1.19:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-core:jar:1.19:compile
+[INFO] |  |  |  |     \- javax.ws.rs:jsr311-api:jar:1.1.1:compile
+[INFO] |  |  |  +- com.sun.jersey:jersey-json:jar:1.19:compile
+[INFO] |  |  |  |  +- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |  |  |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  |  |  \- jdk.tools:jdk.tools:jar:1.8:system
+[INFO] |  |  +- com.tdunning:json:jar:1.8:compile
+[INFO] |  |  +- io.dropwizard.metrics:metrics-core:jar:4.1.17:compile
+[INFO] |  |  +- io.dropwizard.metrics:metrics-jvm:jar:4.1.17:compile
+[INFO] |  |  +- io.dropwizard.metrics:metrics-json:jar:4.1.17:compile
+[INFO] |  |  +- com.github.joshelser:dropwizard-metrics-hadoop-metrics2-reporter:jar:0.1.2:compile
+[INFO] |  |  \- javolution:javolution:jar:5.5.1:compile
+[INFO] |  +- org.apache.hive:hive-llap-client:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-llap-common:jar:4.0.0-alpha-1:compile
+[INFO] |  |  |  +- io.jsonwebtoken:jjwt-api:jar:0.10.5:compile
+[INFO] |  |  |  +- io.jsonwebtoken:jjwt-impl:jar:0.10.5:compile
+[INFO] |  |  |  \- io.jsonwebtoken:jjwt-jackson:jar:0.10.5:compile
+[INFO] |  |  +- org.apache.hive:hive-serde:jar:4.0.0-alpha-1:compile
+[INFO] |  |  |  +- org.apache.arrow:arrow-vector:jar:2.0.0:compile
+[INFO] |  |  |  |  +- org.apache.arrow:arrow-format:jar:2.0.0:compile
+[INFO] |  |  |  |  +- org.apache.arrow:arrow-memory-core:jar:2.0.0:compile
+[INFO] |  |  |  |  \- com.google.flatbuffers:flatbuffers-java:jar:1.9.0:compile
+[INFO] |  |  |  +- com.carrotsearch:hppc:jar:0.7.2:compile
+[INFO] |  |  |  +- com.github.davidmoten:flatbuffers-java:jar:1.6.0.1:compile
+[INFO] |  |  |  +- net.sf.opencsv:opencsv:jar:2.3:compile
+[INFO] |  |  |  \- org.apache.parquet:parquet-hadoop-bundle:jar:1.11.1:compile
+[INFO] |  |  \- org.apache.curator:apache-curator:pom:4.2.0:compile
+[INFO] |  +- org.apache.hive:hive-service:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-metastore:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive:hive-hplsql:jar:4.0.0-alpha-1:compile
+[INFO] |  |  |  \- org.antlr:antlr4-runtime:jar:4.5:compile
+[INFO] |  |  |     \- org.abego.treelayout:org.abego.treelayout.core:jar:1.0.1:compile
+[INFO] |  |  +- javax.servlet.jsp:javax.servlet.jsp-api:jar:2.3.1:compile
+[INFO] |  |  +- commons-codec:commons-codec:jar:1.15:compile
+[INFO] |  |  +- org.apache.thrift:libfb303:jar:0.9.3:compile
+[INFO] |  |  +- org.apache.curator:curator-client:jar:4.2.0:compile
+[INFO] |  |  +- org.bouncycastle:bcprov-jdk15on:jar:1.69:compile
+[INFO] |  |  +- org.apache.santuario:xmlsec:jar:2.3.0:compile
+[INFO] |  |  \- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  +- org.apache.hive:hive-shims:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive.shims:hive-shims-common:jar:4.0.0-alpha-1:compile
+[INFO] |  |  +- org.apache.hive.shims:hive-shims-0.23:jar:4.0.0-alpha-1:runtime
+[INFO] |  |  \- org.apache.hive.shims:hive-shims-scheduler:jar:4.0.0-alpha-1:runtime
+[INFO] |  +- org.apache.hive:hive-service-rpc:jar:4.0.0-alpha-1:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
+[INFO] |  +- org.apache.curator:curator-framework:jar:4.2.0:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.29:compile
+[INFO] +- org.apache.ant:ant:jar:1.10.11:compile
+[INFO] |  +- org.apache.ant:ant-launcher:jar:1.10.11:compile
+[INFO] |  \- com.sun:tools:jar:1.8.0:system
+[INFO] +- org.codehaus.jettison:jettison:jar:1.5.4:compile
+[INFO] +- com.fasterxml.woodstox:woodstox-core:jar:6.4.0:compile
+[INFO] |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
+[INFO] +- org.apache.hbase.thirdparty:hbase-shaded-netty:jar:4.1.0:compile
+[INFO] +- org.apache.avro:avro:jar:1.11.0:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-core:jar:2.14.0-rc2:compile
+[INFO] |  \- org.apache.commons:commons-compress:jar:1.21:compile
+[INFO] +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-starter-batch-springbatch:jar:1.2.58.1:compile
+[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-api:jar:1.2.58.1:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-starter-batch:jar:2.2.13.RELEASE:compile
+[INFO] |  |     \- org.springframework.batch:spring-batch-core:jar:4.2.5.RELEASE:compile
+[INFO] |  |        +- javax.batch:javax.batch-api:jar:1.0:compile
+[INFO] |  |        \- org.springframework.batch:spring-batch-infrastructure:jar:4.2.5.RELEASE:compile
+[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-runtime-springbatch:jar:1.2.58.1:compile
+[INFO] |  |  \- org.springframework.batch:spring-batch-integration:jar:4.2.5.RELEASE:compile
+[INFO] |  |     +- org.springframework.integration:spring-integration-core:jar:5.2.11.RELEASE:compile
+[INFO] |  |     +- org.springframework.retry:spring-retry:jar:1.2.5.RELEASE:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.2.24.RELEASE:compile
+[INFO] |  |     \- org.springframework:spring-messaging:jar:5.2.24.RELEASE:compile
+[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-support:jar:1.2.58.1:compile
+[INFO] |  |  +- mysql:mysql-connector-java:jar:8.0.22:runtime
+[INFO] |  |  +- com.aliyun.oss:aliyun-sdk-oss:jar:2.8.3:compile
+[INFO] |  |  +- commons-net:commons-net:jar:3.1:compile
+[INFO] |  |  \- com.hundsun.jrescloud.middleware:jrescloud-starter-mybatis:jar:2.2.6:compile
+[INFO] |  |     +- com.hundsun.jrescloud.middleware:jrescloud-db-def:jar:2.2.6:compile
+[INFO] |  |     |  +- com.hundsun.jrescloud.middleware:jrescloud-db-core:jar:2.2.6:compile
+[INFO] |  |     |  |  \- com.hundsun.jrescloud.middleware:jrescloud-db-api:jar:2.2.6:compile
+[INFO] |  |     |  \- com.hundsun.jrescloud.middleware:jrescloud-db-monitor-springboot2:jar:2.2.6:compile
+[INFO] |  |     +- com.mysql:mysql-connector-j:jar:8.2.0:compile
+[INFO] |  |     \- tk.mybatis:mapper-spring-boot-starter:jar:2.1.5:compile
+[INFO] |  |        +- tk.mybatis:mapper-core:jar:1.1.5:compile
+[INFO] |  |        |  \- javax.persistence:persistence-api:jar:1.0:compile
+[INFO] |  |        +- tk.mybatis:mapper-base:jar:1.1.5:compile
+[INFO] |  |        +- tk.mybatis:mapper-weekend:jar:1.1.5:compile
+[INFO] |  |        +- tk.mybatis:mapper-spring:jar:1.1.5:compile
+[INFO] |  |        +- tk.mybatis:mapper-extra:jar:1.1.5:compile
+[INFO] |  |        \- tk.mybatis:mapper-spring-boot-autoconfigure:jar:2.1.5:compile
+[INFO] |  \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-common:jar:1.2.58.1:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.2.24.RELEASE:compile
+[INFO] |     |  \- org.springframework:spring-expression:jar:5.2.24.RELEASE:compile
+[INFO] |     \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-common:jar:0.0.94:compile
+[INFO] |        +- com.hundsun.jrescloud:jrescloud-common-gm:jar:3.1.6.3.1:compile
+[INFO] |        +- com.hundsun.jrescloud:jrescloud-starter-cache:jar:3.5.0.2:compile
+[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-cache-core:jar:3.5.0.2:compile
+[INFO] |        |  |  +- com.hundsun.jrescloud:jrescloud-cache-api:jar:3.5.0.2:compile
+[INFO] |        |  |  |  +- org.ehcache:ehcache:jar:3.9.3:compile
+[INFO] |        |  |  |  +- org.springframework.data:spring-data-redis:jar:2.2.12.RELEASE:compile
+[INFO] |        |  |  |  |  +- org.springframework.data:spring-data-keyvalue:jar:2.2.12.RELEASE:compile
+[INFO] |        |  |  |  |  |  \- org.springframework.data:spring-data-commons:jar:2.2.12.RELEASE:compile
+[INFO] |        |  |  |  |  \- org.springframework:spring-context-support:jar:5.2.24.RELEASE:compile
+[INFO] |        |  |  |  \- redis.clients:jedis:jar:3.10.0:compile
+[INFO] |        |  |  +- com.hundsun.jrescloud:jrescloud-cache-redis:jar:3.5.0.2:compile
+[INFO] |        |  |  \- com.hundsun.jrescloud:jrescloud-cache-local:jar:3.5.0.2:compile
+[INFO] |        |  \- com.hundsun.jrescloud:jrescloud-cache-monitor:jar:3.5.0.2:compile
+[INFO] |        +- com.github.pagehelper:pagehelper:jar:5.3.1:compile
+[INFO] |        \- javax.cache:cache-api:jar:1.1.1:compile
+[INFO] +- com.thoughtworks.xstream:xstream:jar:1.4.20:compile
+[INFO] |  \- io.github.x-stream:mxparser:jar:1.2.2:compile
+[INFO] |     \- xmlpull:xmlpull:jar:1.1.3.1:compile
+[INFO] +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-client:jar:1.2.58.1:compile
+[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-rpc:jar:1.2.58.1:compile
+[INFO] |  \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-mq:jar:1.2.58.1:compile
+[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-processdesign-model-api:jar:1.0.92.1:compile
+[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-rabbit:jar:0.0.92.1:compile
+[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-tonglinkq:jar:0.0.92.1:compile
+[INFO] |     |  +- com.hundsun.jrescloud:jrescloud-starter-mq-tonglink:jar:4.1.30.8:compile
+[INFO] |     |  |  \- com.hundsun.jrescloud:jrescloud-mq-tonglink-configuration:jar:4.1.30.8:compile
+[INFO] |     |  |     \- com.hundsun.jrescloud:jrescloud-mq-tonglink:jar:4.1.30.8:compile
+[INFO] |     |  |        \- com.tongtech:htpclient:jar:2.0.2:compile
+[INFO] |     |  \- com.tongtech:tlq9client:jar:1.0:compile
+[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-besmq:jar:0.0.92.1:compile
+[INFO] |     |  \- com.hundsun.jrescloud:jrescloud-starter-mq-bes:jar:4.1.30.8:compile
+[INFO] |     |     \- com.hundsun.jrescloud:jrescloud-mq-bes-configuration:jar:4.1.30.8:compile
+[INFO] |     |        \- com.hundsun.jrescloud:jrescloud-mq-bes:jar:4.1.30.8:compile
+[INFO] |     |           +- com.bes.mq:besmq-client:jar:2.1.0:compile
+[INFO] |     |           \- com.bes.mq:besmq-client-mgmt-destination:jar:2.1.0:compile
+[INFO] |     \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-database:jar:0.0.92.1:compile
+[INFO] |        +- org.springframework:spring-jms:jar:5.2.24.RELEASE:compile
+[INFO] |        +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-zookeeper-support:jar:1.0.4:compile
+[INFO] |        |  +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-zookeeper-registry:jar:1.0.4:compile
+[INFO] |        |  |  \- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-registry-api:jar:1.0.4:compile
+[INFO] |        |  \- com.github.oshi:oshi-core:jar:3.9.1:compile
+[INFO] |        +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-dispatch-support:jar:1.0.4:compile
+[INFO] |        \- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-remote-plugin:jar:1.0.4:compile
+[INFO] +- net.java.dev.jna:jna-platform:jar:5.0.0:compile
+[INFO] |  \- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.2.13.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.2.13.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.2.13.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.2.13.RELEASE:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
+[INFO] |  |  \- net.minidev:json-smart:jar:2.3:test
+[INFO] |  |     \- net.minidev:accessors-smart:jar:1.2:test
+[INFO] |  |        \- org.ow2.asm:asm:jar:5.0.4:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.5.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.5.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.5.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.5.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.5.2:test
+[INFO] |  +- org.junit.vintage:junit-vintage-engine:jar:5.5.2:test
+[INFO] |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:test
+[INFO] |  |  +- org.junit.platform:junit-platform-engine:jar:1.5.2:test
+[INFO] |  |  \- junit:junit:jar:4.12:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:3.1.0:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.13.2:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.1:test
+[INFO] |  +- org.mockito:mockito-core:jar:3.1.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.10.19:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.6:compile
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.2.24.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.2.24.RELEASE:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.2.24.RELEASE:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.4:test
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-logkafka:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-common:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-base:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-encrypt:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.0-rc2:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-legacy:jar:2.1.0.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  \- org.aspectj:aspectjweaver:jar:1.9.5:compile
+[INFO] |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.30:compile
+[INFO] |  |  \- com.lmax:disruptor:jar:3.4.2:compile
+[INFO] |  \- org.apache.kafka:kafka-clients:jar:3.4.0:compile
+[INFO] |     +- com.github.luben:zstd-jni:jar:1.5.2-1:runtime
+[INFO] |     +- org.lz4:lz4-java:jar:1.8.0:runtime
+[INFO] |     \- org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime
+[INFO] +- com.hundsun.jrescloud:jrescloud-lock-api:jar:2.3.1.0.3:compile
+[INFO] |  \- io.netty:netty-common:jar:4.1.68.Final:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.31:compile
+[INFO] +- com.hundsun.crs:crs-jobauth-api:jar:2.20231005.000-SNAPSHOT:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-web-services:jar:2.2.13.RELEASE:compile
+[INFO] |     +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.2:compile
+[INFO] |     |  +- jakarta.xml.soap:jakarta.xml.soap-api:jar:1.4.2:compile
+[INFO] |     |  +- org.jvnet.staxex:stax-ex:jar:1.8.3:compile
+[INFO] |     |  \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
+[INFO] |     +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
+[INFO] |     |  \- jakarta.jws:jakarta.jws-api:jar:2.1.0:runtime
+[INFO] |     +- org.springframework:spring-oxm:jar:5.2.24.RELEASE:compile
+[INFO] |     \- org.springframework.ws:spring-ws-core:jar:3.0.10.RELEASE:compile
+[INFO] |        \- org.springframework.ws:spring-xml:jar:3.0.10.RELEASE:compile
+[INFO] \- com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
+[INFO]    \- com.fasterxml.jackson.core:jackson-annotations:jar:2.14.0-rc2:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 19.454 s
+[INFO] Finished at: 2024-03-25T09:21:39+08:00
+[INFO] ------------------------------------------------------------------------

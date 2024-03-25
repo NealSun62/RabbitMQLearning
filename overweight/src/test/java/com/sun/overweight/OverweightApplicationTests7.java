@@ -39,7 +39,6 @@ public class OverweightApplicationTests7 {
         map.put("age", "18");
         // 读取本地磁盘图片
         map.put("weChatPicture", new PictureRenderData(100, 100, new File("E:\\output.png")));
-        crs5:v:com.hundsun.fais.crdm.api.service.O32.BondToO32Service:com.hundsun.fais.crdm.api.service.O32.BondToO32Service.bondRatingToO32Export:t3:null:crs-crdm-server
         // 通过url读取网络图片
         // https://blog.csdn.net/dava_zhang/article/details/122214736
 
@@ -48,6 +47,7 @@ public class OverweightApplicationTests7 {
         String name = "E:\\输出自我介绍" + System.currentTimeMillis() + ".docx";
         FileOutputStream out = new FileOutputStream(new File(name));
         template.write(out);
+        System.out.println(Integer.toHexString(237311));
         out.flush();
         out.close();
         template.close();
