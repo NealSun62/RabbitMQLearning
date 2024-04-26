@@ -34,16 +34,16 @@ public class OverweightApplicationTests2 {
 
     @Test
     public static void main(String[] args) throws Exception {
-
-            String targetFolderPath = "C:\\Users\\hspcadmin\\Desktop\\数据\\prc"; // 替换为实际的目标文件夹路径
-            String outputFilePath = "C:\\Users\\hspcadmin\\Desktop\\数据\\prc_tmp.sql"; // 输出文件路径
-
-            try {
-                mergeSQLFiles(targetFolderPath, outputFilePath);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        Date currentDay = calendar.getTime();
+        System.out.println(currentDay);
+        String ratCretNum = null;
+        Set<String> a = Collections.singleton(ratCretNum);
+        System.out.println(a.size());
 
     }
 

@@ -63,6 +63,10 @@ public class OverweightApplicationTests5 {
         inputList.add(rankVo6);
         inputList.add(rankVo7);
         inputList.add(rankVo8);
+        Integer one = 1;
+        Integer two = 1;
+        boolean a = one.compareTo(two) > 0;
+        System.out.println(a);
         inputList= calRank(inputList, "1");
         System.out.println(toJson(inputList));
 
