@@ -1,0 +1,1115 @@
+[INFO] Scanning for projects...
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 603 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml (603 B at 2.2 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/basepom-2.0-20240510.010107-31563.pom
+Progress (1): 4.1/18 kB
+Progress (1): 7.4/18 kB
+Progress (1): 11/18 kB
+Progress (1): 16/18 kB
+Progress (1): 18 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/basepom-2.0-20240510.010107-31563.pom (18 kB at 482 kB/s)
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for com.hundsun.crs:crs-crfrmgt-server:jar:2.20231007.000
+[WARNING] 'version' contains an expression but should be a constant. @ com.hundsun.crs:crs-crfrmgt-server:${service.version}, E:\project\���ɴ������\crfrmgt\crs-crfrmgt-server\pom.xml, line 9, column 14
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] -----------------< com.hundsun.crs:crs-crfrmgt-server >-----------------
+[INFO] Building crs-crfrmgt-server 2.20231007.000
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 712/809 B
+Progress (1): 809 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (809 B at 18 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/crs-msg-api-2.20231007.000-20240510.010305-737.pom
+Progress (1): 2.1/3.3 kB
+Progress (1): 3.3 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/crs-msg-api-2.20231007.000-20240510.010305-737.pom (3.3 kB at 113 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-innerreport-api/2.20230300.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 813 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-innerreport-api/2.20230300.000-SNAPSHOT/maven-metadata.xml (813 B at 24 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-equityresearch-api/2.20230300.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 712/816 B
+Progress (1): 816 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-equityresearch-api/2.20230300.000-SNAPSHOT/maven-metadata.xml (816 B at 26 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 712/813 B
+Progress (1): 813 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (813 B at 23 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/crs-crfrmgt-api-2.20231007.000-20240510.010743-731.pom
+Progress (1): 2.1 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/crs-crfrmgt-api-2.20231007.000-20240510.010743-731.pom (2.1 kB at 85 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 816 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (816 B at 26 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/crs-poolmanage-api-2.20231007.000-20240510.010305-738.pom
+Progress (1): 0.6/1.2 kB
+Progress (1): 1.2 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/crs-poolmanage-api-2.20231007.000-20240510.010305-738.pom (1.2 kB at 40 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 812 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (812 B at 23 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/crs-modmgt-api-2.20231007.000-20240510.010604-734.pom
+Progress (1): 2.5 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/crs-modmgt-api-2.20231007.000-20240510.010604-734.pom (2.5 kB at 97 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 810 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (810 B at 16 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/crs-crdm-api-2.20231007.000-20240510.010438-735.pom
+Progress (1): 2.6 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/crs-crdm-api-2.20231007.000-20240510.010438-735.pom (2.6 kB at 63 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 816 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (816 B at 9.6 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/crs-attachment-api-2.20231007.000-20240510.010301-739.pom
+Progress (1): 0.6/2.1 kB
+Progress (1): 2.1 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/crs-attachment-api-2.20231007.000-20240510.010301-739.pom (2.1 kB at 29 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 712/816 B
+Progress (1): 816 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (816 B at 7.8 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/crs-firesearch-api-2.20231007.000-20240510.010329-733.pom
+Progress (1): 4.1/5.6 kB
+Progress (1): 5.0/5.6 kB
+Progress (1): 5.6 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/crs-firesearch-api-2.20231007.000-20240510.010329-733.pom (5.6 kB at 96 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 712/815 B
+Progress (1): 815 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (815 B at 21 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/crs-datamaint-api-2.20231007.000-20240510.010300-738.pom
+Progress (1): 4.1/4.2 kB
+Progress (1): 4.2 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/crs-datamaint-api-2.20231007.000-20240510.010300-738.pom (4.2 kB at 130 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 820 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/maven-metadata.xml (820 B at 14 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/crs-researchpublic-api-2.20231007.000-20240510.010311-736.pom
+Progress (1): 4.1/5.1 kB
+Progress (1): 5.0/5.1 kB
+Progress (1): 5.1 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/crs-researchpublic-api-2.20231007.000-20240510.010311-736.pom (5.1 kB at 113 kB/s)
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-investpool-api/2.20230300.000-SNAPSHOT/maven-metadata.xml
+Progress (1): 812 B
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/fais/fais-investpool-api/2.20230300.000-SNAPSHOT/maven-metadata.xml (812 B at 12 kB/s)
+[WARNING] The POM for com.hundsun.jresplus:jresplus-context:jar:1.0.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/crs-msg-api-2.20231007.000-20240510.010305-737.jar
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/crs-crdm-api-2.20231007.000-20240510.010438-735.jar
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/crs-modmgt-api-2.20231007.000-20240510.010604-734.jar
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/crs-poolmanage-api-2.20231007.000-20240510.010305-738.jar
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/crs-crfrmgt-api-2.20231007.000-20240510.010743-731.jar
+Progress (1): 4.1/118 kB
+Progress (1): 6.5/118 kB
+Progress (2): 6.5/118 kB | 4.1/128 kB
+Progress (2): 11/118 kB | 4.1/128 kB
+Progress (3): 11/118 kB | 4.1/128 kB | 4.1/16 kB
+Progress (3): 15/118 kB | 4.1/128 kB | 4.1/16 kB
+Progress (3): 15/118 kB | 7.3/128 kB | 4.1/16 kB
+Progress (3): 19/118 kB | 7.3/128 kB | 4.1/16 kB
+Progress (3): 19/118 kB | 7.3/128 kB | 7.4/16 kB
+Progress (3): 23/118 kB | 7.3/128 kB | 7.4/16 kB
+Progress (4): 23/118 kB | 7.3/128 kB | 7.4/16 kB | 4.1/935 kB
+Progress (5): 23/118 kB | 7.3/128 kB | 7.4/16 kB | 4.1/935 kB | 4.1/206 kB
+Progress (5): 23/118 kB | 11/128 kB | 7.4/16 kB | 4.1/935 kB | 4.1/206 kB
+Progress (5): 23/118 kB | 11/128 kB | 7.4/16 kB | 4.1/935 kB | 6.5/206 kB
+Progress (5): 23/118 kB | 11/128 kB | 7.4/16 kB | 7.4/935 kB | 6.5/206 kB
+Progress (5): 27/118 kB | 11/128 kB | 7.4/16 kB | 7.4/935 kB | 6.5/206 kB
+Progress (5): 27/118 kB | 11/128 kB | 11/16 kB | 7.4/935 kB | 6.5/206 kB
+Progress (5): 31/118 kB | 11/128 kB | 11/16 kB | 7.4/935 kB | 6.5/206 kB
+Progress (5): 31/118 kB | 11/128 kB | 11/16 kB | 11/935 kB | 6.5/206 kB
+Progress (5): 31/118 kB | 11/128 kB | 11/16 kB | 11/935 kB | 11/206 kB
+Progress (5): 31/118 kB | 16/128 kB | 11/16 kB | 11/935 kB | 11/206 kB
+Progress (5): 31/118 kB | 16/128 kB | 11/16 kB | 11/935 kB | 15/206 kB
+Progress (5): 31/118 kB | 16/128 kB | 11/16 kB | 16/935 kB | 15/206 kB
+Progress (5): 35/118 kB | 16/128 kB | 11/16 kB | 16/935 kB | 15/206 kB
+Progress (5): 35/118 kB | 16/128 kB | 16/16 kB | 16/935 kB | 15/206 kB
+Progress (5): 39/118 kB | 16/128 kB | 16/16 kB | 16/935 kB | 15/206 kB
+Progress (5): 39/118 kB | 16/128 kB | 16/16 kB | 20/935 kB | 15/206 kB
+Progress (5): 39/118 kB | 16/128 kB | 16/16 kB | 20/935 kB | 19/206 kB
+Progress (5): 39/118 kB | 20/128 kB | 16/16 kB | 20/935 kB | 19/206 kB
+Progress (5): 39/118 kB | 20/128 kB | 16/16 kB | 20/935 kB | 23/206 kB
+Progress (5): 39/118 kB | 20/128 kB | 16/16 kB | 24/935 kB | 23/206 kB
+Progress (5): 43/118 kB | 20/128 kB | 16/16 kB | 24/935 kB | 23/206 kB
+Progress (5): 43/118 kB | 20/128 kB | 16 kB | 24/935 kB | 23/206 kB
+Progress (5): 47/118 kB | 20/128 kB | 16 kB | 24/935 kB | 23/206 kB
+Progress (5): 47/118 kB | 20/128 kB | 16 kB | 28/935 kB | 23/206 kB
+Progress (5): 47/118 kB | 20/128 kB | 16 kB | 28/935 kB | 27/206 kB
+Progress (5): 47/118 kB | 24/128 kB | 16 kB | 28/935 kB | 27/206 kB
+Progress (5): 47/118 kB | 24/128 kB | 16 kB | 28/935 kB | 31/206 kB
+Progress (5): 47/118 kB | 24/128 kB | 16 kB | 32/935 kB | 31/206 kB
+Progress (5): 52/118 kB | 24/128 kB | 16 kB | 32/935 kB | 31/206 kB
+Progress (5): 52/118 kB | 24/128 kB | 16 kB | 36/935 kB | 31/206 kB
+Progress (5): 52/118 kB | 24/128 kB | 16 kB | 36/935 kB | 35/206 kB
+Progress (5): 52/118 kB | 28/128 kB | 16 kB | 36/935 kB | 35/206 kB
+Progress (5): 52/118 kB | 28/128 kB | 16 kB | 36/935 kB | 39/206 kB
+Progress (5): 52/118 kB | 28/128 kB | 16 kB | 40/935 kB | 39/206 kB
+Progress (5): 56/118 kB | 28/128 kB | 16 kB | 40/935 kB | 39/206 kB
+Progress (5): 56/118 kB | 28/128 kB | 16 kB | 44/935 kB | 39/206 kB
+Progress (5): 56/118 kB | 28/128 kB | 16 kB | 44/935 kB | 43/206 kB
+Progress (5): 56/118 kB | 32/128 kB | 16 kB | 44/935 kB | 43/206 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-msg-api/2.20231007.000-SNAPSHOT/crs-msg-api-2.20231007.000-20240510.010305-737.jar (16 kB at 222 kB/s)
+Progress (4): 56/118 kB | 32/128 kB | 44/935 kB | 47/206 kB
+Progress (4): 56/118 kB | 32/128 kB | 48/935 kB | 47/206 kB
+Progress (4): 60/118 kB | 32/128 kB | 48/935 kB | 47/206 kB
+Progress (4): 60/118 kB | 32/128 kB | 52/935 kB | 47/206 kB
+Progress (4): 60/118 kB | 32/128 kB | 52/935 kB | 52/206 kB
+
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/crs-attachment-api-2.20231007.000-20240510.010301-739.jar
+Progress (4): 60/118 kB | 36/128 kB | 52/935 kB | 52/206 kB
+Progress (4): 60/118 kB | 36/128 kB | 52/935 kB | 56/206 kB
+Progress (4): 60/118 kB | 36/128 kB | 57/935 kB | 56/206 kB
+Progress (4): 64/118 kB | 36/128 kB | 57/935 kB | 56/206 kB
+Progress (4): 64/118 kB | 36/128 kB | 61/935 kB | 56/206 kB
+Progress (4): 64/118 kB | 36/128 kB | 61/935 kB | 60/206 kB
+Progress (4): 64/118 kB | 40/128 kB | 61/935 kB | 60/206 kB
+Progress (4): 64/118 kB | 40/128 kB | 61/935 kB | 64/206 kB
+Progress (4): 64/118 kB | 40/128 kB | 65/935 kB | 64/206 kB
+Progress (4): 68/118 kB | 40/128 kB | 65/935 kB | 64/206 kB
+Progress (4): 68/118 kB | 40/128 kB | 69/935 kB | 64/206 kB
+Progress (4): 68/118 kB | 40/128 kB | 69/935 kB | 68/206 kB
+Progress (4): 68/118 kB | 44/128 kB | 69/935 kB | 68/206 kB
+Progress (4): 68/118 kB | 44/128 kB | 69/935 kB | 72/206 kB
+Progress (4): 68/118 kB | 44/128 kB | 69/935 kB | 76/206 kB
+Progress (4): 68/118 kB | 44/128 kB | 73/935 kB | 76/206 kB
+Progress (4): 68/118 kB | 44/128 kB | 77/935 kB | 76/206 kB
+Progress (4): 72/118 kB | 44/128 kB | 77/935 kB | 76/206 kB
+Progress (4): 72/118 kB | 44/128 kB | 81/935 kB | 76/206 kB
+Progress (5): 72/118 kB | 44/128 kB | 81/935 kB | 76/206 kB | 4.1/53 kB
+Progress (5): 72/118 kB | 44/128 kB | 81/935 kB | 80/206 kB | 4.1/53 kB
+Progress (5): 72/118 kB | 48/128 kB | 81/935 kB | 80/206 kB | 4.1/53 kB
+Progress (5): 72/118 kB | 48/128 kB | 81/935 kB | 80/206 kB | 7.3/53 kB
+Progress (5): 72/118 kB | 48/128 kB | 81/935 kB | 84/206 kB | 7.3/53 kB
+Progress (5): 72/118 kB | 48/128 kB | 85/935 kB | 84/206 kB | 7.3/53 kB
+Progress (5): 76/118 kB | 48/128 kB | 85/935 kB | 84/206 kB | 7.3/53 kB
+Progress (5): 76/118 kB | 48/128 kB | 89/935 kB | 84/206 kB | 7.3/53 kB
+Progress (5): 76/118 kB | 48/128 kB | 89/935 kB | 88/206 kB | 7.3/53 kB
+Progress (5): 76/118 kB | 48/128 kB | 89/935 kB | 88/206 kB | 11/53 kB
+Progress (5): 76/118 kB | 52/128 kB | 89/935 kB | 88/206 kB | 11/53 kB
+Progress (5): 76/118 kB | 52/128 kB | 89/935 kB | 88/206 kB | 16/53 kB
+Progress (5): 76/118 kB | 52/128 kB | 89/935 kB | 92/206 kB | 16/53 kB
+Progress (5): 76/118 kB | 52/128 kB | 93/935 kB | 92/206 kB | 16/53 kB
+Progress (5): 80/118 kB | 52/128 kB | 93/935 kB | 92/206 kB | 16/53 kB
+Progress (5): 80/118 kB | 52/128 kB | 97/935 kB | 92/206 kB | 16/53 kB
+Progress (5): 80/118 kB | 52/128 kB | 97/935 kB | 97/206 kB | 16/53 kB
+Progress (5): 80/118 kB | 52/128 kB | 97/935 kB | 97/206 kB | 20/53 kB
+Progress (5): 80/118 kB | 56/128 kB | 97/935 kB | 97/206 kB | 20/53 kB
+Progress (5): 80/118 kB | 56/128 kB | 97/935 kB | 97/206 kB | 24/53 kB
+Progress (5): 80/118 kB | 56/128 kB | 97/935 kB | 101/206 kB | 24/53 kB
+Progress (5): 80/118 kB | 56/128 kB | 102/935 kB | 101/206 kB | 24/53 kB
+Progress (5): 84/118 kB | 56/128 kB | 102/935 kB | 101/206 kB | 24/53 kB
+Progress (5): 84/118 kB | 56/128 kB | 106/935 kB | 101/206 kB | 24/53 kB
+Progress (5): 84/118 kB | 56/128 kB | 106/935 kB | 105/206 kB | 24/53 kB
+Progress (5): 84/118 kB | 56/128 kB | 106/935 kB | 105/206 kB | 28/53 kB
+Progress (5): 84/118 kB | 61/128 kB | 106/935 kB | 105/206 kB | 28/53 kB
+Progress (5): 84/118 kB | 61/128 kB | 106/935 kB | 105/206 kB | 32/53 kB
+Progress (5): 84/118 kB | 61/128 kB | 106/935 kB | 109/206 kB | 32/53 kB
+Progress (5): 84/118 kB | 61/128 kB | 110/935 kB | 109/206 kB | 32/53 kB
+Progress (5): 88/118 kB | 61/128 kB | 110/935 kB | 109/206 kB | 32/53 kB
+Progress (5): 88/118 kB | 61/128 kB | 114/935 kB | 109/206 kB | 32/53 kB
+Progress (5): 88/118 kB | 61/128 kB | 114/935 kB | 113/206 kB | 32/53 kB
+Progress (5): 88/118 kB | 61/128 kB | 114/935 kB | 113/206 kB | 36/53 kB
+Progress (5): 88/118 kB | 65/128 kB | 114/935 kB | 113/206 kB | 36/53 kB
+Progress (5): 88/118 kB | 65/128 kB | 114/935 kB | 113/206 kB | 40/53 kB
+Progress (5): 88/118 kB | 65/128 kB | 114/935 kB | 117/206 kB | 40/53 kB
+Progress (5): 88/118 kB | 65/128 kB | 118/935 kB | 117/206 kB | 40/53 kB
+Progress (5): 92/118 kB | 65/128 kB | 118/935 kB | 117/206 kB | 40/53 kB
+Progress (5): 92/118 kB | 65/128 kB | 122/935 kB | 117/206 kB | 40/53 kB
+Progress (5): 92/118 kB | 65/128 kB | 122/935 kB | 121/206 kB | 40/53 kB
+Progress (5): 92/118 kB | 65/128 kB | 122/935 kB | 121/206 kB | 44/53 kB
+Progress (5): 92/118 kB | 69/128 kB | 122/935 kB | 121/206 kB | 44/53 kB
+Progress (5): 92/118 kB | 69/128 kB | 122/935 kB | 121/206 kB | 48/53 kB
+Progress (5): 92/118 kB | 69/128 kB | 122/935 kB | 125/206 kB | 48/53 kB
+Progress (5): 92/118 kB | 69/128 kB | 126/935 kB | 125/206 kB | 48/53 kB
+Progress (5): 97/118 kB | 69/128 kB | 126/935 kB | 125/206 kB | 48/53 kB
+Progress (5): 97/118 kB | 69/128 kB | 130/935 kB | 125/206 kB | 48/53 kB
+Progress (5): 97/118 kB | 69/128 kB | 130/935 kB | 129/206 kB | 48/53 kB
+Progress (5): 97/118 kB | 69/128 kB | 130/935 kB | 129/206 kB | 52/53 kB
+Progress (5): 97/118 kB | 73/128 kB | 130/935 kB | 129/206 kB | 52/53 kB
+Progress (5): 97/118 kB | 73/128 kB | 130/935 kB | 129/206 kB | 53 kB
+Progress (5): 97/118 kB | 73/128 kB | 130/935 kB | 133/206 kB | 53 kB
+Progress (5): 97/118 kB | 73/128 kB | 134/935 kB | 133/206 kB | 53 kB
+Progress (5): 101/118 kB | 73/128 kB | 134/935 kB | 133/206 kB | 53 kB
+Progress (5): 101/118 kB | 73/128 kB | 138/935 kB | 133/206 kB | 53 kB
+Progress (5): 101/118 kB | 73/128 kB | 138/935 kB | 138/206 kB | 53 kB
+Progress (5): 101/118 kB | 77/128 kB | 138/935 kB | 138/206 kB | 53 kB
+Progress (5): 101/118 kB | 77/128 kB | 138/935 kB | 142/206 kB | 53 kB
+Progress (5): 101/118 kB | 77/128 kB | 143/935 kB | 142/206 kB | 53 kB
+Progress (5): 105/118 kB | 77/128 kB | 143/935 kB | 142/206 kB | 53 kB
+Progress (5): 105/118 kB | 77/128 kB | 147/935 kB | 142/206 kB | 53 kB
+Progress (5): 105/118 kB | 77/128 kB | 147/935 kB | 146/206 kB | 53 kB
+Progress (5): 105/118 kB | 81/128 kB | 147/935 kB | 146/206 kB | 53 kB
+Progress (5): 105/118 kB | 81/128 kB | 147/935 kB | 150/206 kB | 53 kB
+Progress (5): 105/118 kB | 81/128 kB | 151/935 kB | 150/206 kB | 53 kB
+Progress (5): 109/118 kB | 81/128 kB | 151/935 kB | 150/206 kB | 53 kB
+Progress (5): 109/118 kB | 81/128 kB | 155/935 kB | 150/206 kB | 53 kB
+Progress (5): 109/118 kB | 81/128 kB | 155/935 kB | 154/206 kB | 53 kB
+Progress (5): 109/118 kB | 85/128 kB | 155/935 kB | 154/206 kB | 53 kB
+Progress (5): 109/118 kB | 85/128 kB | 155/935 kB | 158/206 kB | 53 kB
+Progress (5): 109/118 kB | 85/128 kB | 159/935 kB | 158/206 kB | 53 kB
+Progress (5): 113/118 kB | 85/128 kB | 159/935 kB | 158/206 kB | 53 kB
+Progress (5): 113/118 kB | 85/128 kB | 163/935 kB | 158/206 kB | 53 kB
+Progress (5): 113/118 kB | 85/128 kB | 163/935 kB | 162/206 kB | 53 kB
+Progress (5): 113/118 kB | 89/128 kB | 163/935 kB | 162/206 kB | 53 kB
+Progress (5): 113/118 kB | 89/128 kB | 163/935 kB | 166/206 kB | 53 kB
+Progress (5): 113/118 kB | 89/128 kB | 167/935 kB | 166/206 kB | 53 kB
+Progress (5): 117/118 kB | 89/128 kB | 167/935 kB | 166/206 kB | 53 kB
+Progress (5): 117/118 kB | 89/128 kB | 171/935 kB | 166/206 kB | 53 kB
+Progress (5): 117/118 kB | 89/128 kB | 171/935 kB | 170/206 kB | 53 kB
+Progress (5): 117/118 kB | 93/128 kB | 171/935 kB | 170/206 kB | 53 kB
+Progress (5): 117/118 kB | 93/128 kB | 171/935 kB | 174/206 kB | 53 kB
+Progress (5): 117/118 kB | 93/128 kB | 175/935 kB | 174/206 kB | 53 kB
+Progress (5): 118 kB | 93/128 kB | 175/935 kB | 174/206 kB | 53 kB
+Progress (5): 118 kB | 93/128 kB | 179/935 kB | 174/206 kB | 53 kB
+Progress (5): 118 kB | 93/128 kB | 179/935 kB | 178/206 kB | 53 kB
+Progress (5): 118 kB | 97/128 kB | 179/935 kB | 178/206 kB | 53 kB
+Progress (5): 118 kB | 97/128 kB | 179/935 kB | 183/206 kB | 53 kB
+Progress (5): 118 kB | 97/128 kB | 183/935 kB | 183/206 kB | 53 kB
+Progress (5): 118 kB | 97/128 kB | 183/935 kB | 187/206 kB | 53 kB
+Progress (5): 118 kB | 102/128 kB | 183/935 kB | 187/206 kB | 53 kB
+Progress (5): 118 kB | 102/128 kB | 183/935 kB | 191/206 kB | 53 kB
+Progress (5): 118 kB | 102/128 kB | 188/935 kB | 191/206 kB | 53 kB
+Progress (5): 118 kB | 102/128 kB | 188/935 kB | 195/206 kB | 53 kB
+Progress (5): 118 kB | 106/128 kB | 188/935 kB | 195/206 kB | 53 kB
+Progress (5): 118 kB | 106/128 kB | 188/935 kB | 199/206 kB | 53 kB
+Progress (5): 118 kB | 106/128 kB | 192/935 kB | 199/206 kB | 53 kB
+Progress (5): 118 kB | 106/128 kB | 192/935 kB | 203/206 kB | 53 kB
+Progress (5): 118 kB | 110/128 kB | 192/935 kB | 203/206 kB | 53 kB
+Progress (5): 118 kB | 110/128 kB | 192/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 110/128 kB | 196/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 114/128 kB | 196/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 114/128 kB | 200/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 118/128 kB | 200/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 122/128 kB | 200/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 122/128 kB | 204/935 kB | 206 kB | 53 kB
+Progress (5): 118 kB | 126/128 kB | 204/935 kB | 206 kB | 53 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-attachment-api/2.20231007.000-SNAPSHOT/crs-attachment-api-2.20231007.000-20240510.010301-739.jar (53 kB at 347 kB/s)
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-modmgt-api/2.20231007.000-SNAPSHOT/crs-modmgt-api-2.20231007.000-20240510.010604-734.jar (118 kB at 765 kB/s)
+Progress (3): 128 kB | 204/935 kB | 206 kB
+Progress (3): 128 kB | 208/935 kB | 206 kB
+
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/crs-datamaint-api-2.20231007.000-20240510.010300-738.jar
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/crs-firesearch-api-2.20231007.000-20240510.010329-733.jar
+Progress (3): 128 kB | 212/935 kB | 206 kB
+Progress (3): 128 kB | 216/935 kB | 206 kB
+Progress (3): 128 kB | 220/935 kB | 206 kB
+Progress (3): 128 kB | 224/935 kB | 206 kB
+Progress (3): 128 kB | 229/935 kB | 206 kB
+Progress (3): 128 kB | 233/935 kB | 206 kB
+Progress (3): 128 kB | 237/935 kB | 206 kB
+Progress (3): 128 kB | 241/935 kB | 206 kB
+Progress (3): 128 kB | 245/935 kB | 206 kB
+Progress (3): 128 kB | 249/935 kB | 206 kB
+Progress (3): 128 kB | 253/935 kB | 206 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crfrmgt-api/2.20231007.000-SNAPSHOT/crs-crfrmgt-api-2.20231007.000-20240510.010743-731.jar (206 kB at 1.2 MB/s)
+Progress (2): 128 kB | 257/935 kB
+
+Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/crs-researchpublic-api-2.20231007.000-20240510.010311-736.jar
+Progress (2): 128 kB | 261/935 kB
+Progress (2): 128 kB | 265/935 kB
+Progress (3): 128 kB | 265/935 kB | 4.1/61 kB
+Progress (3): 128 kB | 270/935 kB | 4.1/61 kB
+Progress (3): 128 kB | 274/935 kB | 4.1/61 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-poolmanage-api/2.20231007.000-SNAPSHOT/crs-poolmanage-api-2.20231007.000-20240510.010305-738.jar (128 kB at 737 kB/s)
+Progress (2): 274/935 kB | 6.4/61 kB
+Progress (2): 278/935 kB | 6.4/61 kB
+Progress (2): 278/935 kB | 10/61 kB
+Progress (2): 282/935 kB | 10/61 kB
+Progress (2): 282/935 kB | 15/61 kB
+Progress (3): 282/935 kB | 15/61 kB | 4.1/210 kB
+Progress (3): 286/935 kB | 15/61 kB | 4.1/210 kB
+Progress (3): 286/935 kB | 19/61 kB | 4.1/210 kB
+Progress (3): 286/935 kB | 19/61 kB | 7.3/210 kB
+Progress (3): 290/935 kB | 19/61 kB | 7.3/210 kB
+Progress (3): 290/935 kB | 19/61 kB | 11/210 kB
+Progress (3): 290/935 kB | 23/61 kB | 11/210 kB
+Progress (3): 290/935 kB | 23/61 kB | 16/210 kB
+Progress (3): 294/935 kB | 23/61 kB | 16/210 kB
+Progress (3): 294/935 kB | 23/61 kB | 20/210 kB
+Progress (3): 294/935 kB | 27/61 kB | 20/210 kB
+Progress (3): 294/935 kB | 27/61 kB | 24/210 kB
+Progress (3): 298/935 kB | 27/61 kB | 24/210 kB
+Progress (3): 298/935 kB | 27/61 kB | 28/210 kB
+Progress (3): 298/935 kB | 31/61 kB | 28/210 kB
+Progress (3): 298/935 kB | 31/61 kB | 32/210 kB
+Progress (3): 302/935 kB | 31/61 kB | 32/210 kB
+Progress (3): 302/935 kB | 31/61 kB | 36/210 kB
+Progress (3): 302/935 kB | 35/61 kB | 36/210 kB
+Progress (3): 302/935 kB | 35/61 kB | 40/210 kB
+Progress (3): 306/935 kB | 35/61 kB | 40/210 kB
+Progress (3): 306/935 kB | 35/61 kB | 44/210 kB
+Progress (3): 306/935 kB | 39/61 kB | 44/210 kB
+Progress (3): 306/935 kB | 39/61 kB | 48/210 kB
+Progress (3): 310/935 kB | 39/61 kB | 48/210 kB
+Progress (3): 310/935 kB | 39/61 kB | 52/210 kB
+Progress (3): 310/935 kB | 43/61 kB | 52/210 kB
+Progress (3): 310/935 kB | 43/61 kB | 56/210 kB
+Progress (3): 315/935 kB | 43/61 kB | 56/210 kB
+Progress (3): 315/935 kB | 43/61 kB | 61/210 kB
+Progress (3): 315/935 kB | 47/61 kB | 61/210 kB
+Progress (3): 315/935 kB | 47/61 kB | 65/210 kB
+Progress (3): 319/935 kB | 47/61 kB | 65/210 kB
+Progress (3): 319/935 kB | 47/61 kB | 69/210 kB
+Progress (3): 319/935 kB | 51/61 kB | 69/210 kB
+Progress (3): 319/935 kB | 51/61 kB | 73/210 kB
+Progress (3): 323/935 kB | 51/61 kB | 73/210 kB
+Progress (3): 323/935 kB | 51/61 kB | 77/210 kB
+Progress (3): 323/935 kB | 56/61 kB | 77/210 kB
+Progress (3): 323/935 kB | 56/61 kB | 81/210 kB
+Progress (3): 327/935 kB | 56/61 kB | 81/210 kB
+Progress (3): 327/935 kB | 56/61 kB | 85/210 kB
+Progress (3): 327/935 kB | 60/61 kB | 85/210 kB
+Progress (3): 327/935 kB | 60/61 kB | 89/210 kB
+Progress (3): 331/935 kB | 60/61 kB | 89/210 kB
+Progress (3): 331/935 kB | 60/61 kB | 93/210 kB
+Progress (3): 331/935 kB | 61 kB | 93/210 kB
+Progress (3): 331/935 kB | 61 kB | 97/210 kB
+Progress (3): 335/935 kB | 61 kB | 97/210 kB
+Progress (3): 335/935 kB | 61 kB | 102/210 kB
+Progress (3): 339/935 kB | 61 kB | 102/210 kB
+Progress (3): 339/935 kB | 61 kB | 106/210 kB
+Progress (3): 343/935 kB | 61 kB | 106/210 kB
+Progress (3): 343/935 kB | 61 kB | 110/210 kB
+Progress (3): 347/935 kB | 61 kB | 110/210 kB
+Progress (3): 347/935 kB | 61 kB | 114/210 kB
+Progress (3): 351/935 kB | 61 kB | 114/210 kB
+Progress (3): 351/935 kB | 61 kB | 118/210 kB
+Progress (3): 356/935 kB | 61 kB | 118/210 kB
+Progress (3): 356/935 kB | 61 kB | 122/210 kB
+Progress (3): 360/935 kB | 61 kB | 122/210 kB
+Progress (3): 360/935 kB | 61 kB | 126/210 kB
+Progress (3): 364/935 kB | 61 kB | 126/210 kB
+Progress (3): 364/935 kB | 61 kB | 130/210 kB
+Progress (3): 368/935 kB | 61 kB | 130/210 kB
+Progress (3): 368/935 kB | 61 kB | 134/210 kB
+Progress (3): 372/935 kB | 61 kB | 134/210 kB
+Progress (3): 372/935 kB | 61 kB | 138/210 kB
+Progress (3): 376/935 kB | 61 kB | 138/210 kB
+Progress (3): 376/935 kB | 61 kB | 143/210 kB
+Progress (3): 380/935 kB | 61 kB | 143/210 kB
+Progress (3): 380/935 kB | 61 kB | 147/210 kB
+Progress (3): 384/935 kB | 61 kB | 147/210 kB
+Progress (3): 384/935 kB | 61 kB | 151/210 kB
+Progress (3): 388/935 kB | 61 kB | 151/210 kB
+Progress (3): 388/935 kB | 61 kB | 155/210 kB
+Progress (3): 392/935 kB | 61 kB | 155/210 kB
+Progress (3): 392/935 kB | 61 kB | 159/210 kB
+Progress (3): 396/935 kB | 61 kB | 159/210 kB
+Progress (3): 396/935 kB | 61 kB | 163/210 kB
+Progress (3): 401/935 kB | 61 kB | 163/210 kB
+Progress (3): 401/935 kB | 61 kB | 167/210 kB
+Progress (3): 405/935 kB | 61 kB | 167/210 kB
+Progress (3): 405/935 kB | 61 kB | 171/210 kB
+Progress (3): 409/935 kB | 61 kB | 171/210 kB
+Progress (3): 409/935 kB | 61 kB | 175/210 kB
+Progress (3): 413/935 kB | 61 kB | 175/210 kB
+Progress (3): 413/935 kB | 61 kB | 179/210 kB
+Progress (4): 413/935 kB | 61 kB | 179/210 kB | 4.1/827 kB
+Progress (4): 417/935 kB | 61 kB | 179/210 kB | 4.1/827 kB
+Progress (4): 417/935 kB | 61 kB | 183/210 kB | 4.1/827 kB
+Progress (4): 417/935 kB | 61 kB | 183/210 kB | 7.3/827 kB
+Progress (4): 421/935 kB | 61 kB | 183/210 kB | 7.3/827 kB
+Progress (4): 421/935 kB | 61 kB | 183/210 kB | 11/827 kB
+Progress (4): 421/935 kB | 61 kB | 188/210 kB | 11/827 kB
+Progress (4): 421/935 kB | 61 kB | 188/210 kB | 16/827 kB
+Progress (4): 425/935 kB | 61 kB | 188/210 kB | 16/827 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-firesearch-api/2.20231007.000-SNAPSHOT/crs-firesearch-api-2.20231007.000-20240510.010329-733.jar (61 kB at 294 kB/s)
+Progress (3): 429/935 kB | 188/210 kB | 16/827 kB
+Progress (3): 429/935 kB | 188/210 kB | 20/827 kB
+Progress (3): 429/935 kB | 192/210 kB | 20/827 kB
+Progress (3): 433/935 kB | 192/210 kB | 20/827 kB
+Progress (3): 433/935 kB | 196/210 kB | 20/827 kB
+Progress (3): 433/935 kB | 196/210 kB | 24/827 kB
+Progress (3): 433/935 kB | 200/210 kB | 24/827 kB
+Progress (3): 437/935 kB | 200/210 kB | 24/827 kB
+Progress (3): 437/935 kB | 204/210 kB | 24/827 kB
+Progress (3): 437/935 kB | 204/210 kB | 28/827 kB
+Progress (3): 437/935 kB | 208/210 kB | 28/827 kB
+Progress (3): 442/935 kB | 208/210 kB | 28/827 kB
+Progress (3): 442/935 kB | 210 kB | 28/827 kB
+Progress (3): 442/935 kB | 210 kB | 32/827 kB
+Progress (3): 446/935 kB | 210 kB | 32/827 kB
+Progress (3): 446/935 kB | 210 kB | 36/827 kB
+Progress (3): 450/935 kB | 210 kB | 36/827 kB
+Progress (3): 450/935 kB | 210 kB | 40/827 kB
+Progress (3): 454/935 kB | 210 kB | 40/827 kB
+Progress (3): 454/935 kB | 210 kB | 44/827 kB
+Progress (3): 458/935 kB | 210 kB | 44/827 kB
+Progress (3): 458/935 kB | 210 kB | 48/827 kB
+Progress (3): 462/935 kB | 210 kB | 48/827 kB
+Progress (3): 462/935 kB | 210 kB | 52/827 kB
+Progress (3): 466/935 kB | 210 kB | 52/827 kB
+Progress (3): 466/935 kB | 210 kB | 56/827 kB
+Progress (3): 470/935 kB | 210 kB | 56/827 kB
+Progress (3): 470/935 kB | 210 kB | 61/827 kB
+Progress (3): 474/935 kB | 210 kB | 61/827 kB
+Progress (3): 474/935 kB | 210 kB | 65/827 kB
+Progress (3): 478/935 kB | 210 kB | 65/827 kB
+Progress (3): 478/935 kB | 210 kB | 69/827 kB
+Progress (3): 482/935 kB | 210 kB | 69/827 kB
+Progress (3): 482/935 kB | 210 kB | 73/827 kB
+Progress (3): 487/935 kB | 210 kB | 73/827 kB
+Progress (3): 487/935 kB | 210 kB | 77/827 kB
+Progress (3): 491/935 kB | 210 kB | 77/827 kB
+Progress (3): 491/935 kB | 210 kB | 81/827 kB
+Progress (3): 495/935 kB | 210 kB | 81/827 kB
+Progress (3): 495/935 kB | 210 kB | 85/827 kB
+Progress (3): 499/935 kB | 210 kB | 85/827 kB
+Progress (3): 499/935 kB | 210 kB | 89/827 kB
+Progress (3): 503/935 kB | 210 kB | 89/827 kB
+Progress (3): 503/935 kB | 210 kB | 93/827 kB
+Progress (3): 507/935 kB | 210 kB | 93/827 kB
+Progress (3): 507/935 kB | 210 kB | 97/827 kB
+Progress (3): 511/935 kB | 210 kB | 97/827 kB
+Progress (3): 511/935 kB | 210 kB | 102/827 kB
+Progress (3): 515/935 kB | 210 kB | 102/827 kB
+Progress (3): 515/935 kB | 210 kB | 106/827 kB
+Progress (3): 519/935 kB | 210 kB | 106/827 kB
+Progress (3): 519/935 kB | 210 kB | 110/827 kB
+Progress (3): 523/935 kB | 210 kB | 110/827 kB
+Progress (3): 523/935 kB | 210 kB | 114/827 kB
+Progress (3): 528/935 kB | 210 kB | 114/827 kB
+Progress (3): 528/935 kB | 210 kB | 118/827 kB
+Progress (3): 532/935 kB | 210 kB | 118/827 kB
+Progress (3): 532/935 kB | 210 kB | 122/827 kB
+Progress (3): 536/935 kB | 210 kB | 122/827 kB
+Progress (3): 536/935 kB | 210 kB | 126/827 kB
+Progress (3): 540/935 kB | 210 kB | 126/827 kB
+Progress (3): 540/935 kB | 210 kB | 130/827 kB
+Progress (3): 544/935 kB | 210 kB | 130/827 kB
+Progress (3): 544/935 kB | 210 kB | 134/827 kB
+Progress (3): 548/935 kB | 210 kB | 134/827 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-datamaint-api/2.20231007.000-SNAPSHOT/crs-datamaint-api-2.20231007.000-20240510.010300-738.jar (210 kB at 911 kB/s)
+Progress (2): 552/935 kB | 134/827 kB
+Progress (2): 552/935 kB | 138/827 kB
+Progress (2): 556/935 kB | 138/827 kB
+Progress (2): 556/935 kB | 142/827 kB
+Progress (2): 560/935 kB | 142/827 kB
+Progress (2): 560/935 kB | 147/827 kB
+Progress (2): 564/935 kB | 147/827 kB
+Progress (2): 564/935 kB | 151/827 kB
+Progress (2): 569/935 kB | 151/827 kB
+Progress (2): 569/935 kB | 155/827 kB
+Progress (2): 573/935 kB | 155/827 kB
+Progress (2): 573/935 kB | 159/827 kB
+Progress (2): 577/935 kB | 159/827 kB
+Progress (2): 577/935 kB | 163/827 kB
+Progress (2): 581/935 kB | 163/827 kB
+Progress (2): 581/935 kB | 167/827 kB
+Progress (2): 585/935 kB | 167/827 kB
+Progress (2): 585/935 kB | 171/827 kB
+Progress (2): 589/935 kB | 171/827 kB
+Progress (2): 589/935 kB | 175/827 kB
+Progress (2): 593/935 kB | 175/827 kB
+Progress (2): 593/935 kB | 179/827 kB
+Progress (2): 597/935 kB | 179/827 kB
+Progress (2): 597/935 kB | 183/827 kB
+Progress (2): 601/935 kB | 183/827 kB
+Progress (2): 601/935 kB | 188/827 kB
+Progress (2): 605/935 kB | 188/827 kB
+Progress (2): 605/935 kB | 192/827 kB
+Progress (2): 609/935 kB | 192/827 kB
+Progress (2): 609/935 kB | 196/827 kB
+Progress (2): 614/935 kB | 196/827 kB
+Progress (2): 614/935 kB | 200/827 kB
+Progress (2): 618/935 kB | 200/827 kB
+Progress (2): 618/935 kB | 204/827 kB
+Progress (2): 622/935 kB | 204/827 kB
+Progress (2): 622/935 kB | 208/827 kB
+Progress (2): 626/935 kB | 208/827 kB
+Progress (2): 626/935 kB | 212/827 kB
+Progress (2): 630/935 kB | 212/827 kB
+Progress (2): 630/935 kB | 216/827 kB
+Progress (2): 634/935 kB | 216/827 kB
+Progress (2): 634/935 kB | 220/827 kB
+Progress (2): 638/935 kB | 220/827 kB
+Progress (2): 638/935 kB | 224/827 kB
+Progress (2): 642/935 kB | 224/827 kB
+Progress (2): 642/935 kB | 229/827 kB
+Progress (2): 646/935 kB | 229/827 kB
+Progress (2): 646/935 kB | 233/827 kB
+Progress (2): 650/935 kB | 233/827 kB
+Progress (2): 650/935 kB | 237/827 kB
+Progress (2): 655/935 kB | 237/827 kB
+Progress (2): 655/935 kB | 241/827 kB
+Progress (2): 659/935 kB | 241/827 kB
+Progress (2): 659/935 kB | 245/827 kB
+Progress (2): 663/935 kB | 245/827 kB
+Progress (2): 663/935 kB | 249/827 kB
+Progress (2): 667/935 kB | 249/827 kB
+Progress (2): 667/935 kB | 253/827 kB
+Progress (2): 671/935 kB | 253/827 kB
+Progress (2): 671/935 kB | 257/827 kB
+Progress (2): 675/935 kB | 257/827 kB
+Progress (2): 675/935 kB | 261/827 kB
+Progress (2): 679/935 kB | 261/827 kB
+Progress (2): 679/935 kB | 265/827 kB
+Progress (2): 683/935 kB | 265/827 kB
+Progress (2): 683/935 kB | 269/827 kB
+Progress (2): 687/935 kB | 269/827 kB
+Progress (2): 687/935 kB | 274/827 kB
+Progress (2): 691/935 kB | 274/827 kB
+Progress (2): 691/935 kB | 278/827 kB
+Progress (2): 695/935 kB | 278/827 kB
+Progress (2): 695/935 kB | 282/827 kB
+Progress (2): 700/935 kB | 282/827 kB
+Progress (2): 700/935 kB | 286/827 kB
+Progress (2): 704/935 kB | 286/827 kB
+Progress (2): 704/935 kB | 290/827 kB
+Progress (2): 708/935 kB | 290/827 kB
+Progress (2): 708/935 kB | 294/827 kB
+Progress (2): 712/935 kB | 294/827 kB
+Progress (2): 712/935 kB | 298/827 kB
+Progress (2): 716/935 kB | 298/827 kB
+Progress (2): 716/935 kB | 302/827 kB
+Progress (2): 720/935 kB | 302/827 kB
+Progress (2): 720/935 kB | 306/827 kB
+Progress (2): 724/935 kB | 306/827 kB
+Progress (2): 724/935 kB | 310/827 kB
+Progress (2): 728/935 kB | 310/827 kB
+Progress (2): 728/935 kB | 315/827 kB
+Progress (2): 732/935 kB | 315/827 kB
+Progress (2): 732/935 kB | 319/827 kB
+Progress (2): 736/935 kB | 319/827 kB
+Progress (2): 736/935 kB | 323/827 kB
+Progress (2): 741/935 kB | 323/827 kB
+Progress (2): 741/935 kB | 327/827 kB
+Progress (2): 745/935 kB | 327/827 kB
+Progress (2): 745/935 kB | 331/827 kB
+Progress (2): 749/935 kB | 331/827 kB
+Progress (2): 749/935 kB | 335/827 kB
+Progress (2): 753/935 kB | 335/827 kB
+Progress (2): 753/935 kB | 339/827 kB
+Progress (2): 757/935 kB | 339/827 kB
+Progress (2): 757/935 kB | 343/827 kB
+Progress (2): 761/935 kB | 343/827 kB
+Progress (2): 761/935 kB | 347/827 kB
+Progress (2): 765/935 kB | 347/827 kB
+Progress (2): 765/935 kB | 351/827 kB
+Progress (2): 769/935 kB | 351/827 kB
+Progress (2): 769/935 kB | 355/827 kB
+Progress (2): 773/935 kB | 355/827 kB
+Progress (2): 773/935 kB | 360/827 kB
+Progress (2): 777/935 kB | 360/827 kB
+Progress (2): 777/935 kB | 364/827 kB
+Progress (2): 782/935 kB | 364/827 kB
+Progress (2): 782/935 kB | 368/827 kB
+Progress (2): 786/935 kB | 368/827 kB
+Progress (2): 786/935 kB | 372/827 kB
+Progress (2): 790/935 kB | 372/827 kB
+Progress (2): 790/935 kB | 376/827 kB
+Progress (2): 794/935 kB | 376/827 kB
+Progress (2): 794/935 kB | 380/827 kB
+Progress (2): 798/935 kB | 380/827 kB
+Progress (2): 798/935 kB | 384/827 kB
+Progress (2): 802/935 kB | 384/827 kB
+Progress (2): 802/935 kB | 388/827 kB
+Progress (2): 806/935 kB | 388/827 kB
+Progress (2): 806/935 kB | 392/827 kB
+Progress (2): 810/935 kB | 392/827 kB
+Progress (2): 810/935 kB | 396/827 kB
+Progress (2): 814/935 kB | 396/827 kB
+Progress (2): 814/935 kB | 401/827 kB
+Progress (2): 818/935 kB | 401/827 kB
+Progress (2): 818/935 kB | 405/827 kB
+Progress (2): 822/935 kB | 405/827 kB
+Progress (2): 822/935 kB | 409/827 kB
+Progress (2): 827/935 kB | 409/827 kB
+Progress (2): 827/935 kB | 413/827 kB
+Progress (2): 831/935 kB | 413/827 kB
+Progress (2): 831/935 kB | 417/827 kB
+Progress (2): 835/935 kB | 417/827 kB
+Progress (2): 835/935 kB | 421/827 kB
+Progress (2): 839/935 kB | 421/827 kB
+Progress (2): 839/935 kB | 425/827 kB
+Progress (2): 843/935 kB | 425/827 kB
+Progress (2): 843/935 kB | 429/827 kB
+Progress (2): 847/935 kB | 429/827 kB
+Progress (2): 847/935 kB | 433/827 kB
+Progress (2): 851/935 kB | 433/827 kB
+Progress (2): 851/935 kB | 437/827 kB
+Progress (2): 855/935 kB | 437/827 kB
+Progress (2): 855/935 kB | 442/827 kB
+Progress (2): 859/935 kB | 442/827 kB
+Progress (2): 859/935 kB | 446/827 kB
+Progress (2): 863/935 kB | 446/827 kB
+Progress (2): 863/935 kB | 450/827 kB
+Progress (2): 868/935 kB | 450/827 kB
+Progress (2): 868/935 kB | 454/827 kB
+Progress (2): 872/935 kB | 454/827 kB
+Progress (2): 872/935 kB | 458/827 kB
+Progress (2): 876/935 kB | 458/827 kB
+Progress (2): 876/935 kB | 462/827 kB
+Progress (2): 880/935 kB | 462/827 kB
+Progress (2): 884/935 kB | 462/827 kB
+Progress (2): 884/935 kB | 466/827 kB
+Progress (2): 888/935 kB | 466/827 kB
+Progress (2): 888/935 kB | 470/827 kB
+Progress (2): 892/935 kB | 470/827 kB
+Progress (2): 892/935 kB | 474/827 kB
+Progress (2): 896/935 kB | 474/827 kB
+Progress (2): 896/935 kB | 478/827 kB
+Progress (2): 900/935 kB | 478/827 kB
+Progress (2): 900/935 kB | 482/827 kB
+Progress (2): 904/935 kB | 482/827 kB
+Progress (2): 904/935 kB | 487/827 kB
+Progress (2): 908/935 kB | 487/827 kB
+Progress (2): 908/935 kB | 491/827 kB
+Progress (2): 913/935 kB | 491/827 kB
+Progress (2): 913/935 kB | 495/827 kB
+Progress (2): 917/935 kB | 495/827 kB
+Progress (2): 917/935 kB | 499/827 kB
+Progress (2): 921/935 kB | 499/827 kB
+Progress (2): 921/935 kB | 503/827 kB
+Progress (2): 925/935 kB | 503/827 kB
+Progress (2): 925/935 kB | 507/827 kB
+Progress (2): 929/935 kB | 507/827 kB
+Progress (2): 929/935 kB | 511/827 kB
+Progress (2): 933/935 kB | 511/827 kB
+Progress (2): 933/935 kB | 515/827 kB
+Progress (2): 935 kB | 515/827 kB
+Progress (2): 935 kB | 519/827 kB
+Progress (2): 935 kB | 523/827 kB
+Progress (2): 935 kB | 528/827 kB
+Progress (2): 935 kB | 532/827 kB
+Progress (2): 935 kB | 536/827 kB
+Progress (2): 935 kB | 540/827 kB
+Progress (2): 935 kB | 544/827 kB
+Progress (2): 935 kB | 548/827 kB
+Progress (2): 935 kB | 552/827 kB
+Progress (2): 935 kB | 556/827 kB
+Progress (2): 935 kB | 560/827 kB
+Progress (2): 935 kB | 564/827 kB
+Progress (2): 935 kB | 568/827 kB
+Progress (2): 935 kB | 573/827 kB
+Progress (2): 935 kB | 577/827 kB
+Progress (2): 935 kB | 581/827 kB
+Progress (2): 935 kB | 585/827 kB
+Progress (2): 935 kB | 589/827 kB
+Progress (2): 935 kB | 593/827 kB
+Progress (2): 935 kB | 597/827 kB
+Progress (2): 935 kB | 601/827 kB
+Progress (2): 935 kB | 605/827 kB
+Progress (2): 935 kB | 609/827 kB
+Progress (2): 935 kB | 614/827 kB
+Progress (2): 935 kB | 618/827 kB
+Progress (2): 935 kB | 622/827 kB
+Progress (2): 935 kB | 626/827 kB
+Progress (2): 935 kB | 630/827 kB
+Progress (2): 935 kB | 634/827 kB
+Progress (2): 935 kB | 638/827 kB
+Progress (2): 935 kB | 642/827 kB
+Progress (2): 935 kB | 646/827 kB
+Progress (2): 935 kB | 650/827 kB
+Progress (2): 935 kB | 654/827 kB
+Progress (2): 935 kB | 659/827 kB
+Progress (2): 935 kB | 663/827 kB
+Progress (2): 935 kB | 667/827 kB
+Progress (2): 935 kB | 671/827 kB
+Progress (2): 935 kB | 675/827 kB
+Progress (2): 935 kB | 679/827 kB
+Progress (2): 935 kB | 683/827 kB
+Progress (2): 935 kB | 687/827 kB
+Progress (2): 935 kB | 691/827 kB
+Progress (2): 935 kB | 695/827 kB
+Progress (2): 935 kB | 700/827 kB
+Progress (2): 935 kB | 704/827 kB
+Progress (2): 935 kB | 708/827 kB
+Progress (2): 935 kB | 712/827 kB
+Progress (2): 935 kB | 716/827 kB
+Progress (2): 935 kB | 720/827 kB
+Progress (2): 935 kB | 724/827 kB
+Progress (2): 935 kB | 728/827 kB
+Progress (2): 935 kB | 732/827 kB
+Progress (2): 935 kB | 736/827 kB
+Progress (2): 935 kB | 741/827 kB
+Progress (2): 935 kB | 745/827 kB
+Progress (2): 935 kB | 749/827 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-crdm-api/2.20231007.000-SNAPSHOT/crs-crdm-api-2.20231007.000-20240510.010438-735.jar (935 kB at 3.2 MB/s)
+Progress (1): 753/827 kB
+Progress (1): 757/827 kB
+Progress (1): 761/827 kB
+Progress (1): 765/827 kB
+Progress (1): 769/827 kB
+Progress (1): 773/827 kB
+Progress (1): 777/827 kB
+Progress (1): 781/827 kB
+Progress (1): 786/827 kB
+Progress (1): 790/827 kB
+Progress (1): 794/827 kB
+Progress (1): 798/827 kB
+Progress (1): 802/827 kB
+Progress (1): 806/827 kB
+Progress (1): 810/827 kB
+Progress (1): 814/827 kB
+Progress (1): 818/827 kB
+Progress (1): 822/827 kB
+Progress (1): 827/827 kB
+Progress (1): 827 kB
+
+Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-researchpublic-api/2.20231007.000-SNAPSHOT/crs-researchpublic-api-2.20231007.000-20240510.010311-736.jar (827 kB at 2.6 MB/s)
+[INFO]
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ crs-crfrmgt-server ---
+[INFO] com.hundsun.crs:crs-crfrmgt-server:jar:2.20231007.000
+[INFO] +- com.oracle:ojdbc6:jar:11.2.0.4:compile
+[INFO] +- com.hundsun.crs:crs-msg-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- io.netty:netty-transport:jar:4.1.68.Final:compile
+[INFO] |  +- io.netty:netty-common:jar:4.1.68.Final:compile
+[INFO] |  +- io.netty:netty-buffer:jar:4.1.68.Final:compile
+[INFO] |  \- io.netty:netty-resolver:jar:4.1.68.Final:compile
+[INFO] +- org.apache.commons:commons-compress:jar:1.21:compile
+[INFO] +- commons-io:commons-io:jar:2.8.0:compile
+[INFO] +- com.hundsun.fais:fais-innerreport-api:jar:2.20230300.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.fais:fais-equityresearch-api:jar:2.20230300.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-crfrmgt-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-poolmanage-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-modmgt-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-crdm-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-attachment-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-cache:jar:3.5.0.2:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-cache-core:jar:3.5.0.2:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-api:jar:3.5.0.2:compile
+[INFO] |  |  |  +- org.springframework.data:spring-data-redis:jar:2.2.12.RELEASE:compile
+[INFO] |  |  |  |  +- org.springframework.data:spring-data-keyvalue:jar:2.2.12.RELEASE:compile
+[INFO] |  |  |  |  |  \- org.springframework.data:spring-data-commons:jar:2.2.12.RELEASE:compile
+[INFO] |  |  |  |  +- org.springframework:spring-tx:jar:5.2.24.RELEASE:compile
+[INFO] |  |  |  |  \- org.springframework:spring-oxm:jar:5.2.24.RELEASE:compile
+[INFO] |  |  |  +- redis.clients:jedis:jar:3.10.0:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud.middleware:middleware-tenant-sdk:jar:1.0.0:compile
+[INFO] |  |  |     \- com.hundsun.jrescloud.middleware:middleware-tenant-api:jar:1.0.0:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-redis:jar:3.5.0.2:compile
+[INFO] |  |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.8:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-local:jar:3.5.0.2:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:store:jar:3.5.0.2:compile
+[INFO] |  |  |     \- org.rocksdb:rocksdbjni:jar:5.18.3:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-trace-json:jar:3.1.6.3.1:compile
+[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-trace-core:jar:3.1.6.3.1:compile
+[INFO] |  |        \- com.hundsun.jrescloud:jrescloud-log-defender:jar:3.1.6.3.1:compile
+[INFO] |  |           \- com.hundsun.jrescloud:jrescloud-log4j2:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-cache-monitor:jar:3.5.0.2:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-monitor-common:jar:3.1.6.3.1:compile
+[INFO] |  |     +- com.hundsun.jrescloud:jrescloud-monitor-api:jar:3.1.6.3.1:compile
+[INFO] |  |     +- com.carrotsearch:java-sizeof:jar:0.0.5:compile
+[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-mvc-path-limit:jar:3.1.6.3.1:compile
+[INFO] |  +- com.google.guava:guava:jar:32.1.1-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:3.33.0:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:2.8:compile
+[INFO] |  \- com.google.code.gson:gson:jar:2.8.9:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-lock-redis:jar:2.3.1.0.3:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-lock-redis:jar:2.3.1.0.3:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-lock-api:jar:2.3.1.0.3:compile
+[INFO] |  |  +- org.redisson:redisson:jar:3.17.7:compile
+[INFO] |  |  |  +- io.netty:netty-codec:jar:4.1.68.Final:compile
+[INFO] |  |  |  +- io.netty:netty-resolver-dns:jar:4.1.68.Final:compile
+[INFO] |  |  |  |  \- io.netty:netty-codec-dns:jar:4.1.68.Final:compile
+[INFO] |  |  |  +- io.netty:netty-handler:jar:4.1.68.Final:compile
+[INFO] |  |  |  +- javax.cache:cache-api:jar:1.1.1:compile
+[INFO] |  |  |  +- io.projectreactor:reactor-core:jar:3.3.13.RELEASE:compile
+[INFO] |  |  |  +- org.reactivestreams:reactive-streams:jar:1.0.3:compile
+[INFO] |  |  |  +- io.reactivex.rxjava3:rxjava:jar:3.1.5:compile
+[INFO] |  |  |  +- org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile
+[INFO] |  |  |  +- org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.14.0-rc2:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.0-rc2:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.14.0-rc2:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
+[INFO] |  |  |  \- org.jodd:jodd-bean:jar:5.1.6:compile
+[INFO] |  |  |     \- org.jodd:jodd-core:jar:5.1.6:compile
+[INFO] |  |  \- org.bouncycastle:bcpkix-jdk15on:jar:1.68:compile
+[INFO] |  |     \- org.bouncycastle:bcprov-jdk15on:jar:1.69:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-lock-monitor:jar:2.3.1.0.3:compile
+[INFO] +- org.springframework.boot:spring-boot-configuration-processor:jar:2.2.13.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.2.13.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.2.13.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.2.13.RELEASE:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.32:compile
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.2.13.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.2.13.RELEASE:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.5.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.5.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.5.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.5.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.5.2:test
+[INFO] |  +- org.junit.vintage:junit-vintage-engine:jar:5.5.2:test
+[INFO] |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:test
+[INFO] |  |  +- org.junit.platform:junit-platform-engine:jar:1.5.2:test
+[INFO] |  |  \- junit:junit:jar:4.12:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:3.1.0:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.13.2:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.1:test
+[INFO] |  +- org.mockito:mockito-core:jar:3.1.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.10.19:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.6:compile
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.2.24.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.2.24.RELEASE:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.2.24.RELEASE:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.4:test
+[INFO] +- com.hundsun.crs:crs-firesearch-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-datamaint-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.crs:crs-researchpublic-api:jar:2.20231007.000-SNAPSHOT:compile
+[INFO] +- com.hundsun.fais:fais-investpool-api:jar:2.20230300.000-SNAPSHOT:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.6:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-common:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-base:jar:3.1.6.3.1:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-encrypt:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.0-rc2:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-legacy:jar:2.1.0.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  +- org.springframework:spring-aop:jar:5.2.24.RELEASE:compile
+[INFO] |  |  |  \- org.aspectj:aspectjweaver:jar:1.9.5:compile
+[INFO] |  |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
+[INFO] |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.30:compile
+[INFO] |  |  \- com.lmax:disruptor:jar:3.4.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-log4j2:jar:2.2.13.RELEASE:compile
+[INFO] |  |  +- org.apache.logging.log4j:log4j-core:jar:2.18.0:compile
+[INFO] |  |  \- org.apache.logging.log4j:log4j-jul:jar:2.18.0:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.18.0:compile
+[INFO] |  |  \- org.apache.logging.log4j:log4j-api:jar:2.18.0:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.2.13.RELEASE:compile
+[INFO] |     +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:compile
+[INFO] |     +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:compile
+[INFO] |     \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-rpc-def:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-rpc-t2:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-common-t2:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-event:jar:3.1.6.3.1:compile
+[INFO] |  |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  |  +- io.netty:netty-all:jar:4.1.68.Final:compile
+[INFO] |  |  +- org.apache.curator:curator-framework:jar:4.2.0:compile
+[INFO] |  |  |  \- org.apache.curator:curator-client:jar:4.2.0:compile
+[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.14:compile
+[INFO] |  |  |  +- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile
+[INFO] |  |  |  +- jline:jline:jar:0.9.94:compile
+[INFO] |  |  |  \- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  |  +- org.apache.curator:curator-recipes:jar:4.2.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  |  |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |  +- com.alibaba:hessian-lite:jar:3.2.13:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-common:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-api:jar:3.1.6.3.1:compile
+[INFO] |  |  |     +- org.apache.skywalking:apm-toolkit-trace:jar:8.1.0:compile
+[INFO] |  |  |     \- org.apache.skywalking:apm-toolkit-opentracing:jar:8.1.0:compile
+[INFO] |  |  |        +- io.opentracing:opentracing-api:jar:0.31.0:compile
+[INFO] |  |  |        \- io.opentracing:opentracing-noop:jar:0.31.0:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-starter:jar:3.1.6.3.1:compile
+[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-protobuff:jar:3.1.6.3.1:compile
+[INFO] |  |  |     \- com.google.protobuf:protobuf-java-util:jar:3.16.3:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-partition:jar:3.1.6.3.1:compile
+[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-start-async-api:jar:3.1.6.3.1:compile
+[INFO] |  |  \- io.netty:netty-tcnative-boringssl-static:jar:2.0.42.Final:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-monitor:jar:3.1.6.3.1:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  \- io.micrometer:micrometer-core:jar:1.3.16:compile
+[INFO] |  |  |     +- org.hdrhistogram:HdrHistogram:jar:2.1.11:compile
+[INFO] |  |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-prometheus-monitor-api:jar:3.1.6.3.1:compile
+[INFO] |  |     \- io.micrometer:micrometer-registry-prometheus:jar:1.3.1:compile
+[INFO] |  |        \- io.prometheus:simpleclient_common:jar:0.7.0:compile
+[INFO] |  |           \- io.prometheus:simpleclient:jar:0.7.0:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-log4j2:jar:3.1.6.3.1:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-rpc-def-rule-monitor:jar:3.1.6.3.1:compile
+[INFO] +- com.hundsun.jrescloud.middleware:jrescloud-starter-mybatis:jar:2.2.6:compile
+[INFO] |  +- com.hundsun.jrescloud.middleware:jrescloud-db-def:jar:2.2.6:compile
+[INFO] |  |  +- com.hundsun.jrescloud.middleware:jrescloud-db-core:jar:2.2.6:compile
+[INFO] |  |  |  +- com.hundsun.jrescloud.middleware:jrescloud-db-api:jar:2.2.6:compile
+[INFO] |  |  |  +- com.alibaba:druid:jar:1.2.20:compile
+[INFO] |  |  |  \- com.zaxxer:HikariCP:jar:3.4.5:compile
+[INFO] |  |  \- com.hundsun.jrescloud.middleware:jrescloud-db-monitor-springboot2:jar:2.2.6:compile
+[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.4.0:compile
+[INFO] |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:2.2.0:compile
+[INFO] |  |  |  \- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:2.2.0:compile
+[INFO] |  |  \- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.4.0:compile
+[INFO] |  +- tk.mybatis:mapper-spring-boot-starter:jar:2.1.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.2.13.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-jdbc:jar:5.2.24.RELEASE:compile
+[INFO] |  |  +- org.mybatis:mybatis-spring:jar:1.3.2:compile
+[INFO] |  |  +- tk.mybatis:mapper-core:jar:1.1.5:compile
+[INFO] |  |  |  \- javax.persistence:persistence-api:jar:1.0:compile
+[INFO] |  |  +- tk.mybatis:mapper-base:jar:1.1.5:compile
+[INFO] |  |  +- tk.mybatis:mapper-weekend:jar:1.1.5:compile
+[INFO] |  |  +- tk.mybatis:mapper-spring:jar:1.1.5:compile
+[INFO] |  |  +- tk.mybatis:mapper-extra:jar:1.1.5:compile
+[INFO] |  |  \- tk.mybatis:mapper-spring-boot-autoconfigure:jar:2.1.5:compile
+[INFO] |  \- org.mybatis:mybatis:jar:3.5.6:compile
+[INFO] +- com.mysql:mysql-connector-j:jar:8.2.0:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.16.3:compile
+[INFO] +- com.github.pagehelper:pagehelper:jar:6.1.0:compile
+[INFO] |  \- com.github.jsqlparser:jsqlparser:jar:4.7:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-amqp:jar:4.1.30.8:compile
+[INFO] |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-starter:jar:4.1.30.8:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-mq-monitor-springboot2:jar:4.1.30.8:compile
+[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-mq-monitor-common:jar:4.1.30.8:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-amqp-configuration:jar:4.1.30.8:compile
+[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-amqp:jar:4.1.30.8:compile
+[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-api:jar:4.1.30.8:compile
+[INFO] |        |  +- com.hundsun.jrescloud.middleware:middleware-base-exception:jar:2.0.6:compile
+[INFO] |        |  |  \- com.hundsun.jrescloud.middleware:middleware-base-common:jar:2.0.6:compile
+[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-adapter:jar:4.1.30.8:compile
+[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-api-compatible:jar:4.1.30.8:compile
+[INFO] |        |  \- com.esotericsoftware:kryo:jar:5.0.0-RC1:compile
+[INFO] |        |     +- com.esotericsoftware:reflectasm:jar:1.11.7:compile
+[INFO] |        |     \- com.esotericsoftware:minlog:jar:1.3.0:compile
+[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-core:jar:4.1.30.8:compile
+[INFO] |        +- com.rabbitmq:amqp-client:jar:5.18.0:compile
+[INFO] |        \- org.apache.commons:commons-pool2:jar:2.7.0:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mvc-registry:jar:3.1.6.3.1:compile
+[INFO] |  \- com.hundsun.jrescloud:jrescloud-mvc-registry:jar:3.1.6.3.1:compile
+[INFO] |     +- com.hundsun.jrescloud:jrescloud-common-extension:jar:3.1.6.3.1:compile
+[INFO] |     \- com.hundsun.jrescloud:jrescloud-mvc-jwt:jar:3.1.6.3.1:compile
+[INFO] |        \- com.auth0:java-jwt:jar:3.12.0:compile
+[INFO] +- com.hundsun.jres.bizframe2:bizframe-sdk-api:jar:2.0.98.2:compile
+[INFO] |  +- com.hundsun.jres.bizframe2:bizframe-api:jar:2.0.98.2:compile
+[INFO] |  +- com.hundsun.jres.bizframe2:bizframe-cloud-api:jar:2.0.98.2:compile
+[INFO] |  \- org.apache.commons:commons-lang3:jar:3.9:compile
+[INFO] +- com.alibaba:easyexcel:jar:3.1.1:compile
+[INFO] |  +- com.alibaba:easyexcel-core:jar:3.1.1:compile
+[INFO] |  |  +- com.alibaba:easyexcel-support:jar:3.1.1:compile
+[INFO] |  |  +- org.apache.commons:commons-csv:jar:1.8:compile
+[INFO] |  |  \- org.ehcache:ehcache:jar:3.9.3:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.29:compile
+[INFO] +- javax.mail:mail:jar:1.4.7:compile
+[INFO] |  \- javax.activation:activation:jar:1.1:compile
+[INFO] +- com.hundsun.jres.workflow:wf.multisystem.dependency:jar:1.2.187:compile
+[INFO] |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.cloud.util:jar:1.2.187:compile
+[INFO] |  |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.remoting.api:jar:1.2.187:compile
+[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-rpc-api:jar:3.1.6.3.1:compile
+[INFO] |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.comform.remoting.api:jar:1.2.187:compile
+[INFO] |  |  \- com.hundsun.jresplus:jresplus-remoting:jar:1.1.35:compile
+[INFO] |  |     \- com.hundsun.jresplus:jresplus-common:jar:1.0.9:compile
+[INFO] |  \- com.hundsun.jres.workflow:com.hundsun.jres.workflow.multisystem.remoting.api:jar:1.2.187:compile
+[INFO] |     +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.api.dto:jar:1.2.187:compile
+[INFO] |     \- com.hundsun.workflow:com.hundsun.workflow.api:jar:1.0.0:compile
+[INFO] +- javax.validation:validation-api:jar:2.0.1.Final:compile
+[INFO] +- com.deepoove:poi-tl:jar:1.7.3:compile
+[INFO] |  +- org.apache.poi:poi-ooxml:jar:4.1.2:compile
+[INFO] |  |  \- com.github.virtuald:curvesapi:jar:1.06:compile
+[INFO] |  +- org.apache.poi:poi:jar:4.1.2:compile
+[INFO] |  |  +- commons-codec:commons-codec:jar:1.15:compile
+[INFO] |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
+[INFO] |  |  \- com.zaxxer:SparseBitSet:jar:1.2:compile
+[INFO] |  \- org.apache.poi:poi-ooxml-schemas:jar:4.1.2:compile
+[INFO] |     \- org.apache.xmlbeans:xmlbeans:jar:3.1.0:compile
+[INFO] +- org.apache.poi:ooxml-schemas:jar:1.1:compile
+[INFO] +- org.jxls:jxls:jar:2.12.0:compile
+[INFO] |  +- org.apache.commons:commons-jexl3:jar:3.2:compile
+[INFO] |  +- commons-beanutils:commons-beanutils:jar:1.9.4:compile
+[INFO] |  |  \- commons-collections:commons-collections:jar:3.2.2:compile
+[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.29:compile
+[INFO] +- org.jxls:jxls-poi:jar:2.12.0:compile
+[INFO] +- org.jxls:jxls-jexcel:jar:1.0.9:compile
+[INFO] |  \- net.sourceforge.jexcelapi:jxl:jar:2.6.10:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.13.3:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.5.8:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-freemarker:jar:2.2.13.RELEASE:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.30:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:5.2.24.RELEASE:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.2.24.RELEASE:compile
+[INFO] |     \- org.springframework:spring-context:jar:5.2.24.RELEASE:compile
+[INFO] |        \- org.springframework:spring-expression:jar:5.2.24.RELEASE:compile
+[INFO] +- com.hundsun.jrescloud:jrescloud-starter-logkafka:jar:3.1.6.3.1:compile
+[INFO] |  \- org.apache.kafka:kafka-clients:jar:3.4.0:compile
+[INFO] |     +- com.github.luben:zstd-jni:jar:1.5.2-1:runtime
+[INFO] |     +- org.lz4:lz4-java:jar:1.8.0:runtime
+[INFO] |     \- org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime
+[INFO] +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.5:compile
+[INFO] |  +- xml-resolver:xml-resolver:jar:1.2:compile
+[INFO] |  +- org.ow2.asm:asm:jar:9.4:compile
+[INFO] |  +- org.apache.cxf:cxf-core:jar:3.5.5:compile
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.3:compile
+[INFO] |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.3:compile
+[INFO] |  |  |  +- com.sun.istack:istack-commons-runtime:jar:3.0.11:compile
+[INFO] |  |  |  \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
+[INFO] |  |  +- com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile
+[INFO] |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2:compile
+[INFO] |  |  \- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.5:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.5:compile
+[INFO] |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
+[INFO] |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.5:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.5:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.5:compile
+[INFO] |  \- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.5:compile
+[INFO] |     \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.5:compile
+[INFO] |        \- org.apache.neethi:neethi:jar:3.2.0:compile
+[INFO] +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.5:compile
+[INFO] +- cn.hutool:hutool-all:jar:5.8.12:compile
+[INFO] +- org.dom4j:dom4j:jar:2.1.3:compile
+[INFO] \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-timertask-client-api:jar:1.1.15:compile
+[INFO]    +- org.springframework.boot:spring-boot:jar:2.2.13.RELEASE:compile
+[INFO]    +- com.alibaba:fastjson:jar:1.2.83:compile
+[INFO]    +- org.springframework.boot:spring-boot-starter-web:jar:2.2.13.RELEASE:compile
+[INFO]    |  +- org.springframework.boot:spring-boot-starter-json:jar:2.2.13.RELEASE:compile
+[INFO]    |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.14.0-rc2:compile
+[INFO]    |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.14.0-rc2:compile
+[INFO]    |  +- org.springframework.boot:spring-boot-starter-validation:jar:2.2.13.RELEASE:compile
+[INFO]    |  |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO]    |  |  \- org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile
+[INFO]    |  |     +- org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile
+[INFO]    |  |     \- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO]    |  +- org.springframework:spring-web:jar:5.2.24.RELEASE:compile
+[INFO]    |  \- org.springframework:spring-webmvc:jar:5.2.24.RELEASE:compile
+[INFO]    +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-timertask-api-dto:jar:1.1.15:compile
+[INFO]    \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-processdesign-api:jar:1.0.15:compile
+[INFO]       \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-common:jar:0.0.94:compile
+[INFO]          +- com.jcraft:jsch:jar:0.1.54:compile
+[INFO]          +- com.hundsun.jrescloud:jrescloud-common-gm:jar:3.1.6.3.1:compile
+[INFO]          +- com.hundsun.arescloud.see:cas-simple-client:jar:2.7.26.10:compile
+[INFO]          \- commons-lang:commons-lang:jar:2.6:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.890 s
+[INFO] Finished at: 2024-05-10T09:14:17+08:00
+[INFO] ------------------------------------------------------------------------
