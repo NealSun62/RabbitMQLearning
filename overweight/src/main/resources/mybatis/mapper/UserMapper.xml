@@ -22,5 +22,10 @@
     <select id="getInfo" resultMap="aa">
         select * from crdm_base_comp_cfg a left join crdm_base_comp_type b
         on a.uuid = b.parent_id
+        <where>
+            <if test="items != null and items.size > 0">
+                and <foreach item="item" index="index" collection="items" open="(" separator=" or " close=")">a.ins_num = #{item.insNum} and a.flow_inst_no = #{item.flowInstNo}</foreach>
+            </if>
+        </where>
     </select>
 </mapper>
