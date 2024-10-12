@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fais.crdm.mapper.crdm.CrdmRatStdInstRelaMapper">
+
+    <!-- 通过非标关联时点查询主体内评信息 -->
+    <select id="selectRatStdInstRelaList" resultType="com.hundsun.fais.crdm.entity.CrdmRatStdInstRela">
+        select
+            a.pty_flow_inst_no,
+            a.pd_flow_inst_no,
+            a.ins_num,
+            a.type,
+            a.ratio
+        from crdm_rat_std_inst_rela a
+        <where>
+            <if test="items != null and items.size > 0">
+                and <foreach item="item" index="index" collection="items" open="(" separator=" or " close=")">a.ins_num = #{item.insNum} and a.pd_flow_inst_no = #{item.pdFlowInstNo}</foreach>
+            </if>
+        </where>
+    </select>
+
+    <select id="selectRatStdInstRelaVoList" resultType="com.hundsun.fais.crdm.model.common.CrdmRatStdInstRelaVo">
+        select a.pd_flow_inst_no, a.type, b.ins_fn
+        from crdm_rat_std_inst_rela a
+        left join crdm_inf_inst_archive b
+        on a.ins_num = b.ins_num
+        <where>
+            <if test="pdFlowInstNos!=null and pdFlowInstNos.size()>0">
+                and (
+                <foreach collection="pdFlowInstNos" item="pdFlowInstNo" index="index" open="a.pd_flow_inst_no IN (" close=")" separator=",">
+                    <if test="((index+1) % 950) == 0"> NULL ) OR a.pd_flow_inst_no IN (</if>#{pdFlowInstNo}
+                </foreach>
+                )
+            </if>
+            <if test="type!=null and type!=''">
+                and a.type = #{type}
+            </if>
+        </where>
+    </select>
+</mapper>

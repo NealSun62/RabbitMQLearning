@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fais.modmgt.mapper.ApubInfoInsRegiMapper">
+    <resultMap id="BaseResultMap" type="com.hundsun.fais.modmgt.entity.ApubInfoInsRegi">
+        <!--@mbg.generated-->
+        <!--@Table APUB_INFO_INS_REGI-->
+        <id column="INS_NUM" jdbcType="VARCHAR" property="insNum"/>
+        <id column="REGI_STD_NUM" jdbcType="DECIMAL" property="regiStdNum"/>
+        <result column="REGI_LVL" jdbcType="DECIMAL" property="regiLvl"/>
+        <result column="CHG_DATE" jdbcType="DECIMAL" property="chgDate"/>
+        <result column="PRI_REGI_NUM" jdbcType="VARCHAR" property="priRegiNum"/>
+        <result column="SCD_REGI_NUM" jdbcType="VARCHAR" property="scdRegiNum"/>
+        <result column="THIR_REGI_NUM" jdbcType="VARCHAR" property="thirRegiNum"/>
+        <result column="FOUR_REGI_NUM" jdbcType="VARCHAR" property="fourRegiNum"/>
+        <result column="FIF_REGI_NUM" jdbcType="VARCHAR" property="fifRegiNum"/>
+        <result column="PRI_REGI_NAME" jdbcType="VARCHAR" property="priRegiName"/>
+        <result column="SCD_REGI_NAME" jdbcType="VARCHAR" property="scdRegiName"/>
+        <result column="THIR_REGI_NAME" jdbcType="VARCHAR" property="thirRegiName"/>
+        <result column="FOUR_REGI_NAME" jdbcType="VARCHAR" property="fourRegiName"/>
+        <result column="FIF_REGI_NAME" jdbcType="VARCHAR" property="fifRegiName"/>
+        <result column="DATA_SRC" jdbcType="VARCHAR" property="dataSrc"/>
+        <result column="UPDT_TIME" jdbcType="TIMESTAMP" property="updtTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        INS_NUM,
+        REGI_STD_NUM,
+        REGI_LVL,
+        CHG_DATE,
+        PRI_REGI_NUM,
+        SCD_REGI_NUM,
+        THIR_REGI_NUM,
+        FOUR_REGI_NUM,
+        FIF_REGI_NUM,
+        PRI_REGI_NAME,
+        SCD_REGI_NAME,
+        THIR_REGI_NAME,
+        FOUR_REGI_NAME,
+        FIF_REGI_NAME,
+        DATA_SRC,
+        UPDT_TIME
+    </sql>
+
+    <select id="queryDefInsAreaLevel" resultType="java.lang.String">
+        select REGI_LVL
+        from APUB_INFO_INS_REGI
+        where INS_NUM = #{insNum,jdbcType=VARCHAR} and REGI_STD_NUM = #{regiStid,jdbcType=VARCHAR}
+    </select>
+
+
+    <resultMap id="typeCountMap" type="java.util.Map">
+        <result property="regiNum" column="REGI_NUM" jdbcType="VARCHAR"/>
+        <result property="regiName" column="REGI_NAME" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="queryAreaNum" resultMap="typeCountMap">
+        select
+            CASE
+                WHEN REGI_LVL = 3 THEN THIR_REGI_NUM
+                WHEN REGI_LVL = 2 THEN SCD_REGI_NUM
+                WHEN REGI_LVL = 1 THEN PRI_REGI_NUM
+                ELSE NULL
+                END
+                AS REGI_NUM,
+            CASE
+                WHEN REGI_LVL = 3 THEN concat(concat(PRI_REGI_NAME,SCD_REGI_NAME),THIR_REGI_NAME)
+                WHEN REGI_LVL = 2 THEN concat(PRI_REGI_NAME,SCD_REGI_NAME)
+                WHEN REGI_LVL = 1 THEN PRI_REGI_NAME
+                ELSE NULL
+                END
+                AS REGI_NAME
+        FROM
+            APUB_INFO_INS_REGI
+        WHERE
+            REGI_STD_NUM = #{regionType}
+          AND INS_NUM = #{insNum}
+    </select>
+
+    <select id="queryAreaIndexData" resultType="com.hundsun.fais.modmgt.model.PubRegiMacsData">
+        SELECT
+        REGI_MACS_INDX_CLAS_CODE ,
+        MACS_INDX_VAL ,
+        substr(STAT_END_DATE, 1, 4) AS STAT_END_DATE
+        FROM
+        PUB_REGI_MACS
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>)
+        AND STAT_END_DATE LIKE concat((SELECT
+        CASE WHEN 	LASTDATE>=thisyear-10 THEN LASTDATE ELSE TO_CHAR(thisyear-10)  END AS lastdate
+        FROM
+        (
+        SELECT
+        SUBSTR( max(STAT_END_DATE), 1, 4) AS lastdate ,TO_CHAR(SYSDATE, 'YYYY')  AS thisyear
+        FROM
+        PUB_REGI_MACS prm
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>) )), '%')
+        UNION ALL
+        SELECT
+        REGI_MACS_INDX_CLAS_CODE ,
+        MACS_INDX_VAL,
+        substr(STAT_END_DATE, 1, 4) AS STAT_END_DATE
+        FROM
+        PUB_REGI_MACS
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>)
+        AND STAT_END_DATE LIKE concat((SELECT
+        CASE WHEN 	LASTDATE>=thisyear-10 THEN LASTDATE ELSE TO_char(thisyear-10)  END -1  AS lastdate
+        FROM
+        (
+        SELECT
+        SUBSTR( max(STAT_END_DATE), 1, 4) AS lastdate ,TO_CHAR(SYSDATE, 'YYYY')  AS thisyear
+        FROM
+        PUB_REGI_MACS prm
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>) )), '%')
+        UNION ALL
+        SELECT
+        REGI_MACS_INDX_CLAS_CODE ,
+        MACS_INDX_VAL,
+        substr(STAT_END_DATE, 1, 4) AS STAT_END_DATE
+        FROM
+        PUB_REGI_MACS
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>)
+        AND STAT_END_DATE LIKE concat((SELECT
+        CASE WHEN 	LASTDATE>=thisyear-10 THEN LASTDATE ELSE TO_char(thisyear-10)  END -2 AS lastdate
+        FROM
+        (
+        SELECT
+        SUBSTR( max(STAT_END_DATE), 1, 4) AS lastdate ,TO_CHAR(SYSDATE, 'YYYY')  AS thisyear
+        FROM
+        PUB_REGI_MACS prm
+        WHERE
+        REGI_CODE = #{regionCode}
+        AND DATA_STAT_FREQ_CODE = '03'
+        AND DATA_SRC ='CH_INF_NEW'
+        AND REGI_MACS_INDX_CLAS_CODE IN (<include refid="indexIds"></include>) )), '%')
+
+
+    </select>
+    <sql id="indexIds" >
+        <foreach collection="indexList" item="index" separator="," index="">
+            #{index}
+        </foreach> </sql>
+</mapper>

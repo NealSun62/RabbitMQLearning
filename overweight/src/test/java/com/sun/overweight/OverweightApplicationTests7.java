@@ -3,16 +3,16 @@ package com.sun.overweight;
 import com.deepoove.poi.XWPFTemplate;
 import com.deepoove.poi.data.PictureRenderData;
 import com.deepoove.poi.util.BytePictureUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import sun.misc.BASE64Decoder;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Base64;
@@ -32,18 +32,25 @@ public class OverweightApplicationTests7 {
         } catch (IOException e) {
             System.err.println("转换图片失败： " + e.getMessage());
         }
+//        base64Image = "data:image/png;base64," + base64Image;
+//        base64Image = readFileToString("E:\\test.txt");
 
-        saveBase64StringAsImage(base64Image, "E:\\output.png");
+        String outFilePath = "E:\\test\\test.png";
+        base64Image = base64Image.replaceFirst("data:image/png;base64,", "");
+        File file = base64ToFile(base64Image, outFilePath);
+//        saveBase64StringAsImage(base64Image, "E:\\output.png");
         Map<String, Object> map = new HashMap<>();
         map.put("name", "tony");
         map.put("age", "18");
         // 读取本地磁盘图片
-        map.put("weChatPicture", new PictureRenderData(100, 100, new File("E:\\output.png")));
+        map.put("weChatPicture", new PictureRenderData(100, 100, file));
         // 通过url读取网络图片
         // https://blog.csdn.net/dava_zhang/article/details/122214736
-
-        File file = new File("E:\\tmpdoc.docx");//看tmpl目录
-        XWPFTemplate template = XWPFTemplate.compile(file).render(map);
+        BufferedImage bufferedImage = getImageInfo(base64Image);
+        System.out.println(bufferedImage.getHeight());
+        System.out.println(bufferedImage.getWidth());
+        File file2 = new File("E:\\tmpdoc.docx");//看tmpl目录
+        XWPFTemplate template = XWPFTemplate.compile(file2).render(map);
         String name = "E:\\输出自我介绍" + System.currentTimeMillis() + ".docx";
         FileOutputStream out = new FileOutputStream(new File(name));
         template.write(out);
@@ -78,6 +85,44 @@ public class OverweightApplicationTests7 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static File base64ToFile(String base64, String filePath) {
+        File file = new File(filePath);
+        byte[] buffer;
+        try {
+            BASE64Decoder base64Decoder = new BASE64Decoder();
+            buffer = base64Decoder.decodeBuffer(base64);
+            FileOutputStream out = new FileOutputStream(filePath);
+            out.write(buffer);
+            out.close();
+        } catch (Exception e) {
+
+        }
+        return file;
+    }
+
+    public static String readFileToString(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        StringBuilder stringBuilder = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            stringBuilder.append(line);
+            stringBuilder.append(System.lineSeparator());
+        }
+        reader.close();
+        return stringBuilder.toString();
+    }
+
+
+    public static BufferedImage getImageInfo(String chart) throws IOException{
+        String base64Image = chart.replaceFirst("data:image/png;base64,", "");
+        if(StringUtils.isNotEmpty(chart)){
+            byte [] decoder = new BASE64Decoder().decodeBuffer(base64Image);
+            InputStream is=new ByteArrayInputStream(decoder);
+            return ImageIO.read(is);
+        }
+        return null;
     }
 
 

@@ -1,331 +1,535 @@
+{
+  "return_code": 0,
+  "error_code": "",
+  "error_message": "",
+  "error_properties": {
 
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ crs-crfrmgt-server ---
-[INFO] com.hundsun.crs:crs-crfrmgt-server:jar:2.20231007.000
-[INFO] +- com.oracle:ojdbc6:jar:11.2.0.4:compile
-[INFO] +- com.hundsun.crs:crs-msg-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- io.netty:netty-transport:jar:4.1.68.Final:compile
-[INFO] |  +- io.netty:netty-common:jar:4.1.68.Final:compile
-[INFO] |  +- io.netty:netty-buffer:jar:4.1.68.Final:compile
-[INFO] |  \- io.netty:netty-resolver:jar:4.1.68.Final:compile
-[INFO] +- org.apache.commons:commons-compress:jar:1.21:compile
-[INFO] +- commons-io:commons-io:jar:2.8.0:compile
-[INFO] +- com.hundsun.fais:fais-innerreport-api:jar:2.20230300.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.fais:fais-equityresearch-api:jar:2.20230300.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-crfrmgt-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-poolmanage-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-modmgt-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-crdm-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-attachment-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-cache:jar:3.5.0.2:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-cache-core:jar:3.5.0.2:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-api:jar:3.5.0.2:compile
-[INFO] |  |  |  +- org.springframework.data:spring-data-redis:jar:2.2.12.RELEASE:compile
-[INFO] |  |  |  |  +- org.springframework.data:spring-data-keyvalue:jar:2.2.12.RELEASE:compile
-[INFO] |  |  |  |  |  \- org.springframework.data:spring-data-commons:jar:2.2.12.RELEASE:compile
-[INFO] |  |  |  |  +- org.springframework:spring-tx:jar:5.2.24.RELEASE:compile
-[INFO] |  |  |  |  \- org.springframework:spring-oxm:jar:5.2.24.RELEASE:compile
-[INFO] |  |  |  +- redis.clients:jedis:jar:3.10.0:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud.middleware:middleware-tenant-sdk:jar:1.0.0:compile
-[INFO] |  |  |     \- com.hundsun.jrescloud.middleware:middleware-tenant-api:jar:1.0.0:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-redis:jar:3.5.0.2:compile
-[INFO] |  |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.8:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-cache-local:jar:3.5.0.2:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:store:jar:3.5.0.2:compile
-[INFO] |  |  |     \- org.rocksdb:rocksdbjni:jar:5.18.3:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-trace-json:jar:3.1.6.5:compile
-[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-trace-core:jar:3.1.6.5:compile
-[INFO] |  |        \- com.hundsun.jrescloud:jrescloud-log-defender:jar:3.1.6.5:compile
-[INFO] |  |           \- com.hundsun.jrescloud:jrescloud-log4j2:jar:3.1.6.5:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-cache-monitor:jar:3.5.0.2:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-monitor-common:jar:3.1.6.5:compile
-[INFO] |  |     +- com.hundsun.jrescloud:jrescloud-monitor-api:jar:3.1.6.5:compile
-[INFO] |  |     +- com.carrotsearch:java-sizeof:jar:0.0.5:compile
-[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-mvc-path-limit:jar:3.1.6.5:compile
-[INFO] |  +- com.google.guava:guava:jar:32.1.1-jre:compile
-[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
-[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
-[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
-[INFO] |  |  +- org.checkerframework:checker-qual:jar:3.33.0:compile
-[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
-[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:2.8:compile
-[INFO] |  \- com.google.code.gson:gson:jar:2.8.9:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-lock-redis:jar:2.3.1.0.3:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-lock-redis:jar:2.3.1.0.3:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-lock-api:jar:2.3.1.0.3:compile
-[INFO] |  |  +- org.redisson:redisson:jar:3.17.7:compile
-[INFO] |  |  |  +- io.netty:netty-codec:jar:4.1.68.Final:compile
-[INFO] |  |  |  +- io.netty:netty-resolver-dns:jar:4.1.68.Final:compile
-[INFO] |  |  |  |  \- io.netty:netty-codec-dns:jar:4.1.68.Final:compile
-[INFO] |  |  |  +- io.netty:netty-handler:jar:4.1.68.Final:compile
-[INFO] |  |  |  +- javax.cache:cache-api:jar:1.1.1:compile
-[INFO] |  |  |  +- io.projectreactor:reactor-core:jar:3.3.13.RELEASE:compile
-[INFO] |  |  |  +- org.reactivestreams:reactive-streams:jar:1.0.3:compile
-[INFO] |  |  |  +- io.reactivex.rxjava3:rxjava:jar:3.1.5:compile
-[INFO] |  |  |  +- org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile
-[INFO] |  |  |  +- org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile
-[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.14.0-rc2:compile
-[INFO] |  |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.0-rc2:compile
-[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.14.0-rc2:compile
-[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
-[INFO] |  |  |  \- org.jodd:jodd-bean:jar:5.1.6:compile
-[INFO] |  |  |     \- org.jodd:jodd-core:jar:5.1.6:compile
-[INFO] |  |  \- org.bouncycastle:bcpkix-jdk15on:jar:1.68:compile
-[INFO] |  |     \- org.bouncycastle:bcprov-jdk15on:jar:1.69:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-lock-monitor:jar:2.3.1.0.3:compile
-[INFO] +- org.springframework.boot:spring-boot-configuration-processor:jar:2.2.13.RELEASE:compile
-[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.2.13.RELEASE:test
-[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.2.13.RELEASE:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.2.13.RELEASE:compile
-[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
-[INFO] |  |  \- org.yaml:snakeyaml:jar:1.32:compile
-[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.2.13.RELEASE:test
-[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.2.13.RELEASE:test
-[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
-[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
-[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.5.2:test
-[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.5.2:test
-[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
-[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.5.2:test
-[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.5.2:test
-[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.5.2:test
-[INFO] |  +- org.junit.vintage:junit-vintage-engine:jar:5.5.2:test
-[INFO] |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:test
-[INFO] |  |  +- org.junit.platform:junit-platform-engine:jar:1.5.2:test
-[INFO] |  |  \- junit:junit:jar:4.12:test
-[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:3.1.0:test
-[INFO] |  +- org.assertj:assertj-core:jar:3.13.2:test
-[INFO] |  +- org.hamcrest:hamcrest:jar:2.1:test
-[INFO] |  +- org.mockito:mockito-core:jar:3.1.0:test
-[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.10.19:compile
-[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.19:test
-[INFO] |  |  \- org.objenesis:objenesis:jar:2.6:compile
-[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
-[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
-[INFO] |  +- org.springframework:spring-core:jar:5.2.24.RELEASE:compile
-[INFO] |  |  \- org.springframework:spring-jcl:jar:5.2.24.RELEASE:compile
-[INFO] |  +- org.springframework:spring-test:jar:5.2.24.RELEASE:test
-[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.4:test
-[INFO] +- com.hundsun.crs:crs-firesearch-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-datamaint-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.crs:crs-researchpublic-api:jar:2.20231007.000-SNAPSHOT:compile
-[INFO] +- com.hundsun.fais:fais-investpool-api:jar:2.20230300.000-SNAPSHOT:compile
-[INFO] +- org.projectlombok:lombok:jar:1.18.6:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter:jar:3.1.6.5:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-common:jar:3.1.6.5:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-base:jar:3.1.6.5:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-encrypt:jar:3.1.6.5:compile
-[INFO] |  |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.0-rc2:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-legacy:jar:2.1.0.RELEASE:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  +- org.springframework:spring-aop:jar:5.2.24.RELEASE:compile
-[INFO] |  |  |  \- org.aspectj:aspectjweaver:jar:1.9.5:compile
-[INFO] |  |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
-[INFO] |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.30:compile
-[INFO] |  |  \- com.lmax:disruptor:jar:3.4.2:compile
-[INFO] |  +- org.springframework.boot:spring-boot-starter-log4j2:jar:2.2.13.RELEASE:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-core:jar:2.18.0:compile
-[INFO] |  |  \- org.apache.logging.log4j:log4j-jul:jar:2.18.0:compile
-[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.18.0:compile
-[INFO] |  |  \- org.apache.logging.log4j:log4j-api:jar:2.18.0:compile
-[INFO] |  \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.2.13.RELEASE:compile
-[INFO] |     +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.86:compile
-[INFO] |     +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.86:compile
-[INFO] |     \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.86:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-rpc-def:jar:3.1.6.5:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def:jar:3.1.6.5:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-rpc-t2:jar:3.1.6.5:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-common-t2:jar:3.1.6.5:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-event:jar:3.1.6.5:compile
-[INFO] |  |  +- org.javassist:javassist:jar:3.20.0-GA:compile
-[INFO] |  |  +- io.netty:netty-all:jar:4.1.68.Final:compile
-[INFO] |  |  +- org.apache.curator:curator-framework:jar:4.2.0:compile
-[INFO] |  |  |  \- org.apache.curator:curator-client:jar:4.2.0:compile
-[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.14:compile
-[INFO] |  |  |  +- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile
-[INFO] |  |  |  +- jline:jline:jar:0.9.94:compile
-[INFO] |  |  |  \- org.apache.yetus:audience-annotations:jar:0.5.0:compile
-[INFO] |  |  +- org.apache.curator:curator-recipes:jar:4.2.0:compile
-[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
-[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
-[INFO] |  |  |  \- commons-logging:commons-logging:jar:1.2:compile
-[INFO] |  |  +- com.alibaba:hessian-lite:jar:3.2.13:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-common:jar:3.1.6.5:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-api:jar:3.1.6.5:compile
-[INFO] |  |  |     +- org.apache.skywalking:apm-toolkit-trace:jar:8.1.0:compile
-[INFO] |  |  |     \- org.apache.skywalking:apm-toolkit-opentracing:jar:8.1.0:compile
-[INFO] |  |  |        +- io.opentracing:opentracing-api:jar:0.31.0:compile
-[INFO] |  |  |        \- io.opentracing:opentracing-noop:jar:0.31.0:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-starter:jar:3.1.6.5:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-protobuff:jar:3.1.6.5:compile
-[INFO] |  |  |     \- com.google.protobuf:protobuf-java-util:jar:3.16.3:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-partition:jar:3.1.6.5:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-start-async-api:jar:3.1.6.5:compile
-[INFO] |  |  \- io.netty:netty-tcnative-boringssl-static:jar:2.0.42.Final:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-monitor:jar:3.1.6.5:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  \- io.micrometer:micrometer-core:jar:1.3.16:compile
-[INFO] |  |  |     +- org.hdrhistogram:HdrHistogram:jar:2.1.11:compile
-[INFO] |  |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-prometheus-monitor-api:jar:3.1.6.5:compile
-[INFO] |  |     \- io.micrometer:micrometer-registry-prometheus:jar:1.3.1:compile
-[INFO] |  |        \- io.prometheus:simpleclient_common:jar:0.7.0:compile
-[INFO] |  |           \- io.prometheus:simpleclient:jar:0.7.0:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-log4j2:jar:3.1.6.5:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-rpc-def-rule-monitor:jar:3.1.6.5:compile
-[INFO] +- com.hundsun.jrescloud.middleware:jrescloud-starter-mybatis:jar:2.2.6:compile
-[INFO] |  +- com.hundsun.jrescloud.middleware:jrescloud-db-def:jar:2.2.6:compile
-[INFO] |  |  +- com.hundsun.jrescloud.middleware:jrescloud-db-core:jar:2.2.6:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud.middleware:jrescloud-db-api:jar:2.2.6:compile
-[INFO] |  |  |  +- com.alibaba:druid:jar:1.2.20:compile
-[INFO] |  |  |  \- com.zaxxer:HikariCP:jar:3.4.5:compile
-[INFO] |  |  \- com.hundsun.jrescloud.middleware:jrescloud-db-monitor-springboot2:jar:2.2.6:compile
-[INFO] |  +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.4.0:compile
-[INFO] |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:2.2.0:compile
-[INFO] |  |  |  \- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:2.2.0:compile
-[INFO] |  |  \- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.4.0:compile
-[INFO] |  +- tk.mybatis:mapper-spring-boot-starter:jar:2.1.5:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  \- org.springframework:spring-jdbc:jar:5.2.24.RELEASE:compile
-[INFO] |  |  +- org.mybatis:mybatis-spring:jar:1.3.2:compile
-[INFO] |  |  +- tk.mybatis:mapper-core:jar:1.1.5:compile
-[INFO] |  |  |  \- javax.persistence:persistence-api:jar:1.0:compile
-[INFO] |  |  +- tk.mybatis:mapper-base:jar:1.1.5:compile
-[INFO] |  |  +- tk.mybatis:mapper-weekend:jar:1.1.5:compile
-[INFO] |  |  +- tk.mybatis:mapper-spring:jar:1.1.5:compile
-[INFO] |  |  +- tk.mybatis:mapper-extra:jar:1.1.5:compile
-[INFO] |  |  \- tk.mybatis:mapper-spring-boot-autoconfigure:jar:2.1.5:compile
-[INFO] |  \- org.mybatis:mybatis:jar:3.5.6:compile
-[INFO] +- com.mysql:mysql-connector-j:jar:8.2.0:compile
-[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.16.3:compile
-[INFO] +- com.github.pagehelper:pagehelper:jar:6.1.0:compile
-[INFO] |  \- com.github.jsqlparser:jsqlparser:jar:4.7:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-amqp:jar:4.1.31:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-starter:jar:4.1.31:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-mq-monitor-springboot2:jar:4.1.31:compile
-[INFO] |  |     \- com.hundsun.jrescloud:jrescloud-mq-monitor-common:jar:4.1.31:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-amqp-configuration:jar:4.1.31:compile
-[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-amqp:jar:4.1.31:compile
-[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-api:jar:4.1.31:compile
-[INFO] |        |  +- com.hundsun.jrescloud.middleware:middleware-base-exception:jar:2.0.6:compile
-[INFO] |        |  |  \- com.hundsun.jrescloud.middleware:middleware-base-common:jar:2.0.6:compile
-[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-adapter:jar:4.1.31:compile
-[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-api-compatible:jar:4.1.31:compile
-[INFO] |        |  \- com.esotericsoftware:kryo:jar:5.0.0-RC1:compile
-[INFO] |        |     +- com.esotericsoftware:reflectasm:jar:1.11.7:compile
-[INFO] |        |     \- com.esotericsoftware:minlog:jar:1.3.0:compile
-[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-core:jar:4.1.31:compile
-[INFO] |        +- com.rabbitmq:amqp-client:jar:5.18.0:compile
-[INFO] |        \- org.apache.commons:commons-pool2:jar:2.7.0:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mvc-registry:jar:3.1.6.5:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-mvc-registry:jar:3.1.6.5:compile
-[INFO] |     +- com.hundsun.jrescloud:jrescloud-common-extension:jar:3.1.6.5:compile
-[INFO] |     \- com.hundsun.jrescloud:jrescloud-mvc-jwt:jar:3.1.6.5:compile
-[INFO] |        \- com.auth0:java-jwt:jar:3.12.0:compile
-[INFO] +- com.hundsun.jres.bizframe2:bizframe-sdk-api:jar:2.0.98.2:compile
-[INFO] |  +- com.hundsun.jres.bizframe2:bizframe-api:jar:2.0.98.2:compile
-[INFO] |  +- com.hundsun.jres.bizframe2:bizframe-cloud-api:jar:2.0.98.2:compile
-[INFO] |  \- org.apache.commons:commons-lang3:jar:3.9:compile
-[INFO] +- com.alibaba:easyexcel:jar:3.1.1:compile
-[INFO] |  +- com.alibaba:easyexcel-core:jar:3.1.1:compile
-[INFO] |  |  +- com.alibaba:easyexcel-support:jar:3.1.1:compile
-[INFO] |  |  +- org.apache.commons:commons-csv:jar:1.8:compile
-[INFO] |  |  \- org.ehcache:ehcache:jar:3.9.3:compile
-[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.29:compile
-[INFO] +- javax.mail:mail:jar:1.4.7:compile
-[INFO] |  \- javax.activation:activation:jar:1.1:compile
-[INFO] +- com.hundsun.jres.workflow:wf.multisystem.dependency:jar:1.2.187:compile
-[INFO] |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.cloud.util:jar:1.2.187:compile
-[INFO] |  |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.remoting.api:jar:1.2.187:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-rpc-api:jar:3.1.6.5:compile
-[INFO] |  +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.comform.remoting.api:jar:1.2.187:compile
-[INFO] |  |  \- com.hundsun.jresplus:jresplus-remoting:jar:1.1.35:compile
-[INFO] |  |     \- com.hundsun.jresplus:jresplus-common:jar:1.0.9:compile
-[INFO] |  \- com.hundsun.jres.workflow:com.hundsun.jres.workflow.multisystem.remoting.api:jar:1.2.187:compile
-[INFO] |     +- com.hundsun.jres.workflow:com.hundsun.jres.workflow.api.dto:jar:1.2.187:compile
-[INFO] |     \- com.hundsun.workflow:com.hundsun.workflow.api:jar:1.0.0:compile
-[INFO] +- javax.validation:validation-api:jar:2.0.1.Final:compile
-[INFO] +- com.deepoove:poi-tl:jar:1.7.3:compile
-[INFO] |  +- org.apache.poi:poi-ooxml:jar:4.1.2:compile
-[INFO] |  |  \- com.github.virtuald:curvesapi:jar:1.06:compile
-[INFO] |  +- org.apache.poi:poi:jar:4.1.2:compile
-[INFO] |  |  +- commons-codec:commons-codec:jar:1.15:compile
-[INFO] |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
-[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
-[INFO] |  |  \- com.zaxxer:SparseBitSet:jar:1.2:compile
-[INFO] |  \- org.apache.poi:poi-ooxml-schemas:jar:4.1.2:compile
-[INFO] |     \- org.apache.xmlbeans:xmlbeans:jar:3.1.0:compile
-[INFO] +- org.apache.poi:ooxml-schemas:jar:1.1:compile
-[INFO] +- org.jxls:jxls:jar:2.12.0:compile
-[INFO] |  +- org.apache.commons:commons-jexl3:jar:3.2:compile
-[INFO] |  +- commons-beanutils:commons-beanutils:jar:1.9.4:compile
-[INFO] |  |  \- commons-collections:commons-collections:jar:3.2.2:compile
-[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.29:compile
-[INFO] +- org.jxls:jxls-poi:jar:2.12.0:compile
-[INFO] +- org.jxls:jxls-jexcel:jar:1.0.9:compile
-[INFO] |  \- net.sourceforge.jexcelapi:jxl:jar:2.6.10:compile
-[INFO] +- com.itextpdf:itextpdf:jar:5.5.13.3:compile
-[INFO] +- com.itextpdf:itext-asian:jar:5.5.8:compile
-[INFO] +- org.springframework.boot:spring-boot-starter-freemarker:jar:2.2.13.RELEASE:compile
-[INFO] |  +- org.freemarker:freemarker:jar:2.3.30:compile
-[INFO] |  \- org.springframework:spring-context-support:jar:5.2.24.RELEASE:compile
-[INFO] |     +- org.springframework:spring-beans:jar:5.2.24.RELEASE:compile
-[INFO] |     \- org.springframework:spring-context:jar:5.2.24.RELEASE:compile
-[INFO] |        \- org.springframework:spring-expression:jar:5.2.24.RELEASE:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-logkafka:jar:3.1.6.5:compile
-[INFO] |  \- org.apache.kafka:kafka-clients:jar:3.4.0:compile
-[INFO] |     +- com.github.luben:zstd-jni:jar:1.5.2-1:runtime
-[INFO] |     +- org.lz4:lz4-java:jar:1.8.0:runtime
-[INFO] |     \- org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime
-[INFO] +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.5:compile
-[INFO] |  +- xml-resolver:xml-resolver:jar:1.2:compile
-[INFO] |  +- org.ow2.asm:asm:jar:9.4:compile
-[INFO] |  +- org.apache.cxf:cxf-core:jar:3.5.5:compile
-[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.3:compile
-[INFO] |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.3:compile
-[INFO] |  |  |  +- com.sun.istack:istack-commons-runtime:jar:3.0.11:compile
-[INFO] |  |  |  \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
-[INFO] |  |  +- com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile
-[INFO] |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2:compile
-[INFO] |  |  \- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.5:compile
-[INFO] |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
-[INFO] |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.5:compile
-[INFO] |  \- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.5:compile
-[INFO] |     \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.5:compile
-[INFO] |        \- org.apache.neethi:neethi:jar:3.2.0:compile
-[INFO] +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.5:compile
-[INFO] +- cn.hutool:hutool-all:jar:5.8.12:compile
-[INFO] +- org.dom4j:dom4j:jar:2.1.3:compile
-[INFO] \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-timertask-client-api:jar:1.1.15:compile
-[INFO]    +- org.springframework.boot:spring-boot:jar:2.2.13.RELEASE:compile
-[INFO]    +- com.alibaba:fastjson:jar:1.2.83:compile
-[INFO]    +- org.springframework.boot:spring-boot-starter-web:jar:2.2.13.RELEASE:compile
-[INFO]    |  +- org.springframework.boot:spring-boot-starter-json:jar:2.2.13.RELEASE:compile
-[INFO]    |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.14.0-rc2:compile
-[INFO]    |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.14.0-rc2:compile
-[INFO]    |  +- org.springframework.boot:spring-boot-starter-validation:jar:2.2.13.RELEASE:compile
-[INFO]    |  |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
-[INFO]    |  |  \- org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile
-[INFO]    |  |     +- org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile
-[INFO]    |  |     \- com.fasterxml:classmate:jar:1.5.1:compile
-[INFO]    |  +- org.springframework:spring-web:jar:5.2.24.RELEASE:compile
-[INFO]    |  \- org.springframework:spring-webmvc:jar:5.2.24.RELEASE:compile
-[INFO]    +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-timertask-api-dto:jar:1.1.15:compile
-[INFO]    \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-processdesign-api:jar:1.0.15:compile
-[INFO]       \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-common:jar:0.0.94:compile
-[INFO]          +- com.jcraft:jsch:jar:0.1.54:compile
-[INFO]          +- com.hundsun.jrescloud:jrescloud-common-gm:jar:3.1.6.5:compile
-[INFO]          +- com.hundsun.arescloud.see:cas-simple-client:jar:2.7.26.10:compile
-[INFO]          \- commons-lang:commons-lang:jar:2.6:compile
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 8.638 s
-[INFO] Finished at: 2024-05-10T09:21:20+08:00
-[INFO] ------------------------------------------------------------------------
+  },
+  "result": {
+    "page_no": 1,
+    "page_size": 20,
+    "total": 5,
+    "list": [
+      {
+        "uuid": "KM9793KFUKIGKEZ4AO0RJFTXSE419PTF",
+        "create_datetime": "2024-07-15 14:12:34",
+        "pool_uuid": "b60241c3-e9aa-46fa-8e51-e66153dcfb2b",
+        "pool_content_type": "1",
+        "pool_content_id": "1080023.XCFE",
+        "into_pool_credit_level": "AAA",
+        "into_pool_score": null,
+        "audt_rat_grad": "投资级",
+        "audt_rat_score": null,
+        "into_pool_credit_outlook": null,
+        "into_pool_credit_outlook_dis": null,
+        "audt_rat_otlk_code": null,
+        "audt_rat_otlk_code_dis": null,
+        "adjust_reason": "债券调整联动调整相关交易市场债券",
+        "initiator_no": "admin",
+        "is_delete": null,
+        "ins_fn": "国家电网有限公司",
+        "unif_socl_cred_code": null,
+        "regi_code": null,
+        "regi_code_dis": null,
+        "indt_num": null,
+        "indt_name": null,
+        "corp_ctlr_econ_clas_code": null,
+        "corp_ctlr_econ_clas_code_dis": null,
+        "pool_path": "公司库/固定收益部/固定收益部逆回购池",
+        "initiator_name": "系统管理员",
+        "scr_name": "2010年第一期国家电网公司企业债券(15年期)",
+        "bond_abbr": "10国网债02",
+        "bond_code": "1080023",
+        "prtc_mkt_code": "XCFE",
+        "prtc_mkt_code_dis": "银行间市场(外汇交易中心)",
+        "bond_inr_clas": "07",
+        "bond_inr_clas_dis": "企业债",
+        "guarantor_flag": "0",
+        "guarantor_flag_dis": "否",
+        "guar_ins_num": null,
+        "guar_ins_name": null,
+        "iss_date": 20100205,
+        "iss_date_dis": "2010-02-05",
+        "list_date": 20100223,
+        "list_date_dis": "2010-02-23",
+        "srte_date": 20100205,
+        "srte_date_dis": "2010-02-05",
+        "at_pd_date": 20250205,
+        "at_pd_date_dis": "2025-02-05",
+        "maty": 15.02,
+        "left_period": 0.33,
+        "fst_iss_scal": 0.00,
+        "fst_iss_scal_raw": 0,
+        "rema_scal": 100.00,
+        "rema_scal_raw": 10000000000,
+        "description": null,
+        "pool_name": null,
+        "flow_inst_no": "platform_BIZ_gyxtzqplpj_20240819150546.23015328",
+        "out_rat_grad": "AA-",
+        "out_rat_ins_num": "21698",
+        "out_rat_ins_name": "大公国际资信评估有限公司",
+        "out_inst_rat_date": 20230720,
+        "out_inst_rat_date_dis": "2023-07-20",
+        "out_rat_otlk_code": null,
+        "out_rat_otlk": null,
+        "last_rat_tect_time": null,
+        "rat_tect_time": "2024-08-30",
+        "rat_tect_time_dis": "2024-08-30",
+        "linked_father_pool_name": null,
+        "linked_father_pool_short_name": null,
+        "linked_father_pool_ids": null,
+        "linked_sun_pool_name": null,
+        "linked_sun_pool_short_name": null,
+        "linked_sun_pool_ids": null,
+        "intp_freq_code_dis": null,
+        "inta_mode_code_dis": null,
+        "out_inst_rat_grad": null,
+        "out_rat_otlk_code_dis": null,
+        "intr_type_code": "01",
+        "intr_type_code_dis": null,
+        "ins_num": "2461",
+        "ins_name": "国家电网有限公司",
+        "ins_abbr": null,
+        "inst_rat_grad": "",
+        "inst_rat_otlk_code": null,
+        "inst_rat_otlk_code_dis": null,
+        "prefer_flag": "0",
+        "effect_date": null,
+        "end_date": null,
+        "credit_quota": null,
+        "used_quota": null,
+        "left_quota": null,
+        "share_pools": null,
+        "share_pools_name": null,
+        "invest_pool_id": null,
+        "invest_pool_path": null,
+        "invest_pool_name": null,
+        "guar_inst_rat_grad": "",
+        "guar_ins_out_grad": "",
+        "guar_ins_out_grad_name": "",
+        "bond_rat_grad": "AAA",
+        "bond_rat_out_grad": "大公国际资信评估有限公司",
+        "out_rat_date": 20230627,
+        "out_bond_rat_date_dis": "2023-06-27",
+        "med_rat": "AAA-",
+        "csi_rat": "AAA+"
+      },
+      {
+        "uuid": "SBCEBRM5WXOHXCBWPWWM9VDRDW8716DN",
+        "create_datetime": "2024-07-15 14:12:33",
+        "pool_uuid": "b60241c3-e9aa-46fa-8e51-e66153dcfb2b",
+        "pool_content_type": "1",
+        "pool_content_id": "101551031.XCFE",
+        "into_pool_credit_level": "1+",
+        "into_pool_score": null,
+        "audt_rat_grad": "投机级",
+        "audt_rat_score": null,
+        "into_pool_credit_outlook": null,
+        "into_pool_credit_outlook_dis": null,
+        "audt_rat_otlk_code": null,
+        "audt_rat_otlk_code_dis": null,
+        "adjust_reason": null,
+        "initiator_no": "admin",
+        "is_delete": null,
+        "ins_fn": "青海盐湖工业股份有限公司",
+        "unif_socl_cred_code": null,
+        "regi_code": null,
+        "regi_code_dis": null,
+        "indt_num": null,
+        "indt_name": null,
+        "corp_ctlr_econ_clas_code": null,
+        "corp_ctlr_econ_clas_code_dis": null,
+        "pool_path": "公司库/固定收益部/固定收益部逆回购池",
+        "initiator_name": "系统管理员",
+        "scr_name": "青海盐湖工业股份有限公司2015年度第一期中期票据",
+        "bond_abbr": "15盐湖MTN001",
+        "bond_code": "101551031",
+        "prtc_mkt_code": "XCFE",
+        "prtc_mkt_code_dis": "银行间市场(外汇交易中心)",
+        "bond_inr_clas": "99",
+        "bond_inr_clas_dis": "其他",
+        "guarantor_flag": "0",
+        "guarantor_flag_dis": "否",
+        "guar_ins_num": null,
+        "guar_ins_name": null,
+        "iss_date": 20150609,
+        "iss_date_dis": "2015-06-09",
+        "list_date": 20150612,
+        "list_date_dis": "2015-06-12",
+        "srte_date": 20150611,
+        "srte_date_dis": "2015-06-11",
+        "at_pd_date": 20280505,
+        "at_pd_date_dis": "2028-05-05",
+        "maty": 7.01,
+        "left_period": 3.57,
+        "fst_iss_scal": 0.00,
+        "fst_iss_scal_raw": 0,
+        "rema_scal": 16.00,
+        "rema_scal_raw": 1600000000,
+        "description": null,
+        "pool_name": null,
+        "flow_inst_no": "platform_BIZ_gyxtzqplpj_20240819150546.23015328",
+        "out_rat_grad": "BBB+",
+        "out_rat_ins_num": "21698",
+        "out_rat_ins_name": "大公国际资信评估有限公司",
+        "out_inst_rat_date": 20230630,
+        "out_inst_rat_date_dis": "2023-06-30",
+        "out_rat_otlk_code": null,
+        "out_rat_otlk": null,
+        "last_rat_tect_time": null,
+        "rat_tect_time": "2024-08-30",
+        "rat_tect_time_dis": "2024-08-30",
+        "linked_father_pool_name": null,
+        "linked_father_pool_short_name": null,
+        "linked_father_pool_ids": null,
+        "linked_sun_pool_name": null,
+        "linked_sun_pool_short_name": null,
+        "linked_sun_pool_ids": null,
+        "intp_freq_code_dis": null,
+        "inta_mode_code_dis": null,
+        "out_inst_rat_grad": null,
+        "out_rat_otlk_code_dis": null,
+        "intr_type_code": "01",
+        "intr_type_code_dis": null,
+        "ins_num": "392",
+        "ins_name": "青海盐湖工业股份有限公司",
+        "ins_abbr": null,
+        "inst_rat_grad": "5-",
+        "inst_rat_otlk_code": null,
+        "inst_rat_otlk_code_dis": null,
+        "prefer_flag": "0",
+        "effect_date": "2024-03-22",
+        "end_date": "2024-03-23",
+        "credit_quota": 1243456789,
+        "used_quota": 0.0,
+        "left_quota": 1243456789.0,
+        "share_pools": "",
+        "share_pools_name": "",
+        "invest_pool_id": null,
+        "invest_pool_path": null,
+        "invest_pool_name": null,
+        "guar_inst_rat_grad": "",
+        "guar_ins_out_grad": "",
+        "guar_ins_out_grad_name": "",
+        "bond_rat_grad": "BBB+",
+        "bond_rat_out_grad": "大公国际资信评估有限公司",
+        "out_rat_date": 20230630,
+        "out_bond_rat_date_dis": "2023-06-30",
+        "med_rat": "C",
+        "csi_rat": "C"
+      },
+      {
+        "uuid": "9OVPZLQJ8PAV3SJ9N46J8DJNBG6TLIL4",
+        "create_datetime": "2024-03-22 15:20:03",
+        "pool_uuid": "b60241c3-e9aa-46fa-8e51-e66153dcfb2b",
+        "pool_content_type": "1",
+        "pool_content_id": "018064.XSHG",
+        "into_pool_credit_level": "垃圾级",
+        "into_pool_score": null,
+        "audt_rat_grad": "1+",
+        "audt_rat_score": null,
+        "into_pool_credit_outlook": null,
+        "into_pool_credit_outlook_dis": null,
+        "audt_rat_otlk_code": null,
+        "audt_rat_otlk_code_dis": null,
+        "adjust_reason": null,
+        "initiator_no": "admin",
+        "is_delete": null,
+        "ins_fn": "中国进出口银行",
+        "unif_socl_cred_code": null,
+        "regi_code": null,
+        "regi_code_dis": null,
+        "indt_num": null,
+        "indt_name": null,
+        "corp_ctlr_econ_clas_code": null,
+        "corp_ctlr_econ_clas_code_dis": null,
+        "pool_path": "公司库/固定收益部/固定收益部逆回购池",
+        "initiator_name": "系统管理员",
+        "scr_name": "中国进出口银行2021年第三期跨市场(上交所)金融债券",
+        "bond_abbr": "进出2103",
+        "bond_code": "018064",
+        "prtc_mkt_code": "XSHG",
+        "prtc_mkt_code_dis": "上海证券交易所",
+        "bond_inr_clas": "99",
+        "bond_inr_clas_dis": "其他",
+        "guarantor_flag": "0",
+        "guarantor_flag_dis": "否",
+        "guar_ins_num": null,
+        "guar_ins_name": null,
+        "iss_date": null,
+        "iss_date_dis": null,
+        "list_date": 20210818,
+        "list_date_dis": "2021-08-18",
+        "srte_date": 20210816,
+        "srte_date_dis": "2021-08-16",
+        "at_pd_date": 20240816,
+        "at_pd_date_dis": "2024-08-16",
+        "maty": 3.01,
+        "left_period": -0.16,
+        "fst_iss_scal": 0.00,
+        "fst_iss_scal_raw": 0,
+        "rema_scal": 35.90,
+        "rema_scal_raw": 3590000000,
+        "description": null,
+        "pool_name": null,
+        "flow_inst_no": "platform_BIZ_hxzqzqplpj_20230424152847.21001118",
+        "out_rat_grad": "--",
+        "out_rat_ins_num": "",
+        "out_rat_ins_name": "",
+        "out_inst_rat_date": null,
+        "out_inst_rat_date_dis": "--",
+        "out_rat_otlk_code": null,
+        "out_rat_otlk": null,
+        "last_rat_tect_time": null,
+        "rat_tect_time": "2024-04-10",
+        "rat_tect_time_dis": "2024-04-10",
+        "linked_father_pool_name": null,
+        "linked_father_pool_short_name": null,
+        "linked_father_pool_ids": null,
+        "linked_sun_pool_name": null,
+        "linked_sun_pool_short_name": null,
+        "linked_sun_pool_ids": null,
+        "intp_freq_code_dis": null,
+        "inta_mode_code_dis": null,
+        "out_inst_rat_grad": null,
+        "out_rat_otlk_code_dis": null,
+        "intr_type_code": "01",
+        "intr_type_code_dis": null,
+        "ins_num": "113",
+        "ins_name": "中国进出口银行",
+        "ins_abbr": null,
+        "inst_rat_grad": "--",
+        "inst_rat_otlk_code": null,
+        "inst_rat_otlk_code_dis": null,
+        "prefer_flag": "0",
+        "effect_date": "2024-03-22",
+        "end_date": "2024-09-25",
+        "credit_quota": 222,
+        "used_quota": 0.0,
+        "left_quota": 222.0,
+        "share_pools": "",
+        "share_pools_name": "",
+        "invest_pool_id": null,
+        "invest_pool_path": null,
+        "invest_pool_name": null,
+        "guar_inst_rat_grad": "",
+        "guar_ins_out_grad": "",
+        "guar_ins_out_grad_name": "",
+        "bond_rat_grad": "--",
+        "bond_rat_out_grad": "",
+        "out_rat_date": null,
+        "out_bond_rat_date_dis": "--",
+        "med_rat": "--",
+        "csi_rat": "--"
+      },
+      {
+        "uuid": "ZXFEN39VV3ITDKB17FCDR496O0W7SKNH",
+        "create_datetime": "2024-03-12 17:01:08",
+        "pool_uuid": "b60241c3-e9aa-46fa-8e51-e66153dcfb2b",
+        "pool_content_type": "1",
+        "pool_content_id": "G190207.OTC",
+        "into_pool_credit_level": "投机级",
+        "into_pool_score": null,
+        "audt_rat_grad": "投机级",
+        "audt_rat_score": null,
+        "into_pool_credit_outlook": null,
+        "into_pool_credit_outlook_dis": null,
+        "audt_rat_otlk_code": null,
+        "audt_rat_otlk_code_dis": null,
+        "adjust_reason": null,
+        "initiator_no": "sunwx2",
+        "is_delete": null,
+        "ins_fn": "国家开发银行",
+        "unif_socl_cred_code": null,
+        "regi_code": null,
+        "regi_code_dis": null,
+        "indt_num": null,
+        "indt_name": null,
+        "corp_ctlr_econ_clas_code": null,
+        "corp_ctlr_econ_clas_code_dis": null,
+        "pool_path": "公司库/固定收益部/固定收益部逆回购池",
+        "initiator_name": "孙伟翔-固定收益部",
+        "scr_name": "国家开发银行2019年第七期金融债券",
+        "bond_abbr": "19国开07",
+        "bond_code": "G190207",
+        "prtc_mkt_code": "OTC",
+        "prtc_mkt_code_dis": "场外市场",
+        "bond_inr_clas": "99",
+        "bond_inr_clas_dis": "其他",
+        "guarantor_flag": "0",
+        "guarantor_flag_dis": "否",
+        "guar_ins_num": null,
+        "guar_ins_name": null,
+        "iss_date": null,
+        "iss_date_dis": null,
+        "list_date": 20190521,
+        "list_date_dis": "2019-05-21",
+        "srte_date": 20190517,
+        "srte_date_dis": "2019-05-17",
+        "at_pd_date": 20300517,
+        "at_pd_date_dis": "2030-05-17",
+        "maty": 3.01,
+        "left_period": 5.6,
+        "fst_iss_scal": 0.00,
+        "fst_iss_scal_raw": 0,
+        "rema_scal": 0.00,
+        "rema_scal_raw": 0,
+        "description": null,
+        "pool_name": null,
+        "flow_inst_no": "platform_BIZ_hxzqzqplpj_20230424152847.20736116",
+        "out_rat_grad": "AAA",
+        "out_rat_ins_num": "21699",
+        "out_rat_ins_name": "联合资信评估股份有限公司",
+        "out_inst_rat_date": 20230626,
+        "out_inst_rat_date_dis": "2023-06-26",
+        "out_rat_otlk_code": null,
+        "out_rat_otlk": null,
+        "last_rat_tect_time": null,
+        "rat_tect_time": "2024-03-12",
+        "rat_tect_time_dis": "2024-03-12",
+        "linked_father_pool_name": null,
+        "linked_father_pool_short_name": null,
+        "linked_father_pool_ids": null,
+        "linked_sun_pool_name": null,
+        "linked_sun_pool_short_name": null,
+        "linked_sun_pool_ids": null,
+        "intp_freq_code_dis": null,
+        "inta_mode_code_dis": null,
+        "out_inst_rat_grad": null,
+        "out_rat_otlk_code_dis": null,
+        "intr_type_code": "01",
+        "intr_type_code_dis": null,
+        "ins_num": "100",
+        "ins_name": "国家开发银行",
+        "ins_abbr": null,
+        "inst_rat_grad": "N-2",
+        "inst_rat_otlk_code": null,
+        "inst_rat_otlk_code_dis": null,
+        "prefer_flag": "0",
+        "effect_date": "2024-03-11",
+        "end_date": "2024-05-17",
+        "credit_quota": 44586,
+        "used_quota": 0.0,
+        "left_quota": 44586.0,
+        "share_pools": "7264c600-e7a6-4484-bd8f-8decd121bbb8",
+        "share_pools_name": "",
+        "invest_pool_id": null,
+        "invest_pool_path": null,
+        "invest_pool_name": null,
+        "guar_inst_rat_grad": "",
+        "guar_ins_out_grad": "",
+        "guar_ins_out_grad_name": "",
+        "bond_rat_grad": "--",
+        "bond_rat_out_grad": "",
+        "out_rat_date": null,
+        "out_bond_rat_date_dis": "--",
+        "med_rat": "--",
+        "csi_rat": "--"
+      },
+      {
+        "uuid": "KKU9EOK8NQ0TZ3TJWEWEEOLWRJG08LPX",
+        "create_datetime": "2023-12-21 16:45:13",
+        "pool_uuid": "b60241c3-e9aa-46fa-8e51-e66153dcfb2b",
+        "pool_content_type": "1",
+        "pool_content_id": "102101821.XCFE",
+        "into_pool_credit_level": "AA+",
+        "into_pool_score": null,
+        "audt_rat_grad": "投机级",
+        "audt_rat_score": null,
+        "into_pool_credit_outlook": null,
+        "into_pool_credit_outlook_dis": null,
+        "audt_rat_otlk_code": null,
+        "audt_rat_otlk_code_dis": null,
+        "adjust_reason": null,
+        "initiator_no": "sunwx2",
+        "is_delete": null,
+        "ins_fn": "万科企业股份有限公司",
+        "unif_socl_cred_code": null,
+        "regi_code": null,
+        "regi_code_dis": null,
+        "indt_num": null,
+        "indt_name": null,
+        "corp_ctlr_econ_clas_code": null,
+        "corp_ctlr_econ_clas_code_dis": null,
+        "pool_path": "公司库/固定收益部/固定收益部逆回购池",
+        "initiator_name": "孙伟翔-固定收益部",
+        "scr_name": "万科企业股份有限公司2021年度第三期中期票据",
+        "bond_abbr": "21万科MTN003",
+        "bond_code": "102101821",
+        "prtc_mkt_code": "XCFE",
+        "prtc_mkt_code_dis": "银行间市场(外汇交易中心)",
+        "bond_inr_clas": "09",
+        "bond_inr_clas_dis": "中期票据",
+        "guarantor_flag": "0",
+        "guarantor_flag_dis": "否",
+        "guar_ins_num": null,
+        "guar_ins_name": null,
+        "iss_date": 20210902,
+        "iss_date_dis": "2021-09-02",
+        "list_date": 20210907,
+        "list_date_dis": "2021-09-07",
+        "srte_date": 20210906,
+        "srte_date_dis": "2021-09-06",
+        "at_pd_date": 20240906,
+        "at_pd_date_dis": "2024-09-06",
+        "maty": 3.01,
+        "left_period": -0.1,
+        "fst_iss_scal": 0.00,
+        "fst_iss_scal_raw": 0,
+        "rema_scal": 20.00,
+        "rema_scal_raw": 2000000000,
+        "description": null,
+        "pool_name": null,
+        "flow_inst_no": "platform_BIZ_gyxtzqplpj_20240819150546.23015328",
+        "out_rat_grad": "BBB",
+        "out_rat_ins_num": "21701",
+        "out_rat_ins_name": "中诚信国际信用评级有限责任公司",
+        "out_inst_rat_date": 20240528,
+        "out_inst_rat_date_dis": "2024-05-28",
+        "out_rat_otlk_code": null,
+        "out_rat_otlk": null,
+        "last_rat_tect_time": null,
+        "rat_tect_time": "2024-08-30",
+        "rat_tect_time_dis": "2024-08-30",
+        "linked_father_pool_name": null,
+        "linked_father_pool_short_name": null,
+        "linked_father_pool_ids": null,
+        "linked_sun_pool_name": null,
+        "linked_sun_pool_short_name": null,
+        "linked_sun_pool_ids": null,
+        "intp_freq_code_dis": null,
+        "inta_mode_code_dis": null,
+        "out_inst_rat_grad": null,
+        "out_rat_otlk_code_dis": null,
+        "intr_type_code": "01",
+        "intr_type_code_dis": null,
+        "ins_num": "6",
+        "ins_name": "万科企业股份有限公司",
+        "ins_abbr": null,
+        "inst_rat_grad": "8-",
+        "inst_rat_otlk_code": null,
+        "inst_rat_otlk_code_dis": null,
+        "prefer_flag": "0",
+        "effect_date": null,
+        "end_date": null,
+        "credit_quota": null,
+        "used_quota": null,
+        "left_quota": null,
+        "share_pools": null,
+        "share_pools_name": null,
+        "invest_pool_id": null,
+        "invest_pool_path": null,
+        "invest_pool_name": null,
+        "guar_inst_rat_grad": "",
+        "guar_ins_out_grad": "",
+        "guar_ins_out_grad_name": "",
+        "bond_rat_grad": "AAA",
+        "bond_rat_out_grad": "联合资信评估股份有限公司",
+        "out_rat_date": 20230526,
+        "out_bond_rat_date_dis": "2023-05-26",
+        "med_rat": "AAA-",
+        "csi_rat": "AAA-"
+      }
+    ]
+  }
+}

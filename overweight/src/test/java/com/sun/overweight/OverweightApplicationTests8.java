@@ -1,7 +1,12 @@
 package com.sun.overweight;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 import com.deepoove.poi.XWPFTemplate;
 import com.deepoove.poi.data.PictureRenderData;
+import com.sun.overweight.common.utils.TransUtil;
+import com.sun.overweight.ramp.common.model.Users;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -14,23 +19,33 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class OverweightApplicationTests8 {
     public static void main(String[] args) throws Exception {
-        // base64转落地本地图片
-        List<String> a = new ArrayList<>();
-        a.add("ceshi1");
-        a.add("ceshi2");
-        a.add("ceshi3");
-        a.forEach(p -> {
-                    if (p.contains("2")) {
-                        return;
-                    }
-            System.out.println(p);
-                }
-        );
+        Users user = new Users();
+        List<String> scrNumList = Arrays.asList("1052.XSHG","12556.XCFE");
+        List<Integer> poolIdList =  Arrays.asList(1235,1561);
+        Boolean workflowFlag = true;
+        String adjustModeType = "q";
+        user.setAdjustModeType(adjustModeType);
+        user.setWorkflowFlag(workflowFlag);
+        user.setPoolIdList(poolIdList);
+        user.setScrNumList(scrNumList);
+        Map<String, Object> map = new HashMap<>();
+        map = TransUtil.beanToMap(user);
+        System.out.println(JSON.toJSONString(map));
+
+        if (scrNumList.contains(null)){
+            System.out.println("包含");
+        }else {
+            System.out.println("nonono");
+        }
+
+        Users workFlowEventVO = JSONObject.parseObject("", new TypeReference<Users>(){});
+        System.out.println(workFlowEventVO);
 
     }
 

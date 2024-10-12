@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fais.crdm.mapper.crdm.CrdmInfBondGuarantorMapper">
+    <!-- 获取债券担保人 -->
+    <select id="selectBondGuarantorInfo" resultType="com.hundsun.fais.crdm.model.crfrmgt.BondGuarantorVo"
+            databaseId="mysql">
+        select
+        a.scr_num,
+        group_concat(DISTINCT a.guar_ins_num) AS guar_ins_num,
+        group_concat(DISTINCT b.ins_fn) AS guar_ins_name,
+        group_concat(DISTINCT a.asue_guar_mode_code) AS asue_guar_mode_code,
+        group_concat(DISTINCT a.guar_type_code) AS guar_type_code
+        from v_crdm_inf_bond_guarantor a
+        join v_crdm_inf_inst_archive b on a.guar_ins_num = b.ins_num
+        where 1 = 1
+        <if test="scrNums != null and scrNums.size > 0">
+            AND (
+            <foreach collection="scrNums" item="item" index="index" open="a.scr_num IN (" close=")" separator=",">
+                <if test="((index+1) % 950) == 0">NULL ) OR a.scr_num IN (</if>#{item}
+            </foreach>
+            )
+        </if>
+
+        group by a.scr_num
+    </select>
+    <select id="selectBondGuarantorInfo" resultType="com.hundsun.fais.crdm.model.crfrmgt.BondGuarantorVo"
+            databaseId="oracle">
+        select
+        a.scr_num,
+        listagg(a.guar_ins_num, ',') within group( order by a.guar_ins_num) AS guar_ins_num,
+        listagg(b.ins_fn, ',') within group( order by a.guar_ins_num) AS guar_ins_name,
+        listagg(a.asue_guar_mode_code, ',') within group(order by a.guar_ins_num) AS asue_guar_mode_code,
+        listagg(a.guar_type_code, ',') within group(order by a.guar_ins_num) AS guar_type_code
+        from v_crdm_inf_bond_guarantor a
+        join v_crdm_inf_inst_archive b on a.guar_ins_num = b.ins_num
+        where 1 = 1
+        <if test="scrNums != null and scrNums.size > 0">
+            AND (
+            <foreach collection="scrNums" item="item" index="index" open="a.scr_num IN (" close=")" separator=",">
+                <if test="((index+1) % 950) == 0">NULL ) OR a.scr_num IN (</if>#{item}
+            </foreach>
+            )
+        </if>
+
+        group by a.scr_num
+    </select>
+     <select id="selectBondCreditInfo" resultType="com.hundsun.fais.crdm.api.model.common.BondCreditInfoForComm" >
+         select
+            a.scr_num,
+            c.SCR_NAME,
+            a.guar_ins_num  AS guar_ins_num,
+            b.ins_fn  AS guar_ins_name,
+            a.guar_type_code as asue_guar_mode_code
+        from v_crdm_inf_bond_guarantor a
+            join v_crdm_inf_inst_archive b on a.guar_ins_num = b.ins_num
+            join v_crdm_inf_bond_info c on a.scr_num = c.SCR_NUM 
+        <where>
+            1 = 1
+            <if test="scrNums != null and scrNums.size > 0">
+                AND (
+                <foreach collection="scrNums" item="item" index="index" open="a.scr_num IN (" close=")" separator=",">
+                    <if test="((index+1) % 950) == 0"> NULL ) OR a.scr_num IN (</if>#{item}
+                </foreach>
+                )
+            </if>
+        </where>
+    </select>
+    <select id="selectBondGuarantorByScrNums"
+            resultType="com.hundsun.fais.crdm.api.model.common.BondGuarantorForComm">
+        select a.*,b.ins_fn as guar_ins_fn from v_crdm_inf_bond_guarantor a join v_crdm_inf_inst_archive b
+        on a.guar_ins_num = b.ins_num
+        and (
+            <foreach collection="scrNums" item="item" index="index" open="a.scr_num IN (" close=")" separator=",">
+                <if test="((index+1) % 950) == 0"> NULL ) OR a.scr_num IN (</if>#{item}
+            </foreach>
+        )
+    </select>
+
+    <select id="selectBondInfoByGuarantorInsNum" resultType="com.hundsun.fais.crdm.api.model.common.BondGuarantorForComm">
+         select b.*  from (
+         select a.*,b.ins_fn as guar_ins_fn,c.audt_rat_grad,d.bond_inr_clas,d.issr_num as ins_num,row_number() over(partition by c.scr_num order by c.rat_tect_time desc) mm
+         from v_crdm_inf_bond_guarantor a
+         inner join v_crdm_inf_inst_archive b on a.guar_ins_num = b.ins_num
+         inner join v_crdm_rat_bond_info c on c.scr_num = a.scr_num
+         inner join v_crdm_inf_bond_info d on d.scr_num = c.scr_num
+        <where>
+            1 = 1
+            <if test="currentDate != null ">
+                and d.AT_PD_DATE <![CDATA[ >= ]]> #{currentDate}
+            </if>
+            <if test="insNums != null and insNums.size > 0">
+                AND (
+                <foreach collection="insNums" item="item" index="index" open="a.guar_ins_num IN (" close=")" separator=",">
+                    <if test="((index+1) % 950) == 0"> NULL ) OR a.guar_ins_num IN (</if>#{item}
+                </foreach>
+                )
+            </if>
+        </where>
+         ) b
+        where mm = 1
+    </select>
+    <delete id="deleteByScrNum">
+        delete from crdm_inf_bond_guarantor
+        where scr_num =#{scrNum}
+    </delete>
+     
+</mapper>

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldNameConstants;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @date
@@ -22,4 +23,8 @@ public class Users {
     private String name;
     private String type;
     private String date;
+    private List<String> scrNumList;
+    private List<Integer> poolIdList;
+    private Boolean workflowFlag;
+    private String adjustModeType;
 }
