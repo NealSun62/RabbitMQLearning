@@ -37,7 +37,7 @@ public class OverweightApplicationTests8 {
         Map<String, Object> map = new HashMap<>();
         map = TransUtil.beanToMap(user);
         System.out.println(JSON.toJSONString(map));
-
+        // 
         if (scrNumList.contains(null)){
             System.out.println("包含");
         }else {
