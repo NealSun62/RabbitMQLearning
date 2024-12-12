@@ -1,480 +1,155 @@
-[INFO] Scanning for projects...
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml
-Progress (1): 603 B
-                   
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/basepom/2.0-SNAPSHOT/maven-metadata.xml (603 B at 5.1 kB/s)
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.hundsun.crs:crs-dpppub-server:jar:2.20240106.000
-[WARNING] 'version' contains an expression but should be a constant. @ com.hundsun.crs:crs-dpppub-server:${service.version}, E:\project\merge\dpppub\crs-dpppub-server\pom.xml, line 5, column 11
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] -----------------< com.hundsun.crs:crs-dpppub-server >------------------
-[INFO] Building crs-dpppub-server 2.20240106.000
-[INFO] --------------------------------[ jar ]---------------------------------
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildbload-api/2.20240106.000-SNAPSHOT/maven-metadata.xml
-Progress (1): 633/813 B
-Progress (1): 813 B    
-                   
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildbload-api/2.20240106.000-SNAPSHOT/maven-metadata.xml (813 B at 14 kB/s)
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildb-api/2.20240106.000-SNAPSHOT/maven-metadata.xml
-Progress (1): 633/809 B
-Progress (1): 809 B    
-                   
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utildb-api/2.20240106.000-SNAPSHOT/maven-metadata.xml (809 B at 16 kB/s)
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utilfile-api/2.20240106.000-SNAPSHOT/maven-metadata.xml
-Progress (1): 633/811 B
-Progress (1): 811 B    
-                   
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-utilfile-api/2.20240106.000-SNAPSHOT/maven-metadata.xml (811 B at 14 kB/s)
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/github/spotbugs/spotbugs-annotations/maven-metadata.xml
-Progress (1): 2.0/2.4 kB
-Progress (1): 2.4 kB    
-                    
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/github/spotbugs/spotbugs-annotations/maven-metadata.xml (2.4 kB at 18 kB/s)
-[WARNING] The POM for com.tongtech:tlq9client:jar:1.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
-Downloading from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-jobauth-api/2.20240106.000-SNAPSHOT/maven-metadata.xml
-Progress (1): 633/810 B
-Progress (1): 810 B    
-                   
-Downloaded from fmbp: http://artifactory.hundsun.com:80/artifactory/crs5.0-mvn-virtual/com/hundsun/crs/crs-jobauth-api/2.20240106.000-SNAPSHOT/maven-metadata.xml (810 B at 11 kB/s)
-[INFO] 
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ crs-dpppub-server ---
-[INFO] com.hundsun.crs:crs-dpppub-server:jar:2.20240106.000
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-rpc-def:jar:3.1.6.10:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def:jar:3.1.6.10:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-rpc-t2:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-rpc-api:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-t2:jar:3.1.6.10:compile
-[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.9.4:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-event:jar:3.1.6.10:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-common-extension:jar:3.1.6.10:compile
-[INFO] |  |  +- org.javassist:javassist:jar:3.20.0-GA:compile
-[INFO] |  |  +- io.netty:netty-all:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-buffer:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-dns:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-haproxy:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-http:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-http2:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-memcache:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-mqtt:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-redis:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-smtp:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-socks:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-stomp:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-codec-xml:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-handler:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-native-unix-common:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-handler-proxy:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-handler-ssl-ocsp:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-resolver:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-resolver-dns:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-rxtx:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-sctp:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-udt:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-classes-epoll:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-classes-kqueue:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-resolver-dns-classes-macos:jar:4.1.115.Final:compile
-[INFO] |  |  |  +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.115.Final:runtime
-[INFO] |  |  |  +- io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.115.Final:runtime
-[INFO] |  |  |  +- io.netty:netty-transport-native-epoll:jar:linux-riscv64:4.1.115.Final:runtime
-[INFO] |  |  |  +- io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.115.Final:runtime
-[INFO] |  |  |  +- io.netty:netty-transport-native-kqueue:jar:osx-aarch_64:4.1.115.Final:runtime
-[INFO] |  |  |  +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.115.Final:runtime
-[INFO] |  |  |  \- io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.115.Final:runtime
-[INFO] |  |  +- org.yaml:snakeyaml:jar:1.32:compile
-[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.14:compile
-[INFO] |  |  |  \- org.apache.yetus:audience-annotations:jar:0.5.0:compile
-[INFO] |  |  +- org.apache.curator:curator-recipes:jar:4.2.0:compile
-[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.83:compile
-[INFO] |  |  +- com.alibaba:hessian-lite:jar:3.2.13:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-common:jar:3.1.6.10:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-api:jar:3.1.6.10:compile
-[INFO] |  |  |     +- org.apache.skywalking:apm-toolkit-trace:jar:8.1.0:compile
-[INFO] |  |  |     \- org.apache.skywalking:apm-toolkit-opentracing:jar:8.1.0:compile
-[INFO] |  |  |        +- io.opentracing:opentracing-api:jar:0.31.0:compile
-[INFO] |  |  |        \- io.opentracing:opentracing-noop:jar:0.31.0:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-trace-starter:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-trace-json:jar:3.1.6.10:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-trace-protobuff:jar:3.1.6.10:compile
-[INFO] |  |  |     \- com.google.protobuf:protobuf-java-util:jar:3.25.5:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-partition:jar:3.1.6.10:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-start-async-api:jar:3.1.6.10:compile
-[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.9:compile
-[INFO] |  |  \- io.netty:netty-tcnative-boringssl-static:jar:2.0.62.Final:compile
-[INFO] |  |     +- io.netty:netty-tcnative-classes:jar:2.0.62.Final:compile
-[INFO] |  |     +- io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.62.Final:compile
-[INFO] |  |     +- io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.62.Final:compile
-[INFO] |  |     +- io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.62.Final:compile
-[INFO] |  |     +- io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.62.Final:compile
-[INFO] |  |     \- io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.62.Final:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-monitor:jar:3.1.6.10:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-monitor-common:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-monitor-api:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-mvc-jwt:jar:3.1.6.10:compile
-[INFO] |  |  |  |  \- com.auth0:java-jwt:jar:3.12.0:compile
-[INFO] |  |  |  +- com.carrotsearch:java-sizeof:jar:0.0.5:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-mvc-path-limit:jar:3.1.6.10:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  \- io.micrometer:micrometer-core:jar:1.3.16:compile
-[INFO] |  |  |     +- org.hdrhistogram:HdrHistogram:jar:2.1.11:compile
-[INFO] |  |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-prometheus-monitor-api:jar:3.1.6.10:compile
-[INFO] |  |     \- io.micrometer:micrometer-registry-prometheus:jar:1.3.1:compile
-[INFO] |  |        \- io.prometheus:simpleclient_common:jar:0.7.0:compile
-[INFO] |  |           \- io.prometheus:simpleclient:jar:0.7.0:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-rpc-def-log4j2:jar:3.1.6.10:compile
-[INFO] |  |  \- org.springframework.boot:spring-boot-starter-log4j2:jar:2.2.13.RELEASE:compile
-[INFO] |  |     \- org.apache.logging.log4j:log4j-jul:jar:2.18.0:compile
-[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.2.13.RELEASE:compile
-[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
-[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.91:compile
-[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.91:compile
-[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.91:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-rpc-def-rule-monitor:jar:3.1.6.10:compile
-[INFO] +- com.hundsun.jrescloud:store:jar:2.0.40:compile
-[INFO] |  +- org.rocksdb:rocksdbjni:jar:5.18.3:compile
-[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.18.0:compile
-[INFO] |  |  \- org.apache.logging.log4j:log4j-api:jar:2.18.0:compile
-[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.18.0:compile
-[INFO] |  \- cn.hutool:hutool-all:jar:5.8.24:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-amqp:jar:4.1.31.10:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-starter:jar:4.1.31.10:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-mq-monitor-springboot2:jar:4.1.31.10:compile
-[INFO] |  |  |  \- com.hundsun.jrescloud:jrescloud-mq-monitor-common:jar:4.1.31.10:compile
-[INFO] |  |  \- org.springframework.boot:spring-boot-starter-web:jar:2.2.13.RELEASE:compile
-[INFO] |  |     +- org.springframework.boot:spring-boot-starter-json:jar:2.2.13.RELEASE:compile
-[INFO] |  |     |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.18.0:compile
-[INFO] |  |     |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.18.0:compile
-[INFO] |  |     +- org.springframework.boot:spring-boot-starter-validation:jar:2.2.13.RELEASE:compile
-[INFO] |  |     |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
-[INFO] |  |     |  \- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
-[INFO] |  |     |     +- org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile
-[INFO] |  |     |     \- com.fasterxml:classmate:jar:1.5.1:compile
-[INFO] |  |     +- org.springframework:spring-web:jar:5.2.24.RELEASE:compile
-[INFO] |  |     \- org.springframework:spring-webmvc:jar:5.2.24.RELEASE:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-amqp-configuration:jar:4.1.31.10:compile
-[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-amqp:jar:4.1.31.10:compile
-[INFO] |        +- com.hundsun.jrescloud:jrescloud-mq-api:jar:4.1.31.10:compile
-[INFO] |        |  +- com.hundsun.jrescloud.middleware:middleware-base-exception:jar:2.0.6:compile
-[INFO] |        |  |  \- com.hundsun.jrescloud.middleware:middleware-base-common:jar:2.0.6:compile
-[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-adapter:jar:4.1.31.10:compile
-[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-mq-api-compatible:jar:4.1.31.10:compile
-[INFO] |        |  \- com.esotericsoftware:kryo:jar:5.0.0-RC1:compile
-[INFO] |        |     +- com.esotericsoftware:reflectasm:jar:1.11.7:compile
-[INFO] |        |     \- com.esotericsoftware:minlog:jar:1.3.0:compile
-[INFO] |        +- com.rabbitmq:amqp-client:jar:5.18.0:compile
-[INFO] |        +- org.apache.commons:commons-pool2:jar:2.7.0:compile
-[INFO] |        \- com.hundsun.jrescloud.middleware:middleware-tenant-sdk:jar:1.0.0:compile
-[INFO] |           +- com.google.code.gson:gson:jar:2.8.9:compile
-[INFO] |           \- com.hundsun.jrescloud.middleware:middleware-tenant-api:jar:1.0.0:compile
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-mq-cache:jar:4.1.31.10:compile
-[INFO] |  \- com.hundsun.jrescloud:jrescloud-mq-cache:jar:4.1.31.10:compile
-[INFO] |     \- com.hundsun.jrescloud:jrescloud-mq-core:jar:4.1.31.10:compile
-[INFO] |        \- com.hundsun.jrescloud:jrescloud-trace-core:jar:3.1.6.10:compile
-[INFO] |           \- com.hundsun.jrescloud:jrescloud-log-defender:jar:3.1.6.10:compile
-[INFO] |              \- com.hundsun.jrescloud:jrescloud-log4j2:jar:3.1.6.10:compile
-[INFO] +- com.h2database:h2:jar:2.1.210:compile
-[INFO] +- com.hundsun.crs:crs-utildbload-api:jar:2.20240106.000-SNAPSHOT:compile
-[INFO] |  +- ch.ethz.ganymed:ganymed-ssh2:jar:build210:compile
-[INFO] |  +- com.hundsun.crs:crs-utildb-api:jar:2.20240106.000-SNAPSHOT:compile
-[INFO] |  |  +- com.hundsun.crs:crs-utilfile-api:jar:2.20240106.000-SNAPSHOT:compile
-[INFO] |  |  |  +- commons-io:commons-io:jar:2.14.0:compile
-[INFO] |  |  |  +- com.github.pagehelper:pagehelper-spring-boot-starter:jar:1.4.0:compile
-[INFO] |  |  |  |  +- org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:2.2.0:compile
-[INFO] |  |  |  |  |  \- org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:2.2.0:compile
-[INFO] |  |  |  |  \- com.github.pagehelper:pagehelper-spring-boot-autoconfigure:jar:1.4.0:compile
-[INFO] |  |  |  \- commons-collections:commons-collections:jar:3.2.2:compile
-[INFO] |  |  +- org.mybatis:mybatis:jar:3.5.10:compile
-[INFO] |  |  +- com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:compile
-[INFO] |  |  |  +- com.oracle.ojdbc:ucp:jar:19.3.0.0:compile
-[INFO] |  |  |  +- com.oracle.ojdbc:oraclepki:jar:19.3.0.0:compile
-[INFO] |  |  |  +- com.oracle.ojdbc:osdt_cert:jar:19.3.0.0:compile
-[INFO] |  |  |  +- com.oracle.ojdbc:osdt_core:jar:19.3.0.0:compile
-[INFO] |  |  |  +- com.oracle.ojdbc:simplefan:jar:19.3.0.0:compile
-[INFO] |  |  |  \- com.oracle.ojdbc:ons:jar:19.3.0.0:compile
-[INFO] |  |  \- com.oracle.ojdbc:orai18n:jar:19.3.0.0:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-starter-lock-redis:jar:2.3.1.2.1:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-lock-redis:jar:2.3.1.2.1:compile
-[INFO] |  |  |  \- org.redisson:redisson:jar:3.27.1:compile
-[INFO] |  |  |     +- io.projectreactor:reactor-core:jar:3.6.4:compile
-[INFO] |  |  |     +- org.reactivestreams:reactive-streams:jar:1.0.3:compile
-[INFO] |  |  |     +- io.reactivex.rxjava3:rxjava:jar:3.1.6:compile
-[INFO] |  |  |     +- org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile
-[INFO] |  |  |     +- org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile
-[INFO] |  |  |     +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.18.0:compile
-[INFO] |  |  |     \- org.jodd:jodd-bean:jar:5.1.6:compile
-[INFO] |  |  |        \- org.jodd:jodd-core:jar:5.1.6:compile
-[INFO] |  |  \- com.hundsun.jrescloud:jrescloud-lock-monitor:jar:2.3.1.2.1:compile
-[INFO] |  \- com.github.spotbugs:spotbugs-annotations:jar:4.8.6:compile
-[INFO] |     \- com.google.code.findbugs:jsr305:jar:3.0.2:compile
-[INFO] +- org.projectlombok:lombok:jar:1.18.6:compile
-[INFO] +- com.dameng:DmJdbcDriver18:jar:8.1.3.62:compile
-[INFO] +- com.alipay.oceanbase:oceanbase-client:jar:2.2.8.1:runtime
-[INFO] |  \- com.google.guava:guava:jar:32.1.1-jre:compile
-[INFO] |     +- com.google.guava:failureaccess:jar:1.0.1:compile
-[INFO] |     +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
-[INFO] |     +- org.checkerframework:checker-qual:jar:3.33.0:compile
-[INFO] |     +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
-[INFO] |     \- com.google.j2objc:j2objc-annotations:jar:2.8:compile
-[INFO] +- com.huawei.gaussdb:gaussdbjdbc:jar:5.0.0-htrunk3.csi.gaussdb_kernel.opengaussjdbc.r3:compile
-[INFO] +- com.baomidou:mybatis-plus-boot-starter:jar:3.5.3.1:compile
-[INFO] |  +- com.baomidou:mybatis-plus:jar:3.5.3.1:compile
-[INFO] |  |  \- com.baomidou:mybatis-plus-extension:jar:3.5.3.1:compile
-[INFO] |  |     +- com.baomidou:mybatis-plus-core:jar:3.5.3.1:compile
-[INFO] |  |     |  +- com.baomidou:mybatis-plus-annotation:jar:3.5.3.1:compile
-[INFO] |  |     |  \- com.github.jsqlparser:jsqlparser:jar:4.4:compile
-[INFO] |  |     \- org.mybatis:mybatis-spring:jar:2.0.7:compile
-[INFO] |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.2.13.RELEASE:compile
-[INFO] |  |  \- org.springframework.boot:spring-boot:jar:2.2.13.RELEASE:compile
-[INFO] |  \- org.springframework.boot:spring-boot-starter-jdbc:jar:2.2.13.RELEASE:compile
-[INFO] |     +- com.zaxxer:HikariCP:jar:4.0.3:compile
-[INFO] |     \- org.springframework:spring-jdbc:jar:5.2.24.RELEASE:compile
-[INFO] |        +- org.springframework:spring-beans:jar:5.2.24.RELEASE:compile
-[INFO] |        \- org.springframework:spring-tx:jar:5.2.24.RELEASE:compile
-[INFO] +- com.jcraft:jsch:jar:0.1.55:compile
-[INFO] +- com.alibaba:druid:jar:1.2.22:compile
-[INFO] +- org.apache.hive:hive-jdbc:jar:4.0.0-alpha-1:compile
-[INFO] |  +- org.apache.hive:hive-common:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-classification:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-storage-api:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-standalone-metastore-common:jar:4.0.0-alpha-1:compile
-[INFO] |  |  |  +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
-[INFO] |  |  |  +- org.antlr:antlr-runtime:jar:3.5.2:compile
-[INFO] |  |  |  +- org.antlr:ST4:jar:4.0.4:compile
-[INFO] |  |  |  +- org.apache.derby:derby:jar:10.14.2.0:runtime
-[INFO] |  |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile
-[INFO] |  |  +- commons-cli:commons-cli:jar:1.4:compile
-[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
-[INFO] |  |  +- org.apache.orc:orc-core:jar:1.6.9:compile
-[INFO] |  |  |  +- org.apache.orc:orc-shims:jar:1.6.9:compile
-[INFO] |  |  |  +- io.airlift:aircompressor:jar:0.19:compile
-[INFO] |  |  |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
-[INFO] |  |  |  |  \- javax.activation:javax.activation-api:jar:1.2.0:compile
-[INFO] |  |  |  +- org.jetbrains:annotations:jar:17.0.0:compile
-[INFO] |  |  |  \- org.threeten:threeten-extra:jar:1.5.0:compile
-[INFO] |  |  +- jline:jline:jar:2.14.6:compile
-[INFO] |  |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
-[INFO] |  |  +- joda-time:joda-time:jar:2.10.5:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-1.2-api:jar:2.18.0:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-web:jar:2.18.0:compile
-[INFO] |  |  +- net.sf.jpam:jpam:jar:1.1:compile
-[INFO] |  |  +- org.apache.tez:tez-api:jar:0.10.1:compile
-[INFO] |  |  |  +- commons-lang:commons-lang:jar:2.6:compile
-[INFO] |  |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
-[INFO] |  |  |  +- com.sun.jersey:jersey-client:jar:1.19:compile
-[INFO] |  |  |  |  \- com.sun.jersey:jersey-core:jar:1.19:compile
-[INFO] |  |  |  |     \- javax.ws.rs:jsr311-api:jar:1.1.1:compile
-[INFO] |  |  |  +- com.sun.jersey:jersey-json:jar:1.19:compile
-[INFO] |  |  |  |  +- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
-[INFO] |  |  |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
-[INFO] |  |  |  \- jdk.tools:jdk.tools:jar:1.8:system
-[INFO] |  |  +- com.tdunning:json:jar:1.8:compile
-[INFO] |  |  +- io.dropwizard.metrics:metrics-core:jar:4.1.17:compile
-[INFO] |  |  +- io.dropwizard.metrics:metrics-jvm:jar:4.1.17:compile
-[INFO] |  |  +- io.dropwizard.metrics:metrics-json:jar:4.1.17:compile
-[INFO] |  |  +- com.github.joshelser:dropwizard-metrics-hadoop-metrics2-reporter:jar:0.1.2:compile
-[INFO] |  |  \- javolution:javolution:jar:5.5.1:compile
-[INFO] |  +- org.apache.hive:hive-llap-client:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-llap-common:jar:4.0.0-alpha-1:compile
-[INFO] |  |  |  +- io.jsonwebtoken:jjwt-api:jar:0.10.5:compile
-[INFO] |  |  |  +- io.jsonwebtoken:jjwt-impl:jar:0.10.5:compile
-[INFO] |  |  |  \- io.jsonwebtoken:jjwt-jackson:jar:0.10.5:compile
-[INFO] |  |  +- org.apache.hive:hive-serde:jar:4.0.0-alpha-1:compile
-[INFO] |  |  |  +- org.apache.arrow:arrow-vector:jar:2.0.0:compile
-[INFO] |  |  |  |  +- org.apache.arrow:arrow-format:jar:2.0.0:compile
-[INFO] |  |  |  |  +- org.apache.arrow:arrow-memory-core:jar:2.0.0:compile
-[INFO] |  |  |  |  \- com.google.flatbuffers:flatbuffers-java:jar:1.9.0:compile
-[INFO] |  |  |  +- com.carrotsearch:hppc:jar:0.7.2:compile
-[INFO] |  |  |  +- com.github.davidmoten:flatbuffers-java:jar:1.6.0.1:compile
-[INFO] |  |  |  +- net.sf.opencsv:opencsv:jar:2.3:compile
-[INFO] |  |  |  \- org.apache.parquet:parquet-hadoop-bundle:jar:1.11.1:compile
-[INFO] |  |  \- org.apache.curator:apache-curator:pom:4.2.0:compile
-[INFO] |  +- org.apache.hive:hive-service:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-metastore:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive:hive-hplsql:jar:4.0.0-alpha-1:compile
-[INFO] |  |  |  \- org.antlr:antlr4-runtime:jar:4.5:compile
-[INFO] |  |  |     \- org.abego.treelayout:org.abego.treelayout.core:jar:1.0.1:compile
-[INFO] |  |  +- javax.servlet.jsp:javax.servlet.jsp-api:jar:2.3.1:compile
-[INFO] |  |  +- commons-codec:commons-codec:jar:1.15:compile
-[INFO] |  |  +- org.apache.thrift:libfb303:jar:0.9.3:compile
-[INFO] |  |  +- org.apache.curator:curator-client:jar:4.2.0:compile
-[INFO] |  |  +- org.bouncycastle:bcprov-jdk15on:jar:1.64:compile
-[INFO] |  |  +- org.apache.santuario:xmlsec:jar:2.3.0:compile
-[INFO] |  |  \- org.jamon:jamon-runtime:jar:2.3.1:compile
-[INFO] |  +- org.apache.hive:hive-shims:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive.shims:hive-shims-common:jar:4.0.0-alpha-1:compile
-[INFO] |  |  +- org.apache.hive.shims:hive-shims-0.23:jar:4.0.0-alpha-1:runtime
-[INFO] |  |  \- org.apache.hive.shims:hive-shims-scheduler:jar:4.0.0-alpha-1:runtime
-[INFO] |  +- org.apache.hive:hive-service-rpc:jar:4.0.0-alpha-1:compile
-[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
-[INFO] |  |  \- commons-logging:commons-logging:jar:1.2:compile
-[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
-[INFO] |  +- org.apache.curator:curator-framework:jar:4.2.0:compile
-[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.29:compile
-[INFO] +- org.apache.ant:ant:jar:1.10.11:compile
-[INFO] |  +- org.apache.ant:ant-launcher:jar:1.10.11:compile
-[INFO] |  \- com.sun:tools:jar:1.8.0:system
-[INFO] +- org.codehaus.jettison:jettison:jar:1.5.4:compile
-[INFO] +- com.fasterxml.woodstox:woodstox-core:jar:6.4.0:compile
-[INFO] |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
-[INFO] +- org.apache.hbase.thirdparty:hbase-shaded-netty:jar:4.1.0:compile
-[INFO] +- org.apache.avro:avro:jar:1.11.0:compile
-[INFO] |  +- com.fasterxml.jackson.core:jackson-core:jar:2.18.0:compile
-[INFO] |  \- org.apache.commons:commons-compress:jar:1.21:compile
-[INFO] +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-starter-batch-springbatch:jar:1.2.58.1:compile
-[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-api:jar:1.2.58.1:compile
-[INFO] |  |  \- org.springframework.boot:spring-boot-starter-batch:jar:2.2.13.RELEASE:compile
-[INFO] |  |     \- org.springframework.batch:spring-batch-core:jar:4.2.5.RELEASE:compile
-[INFO] |  |        +- javax.batch:javax.batch-api:jar:1.0:compile
-[INFO] |  |        \- org.springframework.batch:spring-batch-infrastructure:jar:4.2.5.RELEASE:compile
-[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-runtime-springbatch:jar:1.2.58.1:compile
-[INFO] |  |  \- org.springframework.batch:spring-batch-integration:jar:4.2.5.RELEASE:compile
-[INFO] |  |     +- org.springframework.integration:spring-integration-core:jar:5.2.11.RELEASE:compile
-[INFO] |  |     +- org.springframework.retry:spring-retry:jar:1.2.5.RELEASE:compile
-[INFO] |  |     +- org.springframework:spring-aop:jar:5.2.24.RELEASE:compile
-[INFO] |  |     \- org.springframework:spring-messaging:jar:5.2.24.RELEASE:compile
-[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-support:jar:1.2.58.1:compile
-[INFO] |  |  +- mysql:mysql-connector-java:jar:8.0.22:runtime
-[INFO] |  |  +- com.aliyun.oss:aliyun-sdk-oss:jar:2.8.3:compile
-[INFO] |  |  +- commons-net:commons-net:jar:3.1:compile
-[INFO] |  |  \- com.hundsun.jrescloud.middleware:jrescloud-starter-mybatis:jar:2.2.6:compile
-[INFO] |  |     +- com.hundsun.jrescloud.middleware:jrescloud-db-def:jar:2.2.6.1:compile
-[INFO] |  |     |  +- com.hundsun.jrescloud.middleware:jrescloud-db-core:jar:2.2.6.1:compile
-[INFO] |  |     |  |  \- com.hundsun.jrescloud.middleware:jrescloud-db-api:jar:2.2.6.1:compile
-[INFO] |  |     |  \- com.hundsun.jrescloud.middleware:jrescloud-db-monitor-springboot2:jar:2.2.6.1:compile
-[INFO] |  |     +- com.mysql:mysql-connector-j:jar:8.2.0:compile
-[INFO] |  |     \- tk.mybatis:mapper-spring-boot-starter:jar:2.1.5:compile
-[INFO] |  |        +- tk.mybatis:mapper-core:jar:1.1.5:compile
-[INFO] |  |        |  \- javax.persistence:persistence-api:jar:1.0:compile
-[INFO] |  |        +- tk.mybatis:mapper-base:jar:1.1.5:compile
-[INFO] |  |        +- tk.mybatis:mapper-weekend:jar:1.1.5:compile
-[INFO] |  |        +- tk.mybatis:mapper-spring:jar:1.1.5:compile
-[INFO] |  |        +- tk.mybatis:mapper-extra:jar:1.1.5:compile
-[INFO] |  |        \- tk.mybatis:mapper-spring-boot-autoconfigure:jar:2.1.5:compile
-[INFO] |  \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-common:jar:1.2.58.1:compile
-[INFO] |     +- org.springframework:spring-context:jar:5.2.24.RELEASE:compile
-[INFO] |     |  \- org.springframework:spring-expression:jar:5.2.24.RELEASE:compile
-[INFO] |     \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-common:jar:0.0.94:compile
-[INFO] |        +- com.hundsun.jrescloud:jrescloud-common-gm:jar:3.1.6.10:compile
-[INFO] |        |  \- org.bouncycastle:bcprov-jdk18on:jar:1.78.1:compile
-[INFO] |        +- com.hundsun.jrescloud:jrescloud-starter-cache:jar:3.5.0.3.1:compile
-[INFO] |        |  +- com.hundsun.jrescloud:jrescloud-cache-core:jar:3.5.0.3.1:compile
-[INFO] |        |  |  +- com.hundsun.jrescloud:jrescloud-cache-api:jar:3.5.0.3.1:compile
-[INFO] |        |  |  |  +- org.ehcache:ehcache:jar:3.9.3:compile
-[INFO] |        |  |  |  +- org.springframework.data:spring-data-redis:jar:2.2.12.RELEASE:compile
-[INFO] |        |  |  |  |  +- org.springframework.data:spring-data-keyvalue:jar:2.2.12.RELEASE:compile
-[INFO] |        |  |  |  |  |  \- org.springframework.data:spring-data-commons:jar:2.2.12.RELEASE:compile
-[INFO] |        |  |  |  |  \- org.springframework:spring-context-support:jar:5.2.24.RELEASE:compile
-[INFO] |        |  |  |  \- redis.clients:jedis:jar:3.10.0:compile
-[INFO] |        |  |  +- com.hundsun.jrescloud:jrescloud-cache-redis:jar:3.5.0.3.1:compile
-[INFO] |        |  |  \- com.hundsun.jrescloud:jrescloud-cache-local:jar:3.5.0.3.1:compile
-[INFO] |        |  \- com.hundsun.jrescloud:jrescloud-cache-monitor:jar:3.5.0.3.1:compile
-[INFO] |        +- com.github.pagehelper:pagehelper:jar:5.3.1:compile
-[INFO] |        \- javax.cache:cache-api:jar:1.1.1:compile
-[INFO] +- com.thoughtworks.xstream:xstream:jar:1.4.21:compile
-[INFO] |  \- io.github.x-stream:mxparser:jar:1.2.2:compile
-[INFO] |     \- xmlpull:xmlpull:jar:1.1.3.1:compile
-[INFO] +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-client:jar:1.2.58.1:compile
-[INFO] |  +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-rpc:jar:1.2.58.1:compile
-[INFO] |  \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-batch-mq:jar:1.2.58.1:compile
-[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-processdesign-model-api:jar:1.0.92.1:compile
-[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-rabbit:jar:0.0.92.1:compile
-[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-tonglinkq:jar:0.0.92.1:compile
-[INFO] |     |  +- com.hundsun.jrescloud:jrescloud-starter-mq-tonglink:jar:4.1.31.10:compile
-[INFO] |     |  |  \- com.hundsun.jrescloud:jrescloud-mq-tonglink-configuration:jar:4.1.31.10:compile
-[INFO] |     |  |     \- com.hundsun.jrescloud:jrescloud-mq-tonglink:jar:4.1.31.10:compile
-[INFO] |     |  |        \- com.tongtech:htpclient:jar:2.0.2.0_sp6:compile
-[INFO] |     |  \- com.tongtech:tlq9client:jar:1.0:compile
-[INFO] |     +- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-besmq:jar:0.0.92.1:compile
-[INFO] |     |  \- com.hundsun.jrescloud:jrescloud-starter-mq-bes:jar:4.1.31.10:compile
-[INFO] |     |     \- com.hundsun.jrescloud:jrescloud-mq-bes-configuration:jar:4.1.31.10:compile
-[INFO] |     |        \- com.hundsun.jrescloud:jrescloud-mq-bes:jar:4.1.31.10:compile
-[INFO] |     |           +- com.bes.mq:besmq-client:jar:2.1.0:compile
-[INFO] |     |           \- com.bes.mq:besmq-client-mgmt-destination:jar:2.1.0:compile
-[INFO] |     \- com.hundsun.jrescloud.scheduler:jrescloud-scheduler-mq-database:jar:0.0.92.1:compile
-[INFO] |        +- org.springframework:spring-jms:jar:5.2.24.RELEASE:compile
-[INFO] |        +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-zookeeper-support:jar:1.0.4:compile
-[INFO] |        |  +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-zookeeper-registry:jar:1.0.4:compile
-[INFO] |        |  |  \- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-registry-api:jar:1.0.4:compile
-[INFO] |        |  \- com.github.oshi:oshi-core:jar:3.9.1:compile
-[INFO] |        +- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-dispatch-support:jar:1.0.4:compile
-[INFO] |        \- com.hundsun.jrescloud.octopusscheduler:octopusscheduler-remote-plugin:jar:1.0.4:compile
-[INFO] +- net.java.dev.jna:jna-platform:jar:5.0.0:compile
-[INFO] |  \- net.java.dev.jna:jna:jar:5.5.0:compile
-[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.2.13.RELEASE:test
-[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.2.13.RELEASE:compile
-[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.2.13.RELEASE:test
-[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.2.13.RELEASE:test
-[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
-[INFO] |  |  \- net.minidev:json-smart:jar:2.3:test
-[INFO] |  |     \- net.minidev:accessors-smart:jar:1.2:test
-[INFO] |  |        \- org.ow2.asm:asm:jar:5.0.4:test
-[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
-[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.5.2:test
-[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.5.2:test
-[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
-[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.5.2:test
-[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.5.2:test
-[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.5.2:test
-[INFO] |  +- org.junit.vintage:junit-vintage-engine:jar:5.5.2:test
-[INFO] |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:test
-[INFO] |  |  +- org.junit.platform:junit-platform-engine:jar:1.5.2:test
-[INFO] |  |  \- junit:junit:jar:4.12:test
-[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:3.1.0:test
-[INFO] |  +- org.assertj:assertj-core:jar:3.13.2:test
-[INFO] |  +- org.hamcrest:hamcrest:jar:2.1:test
-[INFO] |  +- org.mockito:mockito-core:jar:3.1.0:test
-[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.10.19:compile
-[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.19:test
-[INFO] |  |  \- org.objenesis:objenesis:jar:2.6:compile
-[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
-[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
-[INFO] |  +- org.springframework:spring-core:jar:5.2.24.RELEASE:compile
-[INFO] |  |  \- org.springframework:spring-jcl:jar:5.2.24.RELEASE:compile
-[INFO] |  +- org.springframework:spring-test:jar:5.2.24.RELEASE:test
-[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.4:test
-[INFO] +- com.hundsun.jrescloud:jrescloud-starter-logkafka:jar:3.1.6.10:compile
-[INFO] |  +- com.hundsun.jrescloud:jrescloud-common:jar:3.1.6.10:compile
-[INFO] |  |  +- com.hundsun.jrescloud:jrescloud-common-base:jar:3.1.6.10:compile
-[INFO] |  |  |  +- com.hundsun.jrescloud:jrescloud-common-encrypt:jar:3.1.6.10:compile
-[INFO] |  |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.18.0:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-legacy:jar:2.1.0.RELEASE:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.2.13.RELEASE:compile
-[INFO] |  |  |  \- org.aspectj:aspectjweaver:jar:1.9.5:compile
-[INFO] |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.30:compile
-[INFO] |  |  \- com.lmax:disruptor:jar:3.4.2:compile
-[INFO] |  \- org.apache.kafka:kafka-clients:jar:3.4.0:compile
-[INFO] |     +- com.github.luben:zstd-jni:jar:1.5.2-1:runtime
-[INFO] |     +- org.lz4:lz4-java:jar:1.8.0:runtime
-[INFO] |     \- org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime
-[INFO] +- com.hundsun.jrescloud:jrescloud-lock-api:jar:2.3.1.2.1:compile
-[INFO] |  \- io.netty:netty-common:jar:4.1.115.Final:compile
-[INFO] +- org.freemarker:freemarker:jar:2.3.31:compile
-[INFO] +- com.hundsun.crs:crs-jobauth-api:jar:2.20240106.000-SNAPSHOT:compile
-[INFO] |  \- org.springframework.boot:spring-boot-starter-web-services:jar:2.2.13.RELEASE:compile
-[INFO] |     +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.2:compile
-[INFO] |     |  +- jakarta.xml.soap:jakarta.xml.soap-api:jar:1.4.2:compile
-[INFO] |     |  +- org.jvnet.staxex:stax-ex:jar:1.8.3:compile
-[INFO] |     |  \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
-[INFO] |     +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
-[INFO] |     |  \- jakarta.jws:jakarta.jws-api:jar:2.1.0:runtime
-[INFO] |     +- org.springframework:spring-oxm:jar:5.2.24.RELEASE:compile
-[INFO] |     \- org.springframework.ws:spring-ws-core:jar:3.0.10.RELEASE:compile
-[INFO] |        \- org.springframework.ws:spring-xml:jar:3.0.10.RELEASE:compile
-[INFO] \- com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
-[INFO]    \- com.fasterxml.jackson.core:jackson-annotations:jar:2.18.0:compile
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 17.305 s
-[INFO] Finished at: 2024-12-10T09:34:22+08:00
-[INFO] ------------------------------------------------------------------------
+<process xmlns='http://jbpm.org/4.4/jpdl' name='其他风险审批流程' key='platform_BIZ_qtfxsplc_20241106155452'>
+  <start name='start' isProcessTemplate='false' g='99,141,48,48' id='start-0c0f89c7-939f-4314-b074-30b18bd6ef24'>
+    <transition name='to 人工 1' to='初始节点'/>
+  </start>
+  <end name='end' isProcessTemplate='false' g='995,143,48,48' id='end-2701f36e-d7e4-474b-a860-113c4a0e9bea'>
+    <on event='start'>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be' id='3828ef8b-204a-40c1-92f0-10591628a253'>
+    <in>[{&quot;var&quot;:&quot;4&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
+    </auto>
+    </on>
+  </end>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-f4d1a225-72f8-4c92-b633-d6426a9902c0' g='393,140,46,46' name='是否金控录入'>
+    <transition isJumpOutFromExecution='0' name='是' to='金控审核人1'>
+      <condition expr='#{if_parent_operate==1}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='否' to='子公司复核人'>
+      <condition expr='#{if_parent_operate==0}'/>
+    </transition>
+    <transition name='to 初始节点' g='417,93;237,92:-19,38' to='初始节点' isJumpOutFromExecution='0'/>
+  </decision>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-e6a1e219-b5f9-4c67-917c-27996ac271c1' g='360,223,112,48' name='子公司复核人'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;子公司复核人&quot;,&quot;code&quot;:&quot;#{subCompanyAuditor}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
+    <on event='start'>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be' id='3828ef8b-204a-40c1-92f0-10591628a253'>
+    <in>[{&quot;var&quot;:&quot;2&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
+    </auto>
+    </on>
+    <extaction/>
+  <transition name='reject' to='action 15'/>
+  <transition name='submit' to='action 16'/>
+  </human>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-7b4566c4-3ea3-4c24-a55b-afd52e00a96d' g='518,138,118,46' name='金控审核人1'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;银河金控&quot;,&quot;code&quot;:&quot;0_yhjk&quot;,&quot;typecode&quot;:&quot;org&quot;,&quot;typename&quot;:&quot;组织&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:0,&quot;_rowKey&quot;:1},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
+    <on event='start'>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be' id='3828ef8b-204a-40c1-92f0-10591628a253'>
+    <in>[{&quot;var&quot;:&quot;3&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
+    </auto>
+    </on>
+    <extaction/>
+  <transition name='submit' to='action 13' g='635,163:79,0'/>
+  <transition name='reject' to='action 14'/>
+  </human>
+  <human canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-4e4b1461-f507-4202-904d-bfa02cfa0cc9' g='192,139,90,50' name='初始节点'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;发起人&quot;,&quot;code&quot;:&quot;#{starter}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:0,&quot;_rowKey&quot;:1}]</participants>
+    <on event='start'>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be' id='3828ef8b-204a-40c1-92f0-10591628a253'>
+    <in>[{&quot;var&quot;:&quot;0&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
+    </auto>
+    </on>
+    <extaction/>
+  <transition name='submit' to='action 9'/>
+  </human>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-4b699a88-4a3f-4928-96b0-9d9c26cf0fb5' g='315,149,30,30' text='系统处理' name='action 9'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 是否金控录入' to='是否金控录入'/>
+  </action>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-63f8c519-db69-41a9-ad4a-5bea5078a146' g='809,222,90,50' name='金控审核人2'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;银河金控&quot;,&quot;code&quot;:&quot;0_yhjk&quot;,&quot;typecode&quot;:&quot;org&quot;,&quot;typename&quot;:&quot;组织&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:0,&quot;_rowKey&quot;:1},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
+    <on event='start'>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be' id='3828ef8b-204a-40c1-92f0-10591628a253'>
+    <in>[{&quot;var&quot;:&quot;3&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
+    </auto>
+    </on>
+    <extaction/>
+  <transition name='transition 22' g='854,318;854,464:-166,-28' to='action 20'/>
+  <transition name='transition 27' g='854,392:-51,-68' to='action 23'/>
+  <transition name='transition 32' to='action 25'/>
+  <transition name='transition 30' to='action 26'/>
+  </human>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-15c05372-e3b6-4ffe-8064-e6039118c582' g='794,151,30,30' text='通过' name='action 13'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to end' to='end'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-91809952-3ee4-4922-a8b8-590c0e5b6fcd' g='281,232,30,30' text='退回至发起人' name='action 15'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' to='初始节点' g='237,247:33,-36'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f669e66c-d883-49b2-a0b2-b581910798a1' g='562,43,30,30' text='退回至发起人' name='action 14'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' g='237,54:184,52' to='初始节点'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-73aca04e-cdd9-43b7-afce-3944535c7856' g='525,446,30,30' text='退回至发起人' name='action 20'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' g='236,461;238,388;237,298:155,-69' to='初始节点'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f9b30545-2105-4ece-94a1-440162aeb5fb' g='523,232,30,30' text='通过' name='action 16'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 决策 2' to='是否二级审批'/>
+  </action>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-295c5509-3bcb-4c23-b339-0ea900e7a99b' g='634,224,46,46' name='是否二级审批'>
+    <transition isJumpOutFromExecution='0' name='否' to='金控审核人2'>
+      <condition expr='#{ifSubCompanyVerifier==0}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='是' to='子公司二级复核人'>
+      <condition expr='#{ifSubCompanyVerifier==1}'/>
+    </transition>
+    <transition name='to 初始节点' g='660,93;238,92:9,114' to='初始节点'/>
+  </decision>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-ff7d0362-a806-419c-827e-0c0e8a787ad6' g='580,313,143,50' name='子公司二级复核人'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;子公司二级复核人&quot;,&quot;code&quot;:&quot;#{subCompanyVerifier}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
+    <extaction/>
+  <transition name='pass' to='action 21'/>
+  <transition name='transition 25' to='action 22'/>
+  <transition name='transition 28' g='651,396:-77,-20' to='action 24'/>
+  </human>
+  <action id='action-c9d36f89-2ee2-4145-8718-0344e1ae1f6f' g='743,323,30,30' text='通过' name='action 21' actionType='pass'>
+    <transition name='to 金控审核人' g='854,338:-53,-40' to='金控审核人2'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-19b005a2-a56a-4492-acb8-cfc0007fcd21' g='516,323,30,30' text='退回至上一级审批人' name='action 22'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 子公司复核人' g='416,338:65,-39' to='子公司复核人'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-a2a631b9-7946-4739-9c84-00afd8a1598b' g='743,376,30,30' text='退回至上一级审批人' name='action 23'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 人工 1' g='651,391:70,-17' to='子公司二级复核人'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-2b191c1b-5cd8-45d5-b9a6-6aba9eccaf05' g='518,381,30,30' text='退回至发起人' name='action 24'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' g='237,396:156,-109' to='初始节点'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f361fd91-d9ee-4b06-9028-3c6ee3ac9b89' g='955,232,30,30' text='通过' name='action 25'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to end' g='1018,247:-26,-35' to='end'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-1938f127-99a6-40ca-b383-40384f27d2cd' g='809,274,30,30' text='退回至子公司复核人' name='action 26'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 子公司复核人' to='子公司复核人'/>
+  </action>
+</process>
