@@ -27,12 +27,19 @@ public class OverweightApplicationTests11 {
 
         try {
             String add = "\\+";
-            String filePath = "1+1+0.25+0.25+0.25+0.25";
-            BigDecimal daybb = new BigDecimal("10.823654");
+            String filePath = "3+3N";
+            filePath = filePath.replace("年", "N");
+            BigDecimal daybb = new BigDecimal("3.823654");
             String result = "";
             String[] tmp = filePath.split(add);
             for (int i = 0; i < tmp.length; i++) {
-                BigDecimal thisyear = new BigDecimal(tmp[i]);
+                String dis = tmp[i];
+                if (dis.equals("N")) {
+                    dis = "1";
+                } else {
+                    dis = dis.replace("N", "");
+                }
+                BigDecimal thisyear = new BigDecimal(dis);
 
                 if (daybb.compareTo(thisyear) < 0) {
                     BigDecimal diff = thisyear.subtract(daybb);
