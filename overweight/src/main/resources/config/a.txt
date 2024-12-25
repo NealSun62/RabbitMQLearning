@@ -1,118 +1,191 @@
-<process xmlns='http://jbpm.org/4.4/jpdl' name='重要业务管理' key='platform_BIZ_zdywshlc_20241118191942'>
-  <start name='start' isProcessTemplate='false' g='99,141,48,48' id='start-0c0f89c7-939f-4314-b074-30b18bd6ef24'>
-    <transition name='to 人工 1' to='初始节点'/>
+<process xmlns='http://jbpm.org/4.4/jpdl' name='其他风险管理' key='platform_BIZ_qtfxsplc_20241106155452'>
+  <start name='start' isProcessTemplate='false' g='15,950,48,48' id='start-0c0f89c7-939f-4314-b074-30b18bd6ef24'>
+    <transition name='to 人工 1' to='初始节点' g=':-32,-5'/>
   </start>
-  <end name='end' isProcessTemplate='false' g='995,143,48,48' id='end-2701f36e-d7e4-474b-a860-113c4a0e9bea'>
+  <end name='end' isProcessTemplate='false' g='1499,531,48,48' id='end-2701f36e-d7e4-474b-a860-113c4a0e9bea'>
     <on event='start'>
-    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.ImportantBusinessService:com.hundsun.gefrm.pcm.service.ImportantBusinessService.listenTask:t3::gefrm-pcm-server' type='cloud' serviceName='pcm-重点项目管理工作流监听' serviceUuid='5c03a2c29f6c4c5bb9cd5cc2ab4a5b87'>
-    <in>[{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;流程实例编号&quot;},{&quot;var&quot;:&quot;end_node&quot;,&quot;key&quot;:&quot;node_id&quot;,&quot;paramName&quot;:&quot;节点编码&quot;}]</in>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be'>
+    <in>[{&quot;var&quot;:&quot;4&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
     </auto>
     </on>
   </end>
-  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-e6a1e219-b5f9-4c67-917c-27996ac271c1' g='360,223,112,48' name='子公司复核人'>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-f4d1a225-72f8-4c92-b633-d6426a9902c0' g='273,65,46,46' name='是否风控录入'>
+    <transition isJumpOutFromExecution='0' name='是' g='773,88:-264,4' to='金控一级审核人'>
+      <condition expr='#{if_parent_operate==1}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='否' to='子公司复核人' g='447,88:-81,7'/>
+  </decision>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-e6a1e219-b5f9-4c67-917c-27996ac271c1' g='391,453,112,48' name='子公司复核人'>
     <form>[]</form>
     <defaultNoticeSendUser>[]</defaultNoticeSendUser>
     <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
     <participants>[{&quot;name&quot;:&quot;子公司复核人&quot;,&quot;code&quot;:&quot;#{subCompanyAuditor}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
     <on event='start'>
-    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.ImportantBusinessService:com.hundsun.gefrm.pcm.service.ImportantBusinessService.listenTask:t3::gefrm-pcm-server' type='cloud' serviceName='pcm-重点项目管理工作流监听'>
-    <in>[{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;流程实例编号&quot;},{&quot;var&quot;:&quot;child_audit_node&quot;,&quot;key&quot;:&quot;node_id&quot;,&quot;paramName&quot;:&quot;节点编码&quot;}]</in>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态'>
+    <in>[{&quot;var&quot;:&quot;2&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
     </auto>
     </on>
     <extaction/>
-  <transition name='reject' to='action 15'/>
-  <transition name='submit' to='action 16'/>
+  <transition name='submit' to='action 16' g='447,324:29,3'/>
+  <transition name='transition 39' to='action 30' g=':-52,-5'/>
   </human>
-  <human canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-4e4b1461-f507-4202-904d-bfa02cfa0cc9' g='192,139,90,50' name='初始节点'>
+  <human canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-4e4b1461-f507-4202-904d-bfa02cfa0cc9' g='93,949,90,50' name='初始节点'>
     <form>[]</form>
     <defaultNoticeSendUser>[]</defaultNoticeSendUser>
     <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
     <participants>[{&quot;name&quot;:&quot;发起人&quot;,&quot;code&quot;:&quot;#{starter}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:0,&quot;_rowKey&quot;:1}]</participants>
     <on event='start'>
-    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.ImportantBusinessService:com.hundsun.gefrm.pcm.service.ImportantBusinessService.listenTask:t3::gefrm-pcm-server' type='cloud' serviceName='pcm-重点项目管理工作流监听'>
-    <in>[{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;流程实例编号&quot;},{&quot;var&quot;:&quot;init_node&quot;,&quot;key&quot;:&quot;node_id&quot;,&quot;paramName&quot;:&quot;节点编码&quot;}]</in>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be'>
+    <in>[{&quot;var&quot;:&quot;0&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
     </auto>
     </on>
     <extaction/>
-  <transition name='submit' to='action 9'/>
+  <transition name='submit' to='action 9' g='138,88:21,3'/>
   </human>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-4b699a88-4a3f-4928-96b0-9d9c26cf0fb5' g='315,149,30,30' text='系统处理' name='action 9'>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-4b699a88-4a3f-4928-96b0-9d9c26cf0fb5' g='213,73,30,30' text='系统处理' name='action 9'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 子公司复核人' to='子公司复核人'/>
+    <transition name='to 是否金控录入' to='是否风控录入' g=':-48,-5'/>
   </action>
-  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-63f8c519-db69-41a9-ad4a-5bea5078a146' g='799,222,90,50' name='金控审核人'>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-63f8c519-db69-41a9-ad4a-5bea5078a146' g='711,141,124,50' name='金控一级审核人'>
     <form>[]</form>
     <defaultNoticeSendUser>[]</defaultNoticeSendUser>
     <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
-    <participants>[{&quot;name&quot;:&quot;银河金控&quot;,&quot;code&quot;:&quot;0_yhjk&quot;,&quot;typecode&quot;:&quot;org&quot;,&quot;typename&quot;:&quot;组织&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:0,&quot;_rowKey&quot;:1},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
+    <participants>[{&quot;name&quot;:&quot;集团审核人&quot;,&quot;code&quot;:&quot;groupAuditor&quot;,&quot;typecode&quot;:&quot;role&quot;,&quot;typename&quot;:&quot;角色&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:12,&quot;_rowKey&quot;:13},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:13,&quot;_rowKey&quot;:14}]</participants>
     <on event='start'>
-    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.ImportantBusinessService:com.hundsun.gefrm.pcm.service.ImportantBusinessService.listenTask:t3::gefrm-pcm-server' type='cloud' serviceName='pcm-重点项目管理工作流监听'>
-    <in>[{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;流程实例编号&quot;},{&quot;var&quot;:&quot;parent_audit_node&quot;,&quot;key&quot;:&quot;node_id&quot;,&quot;paramName&quot;:&quot;节点编码&quot;}]</in>
+    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.WorkflowService:GefrmPcm.Workflow.putUpdateAuditStatusByProcessInstanceId:t3::gefrm-pcm-server' type='cloud' serviceName='pcm根据工作流流程实例ID更新审批状态' serviceUuid='ab6ad79e7ea041808f42103d2191c0be'>
+    <in>[{&quot;var&quot;:&quot;3&quot;,&quot;key&quot;:&quot;audit_status&quot;,&quot;paramName&quot;:&quot;审批状态&quot;},{&quot;var&quot;:&quot;#{moduleCode}&quot;,&quot;key&quot;:&quot;module_code&quot;,&quot;paramName&quot;:&quot;模块编码&quot;},{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;工作流流程实例ID&quot;}]</in>
     </auto>
     </on>
     <extaction/>
-  <transition name='transition 22' g='844,318;844,464:-166,-28' to='action 20'/>
-  <transition name='transition 27' g='844,392:-51,-68' to='action 23'/>
-  <transition name='transition 32' to='action 25'/>
-  <transition name='transition 30' to='action 26'/>
+  <transition name='transition 32' to='action 25' g='773,694:2,-12'/>
+  <transition name='transition 45' to='action 32' g=':-52,-5'/>
+  <transition name='transition 53' to='action 34' g=':-52,-5'/>
+  <transition name='transition 55' to='action 35' g='773,555:2,-12'/>
   </human>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-91809952-3ee4-4922-a8b8-590c0e5b6fcd' g='281,232,30,30' text='退回至发起人' name='action 15'>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f9b30545-2105-4ece-94a1-440162aeb5fb' g='533,309,30,30' text='通过' name='action 16'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 初始节点' to='初始节点' g='237,247:33,-36'/>
+    <transition name='to 决策 2' to='是否二级审批' g=':-32,-5'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-73aca04e-cdd9-43b7-afce-3944535c7856' g='515,446,30,30' text='退回至发起人' name='action 20'>
-    <autoSubmit enableAutoSubmit='false'/>
-    <form>[]</form>
-    <transition name='to 初始节点' g='236,461;238,388;237,298:149,-69' to='初始节点'/>
-  </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f9b30545-2105-4ece-94a1-440162aeb5fb' g='523,232,30,30' text='通过' name='action 16'>
-    <autoSubmit enableAutoSubmit='false'/>
-    <form>[]</form>
-    <transition name='to 子公司二级复核人' to='子公司二级复核人'/>
-  </action>
-  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-ff7d0362-a806-419c-827e-0c0e8a787ad6' g='585,313,143,50' name='子公司二级复核人'>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-295c5509-3bcb-4c23-b339-0ea900e7a99b' g='593,301,46,46' name='是否二级审批'>
+    <transition isJumpOutFromExecution='0' name='是' to='子公司二级复核人' g='616,246:237,10'>
+      <condition expr='#{ifSubCompanyVerifier==&apos;1&apos;}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='否' g='773,324:-85,-16' to='金控一级审核人'/>
+  </decision>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-ff7d0362-a806-419c-827e-0c0e8a787ad6' g='1079,221,136,50' name='子公司二级复核人'>
     <form>[]</form>
     <defaultNoticeSendUser>[]</defaultNoticeSendUser>
     <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
     <participants>[{&quot;name&quot;:&quot;子公司二级复核人&quot;,&quot;code&quot;:&quot;#{subCompanyVerifier}&quot;,&quot;typecode&quot;:&quot;script&quot;,&quot;typename&quot;:&quot;表达式&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:1,&quot;_rowKey&quot;:2}]</participants>
-    <on event='start'>
-    <auto service-id='fhrisk:1.0:com.hundsun.gefrm.pcm.service.ImportantBusinessService:com.hundsun.gefrm.pcm.service.ImportantBusinessService.listenTask:t3::gefrm-pcm-server' type='cloud' serviceName='pcm-重点项目管理工作流监听' serviceUuid='5c03a2c29f6c4c5bb9cd5cc2ab4a5b87'>
-    <in>[{&quot;var&quot;:&quot;#{processInstanceId}&quot;,&quot;key&quot;:&quot;process_instance_id&quot;,&quot;paramName&quot;:&quot;流程实例编号&quot;},{&quot;var&quot;:&quot;child_audit_node&quot;,&quot;key&quot;:&quot;node_id&quot;,&quot;paramName&quot;:&quot;节点编码&quot;}]</in>
-    </auto>
-    </on>
     <extaction/>
-  <transition name='pass' to='action 21'/>
-  <transition name='transition 25' to='action 22'/>
-  <transition name='transition 28' g='656,396:-77,-20' to='action 24'/>
+  <transition name='pass' to='action 21' g='1147,324:-176,-9'/>
+  <transition name='transition 41' to='action 31' g='1147,400:-378,-10'/>
+  <transition name='transition 51' to='action 33' g=':-52,-5'/>
   </human>
-  <action id='action-c9d36f89-2ee2-4145-8718-0344e1ae1f6f' g='748,323,30,30' text='通过' name='action 21' actionType='pass'>
-    <transition name='to 金控审核人' g='795,305:5,-7' to='金控审核人'/>
+  <action id='action-c9d36f89-2ee2-4145-8718-0344e1ae1f6f' g='865,309,30,30' text='通过' name='action 21' actionType='pass'>
+    <transition name='to 金控审核人' g='773,324:14,-12' to='金控一级审核人'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-19b005a2-a56a-4492-acb8-cfc0007fcd21' g='521,323,30,30' text='退回至上一级审批人' name='action 22'>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f361fd91-d9ee-4b06-9028-3c6ee3ac9b89' g='865,679,30,30' text='部门负责人审核' name='action 25'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 子公司复核人' g='416,338:68,-38' to='子公司复核人'/>
+    <transition name='transition 36' g=':-52,-5' to='金控二级审核人'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-a2a631b9-7946-4739-9c84-00afd8a1598b' g='733,376,30,30' text='退回至上一级审批人' name='action 23'>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-7a91babb-17b5-43ba-8094-83e10dffd72b' g='925,669,124,50' name='金控二级审核人'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;集团二级审核人&quot;,&quot;code&quot;:&quot;groupAuditor2&quot;,&quot;typecode&quot;:&quot;role&quot;,&quot;typename&quot;:&quot;角色&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:8,&quot;_rowKey&quot;:9},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:9,&quot;_rowKey&quot;:10}]</participants>
+    <extaction/>
+  <transition name='pass' g='987,774:81,-8' to='action 28'/>
+  <transition name='transition 57' to='action 36' g='987,624:49,-1'/>
+  <transition name='transition 59' to='action 37' g='987,904:-108,-12'/>
+  <transition name='transition 61' to='action 38' g='987,774:-455,-14'/>
+  </human>
+  <action id='action-5be2a0bc-07e4-44e0-8d66-9b5a94b6e222' g='1132,759,30,30' text='部门负责人审核' name='action 28' actionType='pass' assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 人工 1' g='656,391:57,-17' to='子公司二级复核人'/>
+    <transition name='to 金控三级审核人' g=':-54,-5' to='金控三级审核人'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-2b191c1b-5cd8-45d5-b9a6-6aba9eccaf05' g='523,381,30,30' text='退回至发起人' name='action 24'>
+  <human wfCompanyId='BIZ' canNotice='false' canReassign='false' canCoordinate='false' message-notice='默认' enableRemind='false' assignToLast='0' id='task-af1bde8d-edd2-42cb-a0f1-0693ab7ac577' g='1245,749,124,50' name='金控三级审核人'>
+    <form>[]</form>
+    <defaultNoticeSendUser>[]</defaultNoticeSendUser>
+    <coordinateParticipants subtask-must-submit='false'>[]</coordinateParticipants>
+    <participants>[{&quot;name&quot;:&quot;集团三级审核人&quot;,&quot;code&quot;:&quot;groupAuditor3&quot;,&quot;typecode&quot;:&quot;role&quot;,&quot;typename&quot;:&quot;角色&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:10,&quot;_rowKey&quot;:11},{&quot;name&quot;:&quot;系统管理员&quot;,&quot;code&quot;:&quot;admin&quot;,&quot;typecode&quot;:&quot;user&quot;,&quot;typename&quot;:&quot;用户&quot;,&quot;type&quot;:&quot;&quot;,&quot;_index&quot;:11,&quot;_rowKey&quot;:12}]</participants>
+    <extaction/>
+  <transition name='pass' g=':-16,-5' to='action 29'/>
+  <transition name='transition 63' to='action 39' g='1307,844:-615,-15'/>
+  <transition name='transition 65' to='action 40' g='1307,904:-139,-10'/>
+  </human>
+  <action id='action-92d3d854-446d-4214-b07b-5ecb886baa09' g='1407,759,30,30' text='通过' name='action 29' actionType='pass'>
+    <transition name='to end' g='1523,774:-76,-12' to='end'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-9dab6aa7-5ec5-4adf-b241-55663c977369' g='213,462,30,30' text='退回至操作人' name='action 30'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 初始节点' g='237,396:158,-108' to='初始节点'/>
+    <transition name='to 初始节点' g='138,477:9,2' to='初始节点'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-f361fd91-d9ee-4b06-9028-3c6ee3ac9b89' g='945,232,30,30' text='通过' name='action 25'>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-ce4c6f80-c7d5-4663-a8c2-d70dd8d10cae' g='533,385,30,30' text='退回至上一级' name='action 31'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to end' g='1018,247:-31,-35' to='end'/>
+    <transition name='to 子公司复核人' to='子公司复核人' g='447,400:10,1'/>
   </action>
-  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-1938f127-99a6-40ca-b383-40384f27d2cd' g='829,157,30,30' text='退回至子公司复核人' name='action 26'>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-60691f52-b8c1-4ae3-b907-855aab903303' g='1606,151,30,30' text='退回至上一级' name='action 32'>
     <autoSubmit enableAutoSubmit='false'/>
     <form>[]</form>
-    <transition name='to 子公司复核人' to='子公司复核人'/>
+    <transition name='to 是否金控录入' to='是否风控录入(退回)' g=':-48,-5'/>
+  </action>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-ca82cfc4-d73f-4f0b-b0db-cb81bd8c1944' g='1598,951,46,46' name='是否风控录入(退回)'>
+    <transition isJumpOutFromExecution='0' name='是' to='初始节点' g=':-6,-5'>
+      <condition expr='#{if_parent_operate==1}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='否' to='是否二级审批(退回)' g='1621,400:-162,147'/>
+  </decision>
+  <decision wfCompanyId='BIZ' useDynamicTran='false' id='decision-14027d08-e491-4cdb-8ad5-ed20b2650b54' g='1284,377,46,46' name='是否二级审批(退回)'>
+    <transition isJumpOutFromExecution='0' name='是' to='子公司二级复核人' g='1307,246:-84,8'>
+      <condition expr='#{ifSubCompanyVerifier==&apos;1&apos;}'/>
+    </transition>
+    <transition isJumpOutFromExecution='0' name='否' to='子公司复核人' g='1307,477:-419,-17'/>
+  </decision>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-ebc2089d-c8bc-4111-9212-2486abdcc0ab' g='213,231,30,30' text='退回至操作人' name='action 33'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' to='初始节点' g='138,246:9,3'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-858b30fc-52ad-4e7d-8c4b-2aa15fc9ad4c' g='213,151,30,30' text='退回至操作人' name='action 34'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' to='初始节点' g='138,166:9,3'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-bcc19875-7df3-4756-9019-61dd01b1f9c4' g='865,540,30,30' text='通过' name='action 35'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to end' to='end' g=':-24,-5'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-6187aca2-4eee-4472-af7a-d272af916c34' g='1132,609,30,30' text='通过' name='action 36'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to end' to='end' g='1523,624:-216,-15'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-be262758-fdcf-4463-8d5f-26161d841dc1' g='865,889,30,30' text='退回至上一级' name='action 37'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 金控一级审核人' to='金控一级审核人' g='773,904:0,-12'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-ed1693fd-d7d5-4b51-9f7c-70e44e7b28ae' g='213,759,30,30' text='退回至操作人' name='action 38'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' to='初始节点' g='138,774:11,3'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-54732eb8-7ec2-4c2d-bb5c-22c5e69ce74e' g='213,829,30,30' text='退回至操作人' name='action 39'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 初始节点' to='初始节点' g='138,844:12,3'/>
+  </action>
+  <action assignNext='0' irrevocable='0' comeBack='0' confirmFlag='1' assignSequenceActivity='0' isJumpOutFromExecution='0' defaultAction='0' jumpToFutureNode='0' id='action-e797b95d-8ca3-4067-9ffe-6ebeb470d3ba' g='1132,889,30,30' text='退回' name='action 40'>
+    <autoSubmit enableAutoSubmit='false'/>
+    <form>[]</form>
+    <transition name='to 金控二级审核人' to='金控二级审核人' g='987,904:29,-12'/>
   </action>
 </process>
