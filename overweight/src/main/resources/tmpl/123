@@ -3,616 +3,184 @@
     "error_code": "",
     "error_message": "",
     "error_properties": {},
-    "result": [
-        {
-            "id": "224335",
-            "pid": "root",
-            "title": "佛山市中基投资有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": null,
-            "children": []
-        },
-        {
-            "id": "392",
-            "pid": "root",
-            "title": "青海盐湖工业股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "5-",
-            "children": [
-                {
-                    "id": "101551031.XCFE",
-                    "pid": "392",
-                    "title": "15盐湖MTN001",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                }
-            ]
-        },
-        {
-            "id": "6",
-            "pid": "root",
-            "title": "万科企业股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "A-",
-            "children": [
-                {
-                    "id": "102280265.XCFE",
-                    "pid": "6",
-                    "title": "22万科MTN002",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "112742.XSHE",
-                    "pid": "6",
-                    "title": "18万科01",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "12323112313.XSHG",
-                    "pid": "6",
-                    "title": "23132321",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149124.XSHE",
-                    "pid": "6",
-                    "title": "20万科04",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149357.XSHE",
-                    "pid": "6",
-                    "title": "21万科01",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149477.XSHE",
-                    "pid": "6",
-                    "title": "21万科03",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "112784.XSHE",
-                    "pid": "6",
-                    "title": "18万科02",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "139003.XSHE",
-                    "pid": "6",
-                    "title": "松花湖06",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149297.XSHE",
-                    "pid": "6",
-                    "title": "20万科08",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "102100209.XCFE",
-                    "pid": "6",
-                    "title": "21万科MTN001",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "102280364.XCFE",
-                    "pid": "6",
-                    "title": "22万科MTN003",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "112844.XSHE",
-                    "pid": "6",
-                    "title": "19万科01",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "139004.XSHE",
-                    "pid": "6",
-                    "title": "松花湖07",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "139007.XSHE",
-                    "pid": "6",
-                    "title": "松花湖次",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149296.XSHE",
-                    "pid": "6",
-                    "title": "20万科07",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149815.XSHE",
-                    "pid": "6",
-                    "title": "22万科02",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149141.XSHE",
-                    "pid": "6",
-                    "title": "20万科05",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149358.XSHE",
-                    "pid": "6",
-                    "title": "21万科02",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149123.XSHE",
-                    "pid": "6",
-                    "title": "20万科03",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149567.XSHE",
-                    "pid": "6",
-                    "title": "21万科05",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149976.XSHE",
-                    "pid": "6",
-                    "title": "22万科06",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "102100912.XCFE",
-                    "pid": "6",
-                    "title": "21万科MTN002",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "102280222.XCFE",
-                    "pid": "6",
-                    "title": "22万科MTN001",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "112976.XSHE",
-                    "pid": "6",
-                    "title": "19万科02",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "132280068.XCFE",
-                    "pid": "6",
-                    "title": "22万科GN001",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149056.XSHE",
-                    "pid": "6",
-                    "title": "20万科01",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149057.XSHE",
-                    "pid": "6",
-                    "title": "20万科02",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149142.XSHE",
-                    "pid": "6",
-                    "title": "20万科06",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "139005.XSHE",
-                    "pid": "6",
-                    "title": "松花湖08",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "139006.XSHE",
-                    "pid": "6",
-                    "title": "松花湖09",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149478.XSHE",
-                    "pid": "6",
-                    "title": "21万科04",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "TEST001.XSHG",
-                    "pid": "6",
-                    "title": "测试临时债",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "TEST002.XSHG",
-                    "pid": "6",
-                    "title": "测试临时债券2",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "102101821.XCFE",
-                    "pid": "6",
-                    "title": "21万科MTN003",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149568.XSHE",
-                    "pid": "6",
-                    "title": "21万科06",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149814.XSHE",
-                    "pid": "6",
-                    "title": "22万科01",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149930.XSHE",
-                    "pid": "6",
-                    "title": "22万科03",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149931.XSHE",
-                    "pid": "6",
-                    "title": "22万科04",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                },
-                {
-                    "id": "149975.XSHE",
-                    "pid": "6",
-                    "title": "22万科05",
-                    "data": null,
-                    "label": null,
-                    "value": null,
-                    "to_do_flag": "1",
-                    "new_bond_flag": null,
-                    "children": null
-                }
-            ]
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        },
-        {
-            "id": "7611",
-            "pid": "root",
-            "title": "中国蓝星(集团)股份有限公司",
-            "label": null,
-            "value": null,
-            "hold_flag": "0",
-            "to_do_flag": "1",
-            "new_bond_flag": null,
-            "audt_rat_grad": "BB",
-            "children": []
-        }
-    ]
+    "result": {
+        "pty_ins_shah_list": [
+            {
+                "hold_wght_rati": 5.97,
+                "shah_rank": null,
+                "ins_fn": "曹晓春",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "01"
+            },
+            {
+                "hold_wght_rati": 3.48,
+                "shah_rank": null,
+                "ins_fn": "中国工商银行股份有限公司-中欧医疗健康混合型证券投资基金",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 20.49,
+                "shah_rank": null,
+                "ins_fn": "叶小平",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "01"
+            },
+            {
+                "hold_wght_rati": 2.65,
+                "shah_rank": null,
+                "ins_fn": "香港中央结算有限公司",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": "258220",
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 2.08,
+                "shah_rank": null,
+                "ins_fn": "中国银行股份有限公司-华宝中证医疗交易型开放式指数证券投资基金",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 14.23,
+                "shah_rank": null,
+                "ins_fn": "HKSCC NOMINEES LIMITED",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 1.69,
+                "shah_rank": null,
+                "ins_fn": "中国工商银行股份有限公司-易方达创业板交易型开放式指数证券投资基金",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 1.16,
+                "shah_rank": null,
+                "ins_fn": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            },
+            {
+                "hold_wght_rati": 1.16,
+                "shah_rank": null,
+                "ins_fn": "施笑利",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "01"
+            },
+            {
+                "hold_wght_rati": 1.15,
+                "shah_rank": null,
+                "ins_fn": "中国光大银行股份有限公司-兴全商业模式优选混合型证券投资基金(LOF)",
+                "last_pty_rat_name": null,
+                "last_inr_pty_rat_name": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "02"
+            }
+        ],
+        "pty_ins_ctlr": [
+            {
+                "ins_fn": "叶小平",
+                "hold_wght_rati": 20.4913,
+                "list_flag": null,
+                "debt_flag": null,
+                "hdlp_flag": null,
+                "ins_num": null,
+                "shah_num": null,
+                "shah_char_code": "01",
+                "pty_rat": null,
+                "inr_pty_rat": null
+            }
+        ],
+        "ext_ivsm_list": [
+            {
+                "ins_fn": "上海泰格医药科技有限公司",
+                "ins_num": "500497",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "上海谋思医药科技有限公司",
+                "ins_num": "500489",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "北京康利华咨询服务有限公司",
+                "ins_num": "10220763",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "北京雅信诚医学信息科技有限公司",
+                "ins_num": "500523",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "北医仁智(北京)医学科技发展有限公司",
+                "ins_num": "500494",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "南京谋思医药科技有限公司",
+                "ins_num": null,
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "嘉兴欣格医药科技有限公司",
+                "ins_num": null,
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "嘉兴泰格数据管理有限公司",
+                "ins_num": "500517",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "无锡泰格医药科技有限公司",
+                "ins_num": null,
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            },
+            {
+                "ins_fn": "杭州凤栖产业运营有限公司",
+                "ins_num": "96209567",
+                "hold_wght_rati": 100.0,
+                "shah_char_code": "02"
+            }
+        ]
+    }
 }

@@ -33,9 +33,8 @@ public class OverweightApplicationTests11 {
 
     @Test
     public static void main(String[] args) {
-        List<Integer> integerList = new ArrayList<>();
-        String result = calOptionLeftLimit("5+2N", 20200903, 20100903, 20171227);
-        System.out.println(result);
+        String name = "NThmMWZkYTJkZjMxMjc1OQ==:YjQ4NmJmZDMxMjk2NTM0NA==";
+        System.out.println(encrypt(name));
 
     }
 
