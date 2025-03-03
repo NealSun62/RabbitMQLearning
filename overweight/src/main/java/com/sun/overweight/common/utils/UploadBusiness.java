@@ -19,6 +19,6 @@ QueryWrapper<SysDataPermConfig> queryWrapper = new QueryWrapper<>();
 queryWrapper.lambda()
 .eq(SysDataPermConfig::getPermObjId, userId)
 .eq(SysDataPermConfig::getPermObjType, PermObjTypeEnum.USER.getCode())
-.eq(SysDataPermConfig::getPermDimension, PermDimensionEnum.WORKFLOW.getCode())
+.in(SysDataPermConfig::getPermDimension, permDimensionList)
 .eq(SysDataPermConfig::getPermBizCode, bizCode);
 List<SysDataPermConfig> userPermConfigs = sysDataPermConfigDao.selectList(queryWrapper);

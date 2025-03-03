@@ -1,186 +1,175 @@
-{
-    "return_code": 0,
-    "error_code": "",
-    "error_message": "",
-    "error_properties": {},
-    "result": {
-        "pty_ins_shah_list": [
-            {
-                "hold_wght_rati": 5.97,
-                "shah_rank": null,
-                "ins_fn": "曹晓春",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "01"
-            },
-            {
-                "hold_wght_rati": 3.48,
-                "shah_rank": null,
-                "ins_fn": "中国工商银行股份有限公司-中欧医疗健康混合型证券投资基金",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 20.49,
-                "shah_rank": null,
-                "ins_fn": "叶小平",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "01"
-            },
-            {
-                "hold_wght_rati": 2.65,
-                "shah_rank": null,
-                "ins_fn": "香港中央结算有限公司",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": "258220",
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 2.08,
-                "shah_rank": null,
-                "ins_fn": "中国银行股份有限公司-华宝中证医疗交易型开放式指数证券投资基金",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 14.23,
-                "shah_rank": null,
-                "ins_fn": "HKSCC NOMINEES LIMITED",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 1.69,
-                "shah_rank": null,
-                "ins_fn": "中国工商银行股份有限公司-易方达创业板交易型开放式指数证券投资基金",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 1.16,
-                "shah_rank": null,
-                "ins_fn": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            },
-            {
-                "hold_wght_rati": 1.16,
-                "shah_rank": null,
-                "ins_fn": "施笑利",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "01"
-            },
-            {
-                "hold_wght_rati": 1.15,
-                "shah_rank": null,
-                "ins_fn": "中国光大银行股份有限公司-兴全商业模式优选混合型证券投资基金(LOF)",
-                "last_pty_rat_name": null,
-                "last_inr_pty_rat_name": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "02"
-            }
-        ],
-        "pty_ins_ctlr": [
-            {
-                "ins_fn": "叶小平",
-                "hold_wght_rati": 20.4913,
-                "list_flag": null,
-                "debt_flag": null,
-                "hdlp_flag": null,
-                "ins_num": null,
-                "shah_num": null,
-                "shah_char_code": "01",
-                "pty_rat": null,
-                "inr_pty_rat": null
-            }
-        ],
-        "ext_ivsm_list": [
-            {
-                "ins_fn": "上海泰格医药科技有限公司",
-                "ins_num": "500497",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "上海谋思医药科技有限公司",
-                "ins_num": "500489",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "北京康利华咨询服务有限公司",
-                "ins_num": "10220763",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "北京雅信诚医学信息科技有限公司",
-                "ins_num": "500523",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "北医仁智(北京)医学科技发展有限公司",
-                "ins_num": "500494",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "南京谋思医药科技有限公司",
-                "ins_num": null,
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "嘉兴欣格医药科技有限公司",
-                "ins_num": null,
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "嘉兴泰格数据管理有限公司",
-                "ins_num": "500517",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "无锡泰格医药科技有限公司",
-                "ins_num": null,
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            },
-            {
-                "ins_fn": "杭州凤栖产业运营有限公司",
-                "ins_num": "96209567",
-                "hold_wght_rati": 100.0,
-                "shah_char_code": "02"
-            }
-        ]
-    }
+public RpcResultDTO<PoolFlowStartResultVo> instBatchStart(PoolFlowParamVo poolFlowParamVo) {
+PoolFlowStartResultVo poolFlowStartResultVo = new PoolFlowStartResultVo();
+List<PoolContentInsertVo> failedResult = new ArrayList<>();
+List<SuccessFlowInfo> successFlowInfos = new ArrayList<>();
+String adjustFlowInitiator = poolFlowParamVo.getAdjustFlowInitiator();
+String aprvEvt = poolFlowParamVo.getAprvEvt();
+//分组
+List<PoolContentInsertVo> poolContentInsertVos = poolFlowParamVo.getPoolContentInsertVos();
+Map<String, List<PoolContentInsertVo>> adjustIn = poolContentInsertVos.stream().filter(item -> StringUtils.isNotEmpty(item.getAdjustInPoolUuid())).collect(Collectors.groupingBy(PoolContentInsertVo::getAdjustInPoolUuid));
+Map<String, List<PoolContentInsertVo>> adjustOut = poolContentInsertVos.stream().filter(item -> StringUtils.isNotEmpty(item.getAdjustOutPoolUuid())).collect(Collectors.groupingBy(PoolContentInsertVo::getAdjustOutPoolUuid));
+//根据池id查询债券池配置
+List<String> poolUuidList = new ArrayList<>();
+Set<String> inSet = adjustIn.keySet();
+Set<String> outSet = adjustOut.keySet();
+poolUuidList.addAll(inSet);
+poolUuidList.addAll(outSet);
+Example example = new Example(PoolAttribute.class);
+// example.createCriteria().andIn(PoolAttribute.Fields.poolUuid,poolUuidList);
+example.and(DatabaseUtil.sqlSpecialForIn(example, PoolAttribute.Fields.poolUuid, poolUuidList));
+List<PoolAttribute> poolAttributes = poolAttributeDao.selectByExample(example);
+//调入 分为有流程和无流程
+if (CollectionUtils.isNotEmpty(inSet)) {
+//有流程 根据流程种类发起流程，同一个流程只发起一个
+List<PoolAttribute> inAttribute = poolAttributes.stream().filter(item -> inSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_OPEN.equals(item.getManualInApproveSwitch())).collect(Collectors.toList());
+Map<String, List<PoolAttribute>> inFlowMap = inAttribute.stream().collect(Collectors.groupingBy(PoolAttribute::getManualInApproveFlowId));
+Set<String> keySet = inFlowMap.keySet();
+for (String processKey : keySet) {
+try {
+List<String> inFlowPool = inFlowMap.get(processKey).stream().map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> inFlowPool.contains(item.getAdjustInPoolUuid())).collect(Collectors.toList());
+Map<String, Object> map = new HashMap<>();
+//                map.put("hsBpmInstanceDesc", hsBpmInstanceDesc);
+Map<String, String> mapScr = new HashMap<>();
+mapScr.put("scr_name", "");
+mapScr.put("ins_fn", poolFlowParamVo.getInsFn());
+map.put("hsBpmInstanceExt", JSON.toJSONString(mapScr));
+map.put("hsBpmRemark", aprvEvt);
+map.put(WorkflowConstants.SUBMIT_USER, poolFlowParamVo.getAdjustFlowInitiator());
+TSysUserBean tSysUserBean = new TSysUserBean();
+tSysUserBean.setUserId(poolFlowParamVo.getAdjustFlowInitiator());
+UserInfoBean userInfo = iUserService.getUserInfo(tSysUserBean);
+if (Objects.nonNull(userInfo)) {
+map.put(WorkflowConstants.SUBMIT_USER_ROLE, Joiner.on(Constants.SPLIT_TYPE).join(userInfo.getUserRoleList()
+.stream().map(TSysRoleUser::getRoleCode).collect(Collectors.toSet())));
+}
+String outcome = null;
+// 根据客户号进行不同处理
+String custNum = configForCommService.getCustomNum().getResult();
+if (Constants.FTS_CUSTNUM.equals(custNum)) {
+outcome = "submit";
+}
+String instanceId = instanceService.startWithSubmit(systemId, companyId, adjustFlowInitiator, processKey, null, outcome, map, null);
+//poolFlowParamVo 转化 PoolAdjustResultVO
+List<PoolAdjustResultVO> poolAdjustResultVOS = this.copyData(insertPoolData, instanceId, poolFlowParamVo.getAdjustFlowInitiator());
+createInstPoolAdjust(poolAdjustResultVOS, poolFlowParamVo.getAdjustFlowInitiator());
+Long taskId = taskService.getLastTaskByInstanceId(systemId, companyId, instanceId);
+SuccessFlowInfo successFlowInfo = new SuccessFlowInfo();
+successFlowInfo.setFlowInstNo(instanceId);
+successFlowInfo.setTaskNum(taskId.toString());
+successFlowInfos.add(successFlowInfo);
+//后端保存已办
+// 机构池
+String nodeId = Constants.SUBJECT_IN_START_NODE;
+// 根据客户号进行不同处理
+if (Constants.FTS_CUSTNUM.equals(custNum)) {
+if (Constants.SUBJECT_IN_OUT_NODE_FTS_MAP.keySet().contains(processKey)) {
+nodeId = Constants.SUBJECT_IN_OUT_NODE_FTS_MAP.get(processKey);
+}
+}
+String startJson = this.buildInstInPoolStartPage(poolAdjustResultVOS, poolFlowParamVo.getAdjustFlowInitiator(), aprvEvt);
+ratForCommService.saveTaskConentForComp(instanceId, taskId.toString(), startJson, nodeId);
+} catch (Exception e) {
+log.error("调入流程发起失败：" + e.getMessage());
+List<String> inFlowPool = inFlowMap.get(processKey).stream().map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> inFlowPool.contains(item.getAdjustInPoolUuid())).collect(Collectors.toList());
+failedResult.addAll(insertPoolData);
+}
+}
+//无流程 直接入池
+try {
+List<String> inNonPoolId = poolAttributes.stream().filter(item -> inSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_CLOSE.equals(item.getManualInApproveSwitch())).map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> inNonPoolId.contains(item.getAdjustInPoolUuid())).collect(Collectors.toList());
+if (CollectionUtils.isNotEmpty(insertPoolData)) {
+List<PoolAdjustResultVO> poolAdjustResultVOS = this.copyData(insertPoolData, null, poolFlowParamVo.getAdjustFlowInitiator());
+saveInstPoolAdjust(null, poolAdjustResultVOS, poolFlowParamVo.getAdjustFlowInitiator());
+}
+} catch (Exception e) {
+log.error("无流程入池失败：" + e.getMessage());
+List<String> inNonPoolId = poolAttributes.stream().filter(item -> inSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_CLOSE.equals(item.getManualInApproveSwitch())).map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> inNonPoolId.contains(item.getAdjustInPoolUuid())).collect(Collectors.toList());
+failedResult.addAll(insertPoolData);
+}
+}
+//调出 分为有流程和无流程
+if (CollectionUtils.isNotEmpty(outSet)) {
+//有流程
+List<PoolAttribute> outAttribute = poolAttributes.stream().filter(item -> outSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_OPEN.equals(item.getManualOutApproveSwitch())).collect(Collectors.toList());
+Map<String, List<PoolAttribute>> outFlowMap = outAttribute.stream().collect(Collectors.groupingBy(PoolAttribute::getManualOutApproveFlowId));
+Set<String> keySet = outFlowMap.keySet();
+for (String processKey : keySet) {
+try {
+List<String> outFlowPool = outFlowMap.get(processKey).stream().map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> outFlowPool.contains(item.getAdjustOutPoolUuid())).collect(Collectors.toList());
+Map<String, Object> map = new HashMap<>();
+//map.put("hsBpmInstanceDesc", hsBpmInstanceDesc);
+Map<String, String> mapScr = new HashMap<>();
+mapScr.put("scr_name", "");
+mapScr.put("ins_fn", poolFlowParamVo.getInsFn());
+map.put("hsBpmInstanceExt", JSON.toJSONString(mapScr));
+map.put("hsBpmRemark", aprvEvt);
+map.put(WorkflowConstants.SUBMIT_USER, poolFlowParamVo.getAdjustFlowInitiator());
+TSysUserBean tSysUserBean = new TSysUserBean();
+tSysUserBean.setUserId(poolFlowParamVo.getAdjustFlowInitiator());
+UserInfoBean userInfo = iUserService.getUserInfo(tSysUserBean);
+if (Objects.nonNull(userInfo)) {
+map.put(WorkflowConstants.SUBMIT_USER_ROLE, Joiner.on(Constants.SPLIT_TYPE).join(userInfo.getUserRoleList()
+.stream().map(TSysRoleUser::getRoleCode).collect(Collectors.toSet())));
+}
+String outcome = null;
+// 根据客户号进行不同处理
+String custNum = configForCommService.getCustomNum().getResult();
+if (Constants.FTS_CUSTNUM.equals(custNum)) {
+outcome = "submit";
+}
+String instanceId = instanceService.startWithSubmit(systemId, companyId, adjustFlowInitiator, processKey, null, outcome, map, null);
+//poolFlowParamVo 转化 PoolAdjustResultVO
+PoolFlowParamVo outFlowParamVo = new PoolFlowParamVo();
+for (PoolContentInsertVo insertPoolDatum : insertPoolData) {
+insertPoolDatum.setFlowInstNo(instanceId);
+}
+outFlowParamVo.setAdjustFlowInitiator(poolFlowParamVo.getAdjustFlowInitiator());
+outFlowParamVo.setPoolContentInsertVos(insertPoolData);
+submitOutInstProcess(outFlowParamVo);
+Long taskId = taskService.getLastTaskByInstanceId(systemId, companyId, instanceId);
+SuccessFlowInfo successFlowInfo = new SuccessFlowInfo();
+successFlowInfo.setFlowInstNo(instanceId);
+successFlowInfo.setTaskNum(taskId.toString());
+successFlowInfos.add(successFlowInfo);
+outFlowParamVo.setAprvEvt(poolFlowParamVo.getAprvEvt());
+// 机构池
+String nodeId = Constants.SUBJECT_OUT_START_NODE;
+// 根据客户号进行不同处理
+if (Constants.FTS_CUSTNUM.equals(custNum)) {
+if (Constants.SUBJECT_IN_OUT_NODE_FTS_MAP.keySet().contains(processKey)) {
+nodeId = Constants.SUBJECT_IN_OUT_NODE_FTS_MAP.get(processKey);
+}
+}
+String startJson = this.buildInstOutPoolStartPage(outFlowParamVo);
+ratForCommService.saveTaskConentForComp(instanceId, taskId.toString(), startJson, nodeId);
+} catch (Exception e) {
+log.error("调出流程发起失败", e);
+List<String> outFlowPool = outFlowMap.get(processKey).stream().map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> outFlowPool.contains(item.getAdjustOutPoolUuid())).collect(Collectors.toList());
+failedResult.addAll(insertPoolData);
+}
+}
+//无流程 直接出池
+try {
+List<String> outNonPoolId = poolAttributes.stream().filter(item -> outSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_CLOSE.equals(item.getManualOutApproveSwitch())).map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> outNonPoolId.contains(item.getAdjustOutPoolUuid())).collect(Collectors.toList());
+PoolFlowParamVo outFlowParamVo = new PoolFlowParamVo();
+outFlowParamVo.setAdjustFlowInitiator(poolFlowParamVo.getAdjustFlowInitiator());
+outFlowParamVo.setPoolContentInsertVos(insertPoolData);
+endOutInstProcess(outFlowParamVo);
+} catch (Exception e) {
+log.error("无流程出池失败：" + e.getMessage());
+List<String> outNonPoolId = poolAttributes.stream().filter(item -> outSet.contains(item.getPoolUuid()) && Constants.FLOW_FLAG_CLOSE.equals(item.getManualOutApproveSwitch())).map(item -> item.getPoolUuid()).collect(Collectors.toList());
+List<PoolContentInsertVo> insertPoolData = poolContentInsertVos.stream().filter(item -> outNonPoolId.contains(item.getAdjustOutPoolUuid())).collect(Collectors.toList());
+failedResult.addAll(insertPoolData);
+}
+}
+poolFlowStartResultVo.setFailedItem(failedResult);
+poolFlowStartResultVo.setSuccessTask(successFlowInfos);
+return CommUtil.buildRpcResultDTO(poolFlowStartResultVo);
 }
